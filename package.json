@@ -1,0 +1,24 @@
+{
+  "name": "tagzee-luxury-ecommerce",
+  "version": "1.0.0",
+  "description": "TAG Zee Luxury B2C E-Commerce Platform - Handcrafted Moradabad Metalware",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node server/tests/api.test.js"
+  },
+  "keywords": [
+    "ecommerce",
+    "moradabad",
+    "brassware",
+    "metal-handicrafts",
+    "razorpay",
+    "shiprocket"
+  ],
+  "author": "TAG Zee (Zeefaham Rais & Atir Rais)",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
