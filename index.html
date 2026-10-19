@@ -336,30 +336,7 @@
             </button>
           </div>
 
-          <!-- Section B: Compact 3 Benefits Strip (Hero bottom) -->
-          <div class="pt-6 sm:pt-8 border-t border-brand-stone grid grid-cols-3 gap-3 sm:gap-4 text-slate-700">
-            <div class="flex items-start gap-2">
-              <span class="text-base sm:text-lg">🔨</span>
-              <div>
-                <span class="font-bold text-[10.5px] sm:text-xs block text-brand-charcoal">100% Solid Metal</span>
-                <span class="text-[9.5px] sm:text-[10px] text-slate-500 block leading-tight">Virgin Brass & Copper</span>
-              </div>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="text-base sm:text-lg">📦</span>
-              <div>
-                <span class="font-bold text-[10.5px] sm:text-xs block text-brand-charcoal">Wooden Crate Packing</span>
-                <span class="text-[9.5px] sm:text-[10px] text-slate-500 block leading-tight">Zero transit dent guarantee</span>
-              </div>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="text-base sm:text-lg">🏛️</span>
-              <div>
-                <span class="font-bold text-[10.5px] sm:text-xs block text-brand-charcoal">Direct Foundry</span>
-                <span class="text-[9.5px] sm:text-[10px] text-slate-500 block leading-tight">From Moradabad owners desk</span>
-              </div>
-            </div>
-          </div>
+
 
         </div>
 
@@ -516,7 +493,7 @@
         <!-- Cat 6: Pooja Brassware -->
         <div onclick="filterByCategory('Pooja')" class="category-card group bg-brand-sand hover:bg-white rounded-2xl p-3 text-center border border-brand-stone hover:border-brand-gold shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col items-center justify-between">
           <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-white p-1 flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
-            <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=200&q=80" alt="Pooja Brassware" class="w-full h-full object-cover rounded-lg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=200&q=80';">
+            <img src="https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?auto=format&fit=crop&w=200&q=80" alt="Pooja Brassware" class="w-full h-full object-cover rounded-lg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=200&q=80';">
           </div>
           <span class="text-xs font-bold text-slate-800 group-hover:text-brand-gold transition-colors">Pooja Items</span>
           <span class="text-[9px] text-slate-400 font-semibold mt-0.5">15+ Designs</span>
@@ -748,7 +725,7 @@
 
         <div class="lg:col-span-5 relative">
           <div class="rounded-3xl overflow-hidden shadow-2xl border-2 border-brand-gold/40">
-            <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=700&q=80" alt="Moradabad Metal Casting Workshop" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=700&q=80';">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80" alt="Moradabad Metal Casting Workshop" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=700&q=80';">
           </div>
           <div class="absolute -bottom-4 -right-4 bg-brand-charcoal text-brand-gold text-xs font-bold p-3.5 rounded-2xl shadow-xl border border-brand-gold/50 flex items-center gap-2">
             <span>✨</span>
@@ -1046,8 +1023,17 @@
     <!-- ================= 12. ADVANCED PRODUCT DETAIL MODAL (PDP WITH TABS & SPECIFICATIONS) ================= -->
   <div id="quickViewModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6">
     <div onclick="closeQuickViewModal()" class="absolute inset-0 drawer-backdrop"></div>
-    <div class="relative bg-white rounded-3xl max-w-4xl w-full max-h-[94vh] overflow-y-auto shadow-2xl border border-brand-gold z-10 p-5 sm:p-8">
-      <button onclick="closeQuickViewModal()" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-800 rounded-full hover:bg-slate-100 text-lg cursor-pointer">✕</button>
+    <div class="relative bg-white rounded-3xl max-w-4xl w-full max-h-[94vh] overflow-y-auto shadow-2xl border-2 border-brand-gold z-10 p-5 sm:p-8">
+      
+      <!-- Dedicated Modal Header Bar (Zero Overlap Guaranteed) -->
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-brand-stone">
+        <div class="flex items-center gap-2">
+          <span class="text-[10px] font-black uppercase tracking-widest text-brand-goldDark">MORADABAD ARTISAN ATELIER</span>
+          <span class="text-slate-300">•</span>
+          <span id="qvSku" class="text-xs font-mono font-bold text-slate-600">SKU: TZ-001</span>
+        </div>
+        <button onclick="closeQuickViewModal()" class="w-8 h-8 rounded-full bg-brand-sand hover:bg-brand-stone text-slate-700 flex items-center justify-center font-bold text-sm cursor-pointer transition-all shadow-sm" aria-label="Close Modal">✕</button>
+      </div>
       
       <!-- Live Social Proof & Urgency Bar -->
       <div class="mb-4 bg-gradient-to-r from-amber-50 via-amber-100/50 to-amber-50 border border-amber-200/80 rounded-2xl px-4 py-2 flex flex-wrap items-center justify-between gap-2 text-xs">
@@ -1104,9 +1090,8 @@
         
         <!-- Info & Actions Column -->
         <div class="space-y-3.5">
-          <div class="flex items-center justify-between">
-            <span id="qvCategory" class="text-[10px] font-bold uppercase tracking-widest text-brand-goldDark">Category</span>
-            <span id="qvSku" class="text-[10px] font-mono text-slate-400">SKU: TZ-001</span>
+          <div>
+            <span id="qvCategory" class="text-xs font-extrabold uppercase tracking-widest text-brand-goldDark block">Category</span>
           </div>
 
           <h3 id="qvTitle" class="text-xl sm:text-2xl font-black text-brand-charcoal leading-snug">Product Title</h3>
@@ -1650,340 +1635,536 @@
   </div>
 
   <!-- ================= 17. B2C OPERATIONAL ADMIN DASHBOARD MODAL ================= -->
-  <div id="adminModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6">
-    <div onclick="closeAdminModal()" class="absolute inset-0 drawer-backdrop"></div>
-    <div class="relative bg-white rounded-3xl max-w-5xl w-full max-h-[94vh] overflow-y-auto shadow-2xl border-2 border-brand-charcoal z-10 p-5 sm:p-8">
-      <button onclick="closeAdminModal()" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-800 rounded-full hover:bg-slate-100 text-lg cursor-pointer">✕</button>
-
-      <!-- Security PIN Gate -->
-      <div id="adminGateView" class="max-w-md mx-auto py-10 text-center space-y-4">
-        <div class="w-16 h-16 rounded-2xl bg-brand-charcoal text-brand-gold text-2xl flex items-center justify-center mx-auto shadow-md">
+    <!-- ================= 15. FULL-SCREEN OPERATIONAL ADMIN WORKSPACE ================= -->
+  <div id="adminModal" class="hidden fixed inset-0 z-50 bg-[#0C0C0B] flex flex-col md:flex-row overflow-hidden font-sans">
+    
+    <!-- Security PIN Gate (When Locked) -->
+    <div id="adminGateView" class="w-full h-full flex items-center justify-center p-4 bg-gradient-to-br from-brand-charcoal via-slate-900 to-black text-white">
+      <div class="max-w-md w-full bg-[#181817] border border-brand-gold/40 rounded-3xl p-8 sm:p-10 shadow-2xl text-center space-y-5">
+        <div class="w-16 h-16 rounded-2xl bg-brand-gold/20 text-brand-gold border border-brand-gold/50 text-3xl flex items-center justify-center mx-auto shadow-inner">
           🔒
         </div>
         <div>
-          <span class="text-[10px] font-bold tracking-widest text-brand-goldDark uppercase">TAG ZEE OPERATIONS DESK</span>
-          <h3 class="text-2xl font-black text-brand-charcoal">Admin Portal Authentication</h3>
-          <p class="text-xs text-slate-500 mt-1">Authorized store management for founders & operations team.</p>
+          <span class="text-[10px] font-black tracking-widest text-brand-gold uppercase block">TAG ZEE EXECUTIVE ATELIER</span>
+          <h3 class="text-2xl font-black text-white uppercase mt-1">Admin Operations Suite</h3>
+          <p class="text-xs text-slate-400 mt-1">Foundry Management • Moradabad Hub (244001)</p>
         </div>
 
-        <form onsubmit="handleAdminLogin(event)" class="space-y-3 pt-2">
-          <input type="password" id="adminPinInput" required placeholder="Enter Admin Secret PIN / Password" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-xs text-center font-mono tracking-widest focus:outline-none focus:border-brand-charcoal">
-          <p class="text-[10px] text-slate-400">Default Security PIN: <code class="bg-slate-100 px-1 py-0.5 rounded text-slate-700 font-bold">tagzee@admin2026</code></p>
-          <button type="submit" class="w-full py-3 bg-brand-charcoal hover:bg-brand-gold text-brand-ivory hover:text-white text-xs font-bold uppercase rounded-xl tracking-wider transition-all cursor-pointer">
-            ACCESS B2C OPERATIONS DASHBOARD
-          </button>
+        <form onsubmit="handleAdminLogin(event)" class="space-y-4 pt-2">
+          <div>
+            <label class="block text-left text-xs font-bold text-slate-300 mb-1">Enter Master PIN:</label>
+            <input type="password" id="adminPinInput" required placeholder="••••••••••••" class="w-full bg-[#232321] border border-slate-700 rounded-xl px-4 py-3 text-sm text-center font-mono tracking-widest text-white focus:outline-none focus:border-brand-gold">
+          </div>
+          <p class="text-[11px] text-slate-400">Default Security PIN: <code class="bg-[#2A2A28] px-2 py-0.5 rounded text-brand-gold font-bold">tagzee@admin2026</code></p>
+          <div class="flex gap-2 pt-2">
+            <button type="button" onclick="closeAdminModal()" class="w-1/3 py-3 bg-[#2A2A28] hover:bg-[#353533] text-slate-300 text-xs font-bold rounded-xl transition-all cursor-pointer">
+              Cancel
+            </button>
+            <button type="submit" class="w-2/3 py-3 bg-brand-gold hover:bg-brand-goldDark text-white text-xs font-black uppercase rounded-xl tracking-wider transition-all shadow-lg active:scale-95 cursor-pointer">
+              LOGIN TO CONSOLE ➔
+            </button>
+          </div>
         </form>
       </div>
+    </div>
 
-      <!-- Admin Control Center View -->
-      <div id="adminDashboardView" class="hidden space-y-6">
+    <!-- Full-Screen Unlocked Admin Workspace -->
+    <div id="adminDashboardView" class="hidden w-full h-full flex flex-col md:flex-row overflow-hidden bg-[#F4F6F8]">
+      
+      <!-- LEFT SIDEBAR -->
+      <aside class="w-full md:w-64 bg-[#141413] text-slate-300 flex flex-col shrink-0 border-b md:border-b-0 md:border-r border-[#242422] select-none z-20">
+        <!-- Sidebar Brand Header -->
+        <div class="p-4 sm:p-5 border-b border-[#242422] flex items-center justify-between">
+          <div class="flex items-center gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-brand-gold/20 border border-brand-gold/50 flex items-center justify-center text-brand-gold text-lg font-black">
+              👑
+            </div>
+            <div>
+              <span class="text-sm font-black text-white tracking-wider block">TAG ZEE</span>
+              <span class="text-[9.5px] uppercase font-bold text-brand-gold tracking-widest block">OPERATIONS SUITE</span>
+            </div>
+          </div>
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" title="Foundry Hub Online"></span>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="flex flex-row md:flex-col overflow-x-auto md:overflow-y-auto p-2 md:p-3 gap-1.5 md:gap-0 md:space-y-1 text-xs shrink-0">
+          <button onclick="switchAdminTab('dashboard')" id="adminNav-dashboard" class="shrink-0 md:shrink md:w-full flex items-center justify-between px-3 md:px-3.5 py-2 md:py-2.5 rounded-xl font-bold transition-all whitespace-nowrap bg-brand-gold text-white shadow-sm cursor-pointer">
+            <div class="flex items-center gap-2.5"><span>📊</span> <span>Executive Dashboard</span></div>
+            <span class="text-[9.5px] bg-black/30 px-1.5 py-0.5 rounded">Live</span>
+          </button>
+
+          <button onclick="switchAdminTab('products')" id="adminNav-products" class="shrink-0 md:shrink md:w-full flex items-center justify-between px-3 md:px-3.5 py-2 md:py-2.5 rounded-xl font-bold transition-all whitespace-nowrap text-slate-400 hover:text-white hover:bg-[#20201E] cursor-pointer">
+            <div class="flex items-center gap-2.5"><span>📦</span> <span>Products & SKUs</span></div>
+            <span id="sideBadgeProducts" class="text-[9.5px] bg-[#2A2A28] text-slate-300 px-1.5 py-0.5 rounded">12</span>
+          </button>
+
+          <button onclick="switchAdminTab('orders')" id="adminNav-orders" class="shrink-0 md:shrink md:w-full flex items-center justify-between px-3 md:px-3.5 py-2 md:py-2.5 rounded-xl font-bold transition-all whitespace-nowrap text-slate-400 hover:text-white hover:bg-[#20201E] cursor-pointer">
+            <div class="flex items-center gap-2.5"><span>🛒</span> <span>Orders & Dispatch</span></div>
+            <span id="sideBadgeOrders" class="text-[9.5px] bg-emerald-500/20 text-emerald-400 px-1.5 py-0.5 rounded">Live</span>
+          </button>
+
+          <button onclick="switchAdminTab('b2b')" id="adminNav-b2b" class="shrink-0 md:shrink md:w-full flex items-center justify-between px-3 md:px-3.5 py-2 md:py-2.5 rounded-xl font-bold transition-all whitespace-nowrap text-slate-400 hover:text-white hover:bg-[#20201E] cursor-pointer">
+            <div class="flex items-center gap-2.5"><span>🏢</span> <span>B2B Wholesale RFQs</span></div>
+            <span class="text-[9.5px] bg-amber-500/20 text-amber-400 px-1.5 py-0.5 rounded font-mono">B2B</span>
+          </button>
+
+          <button onclick="switchAdminTab('inventory')" id="adminNav-inventory" class="shrink-0 md:shrink md:w-full flex items-center justify-between px-3 md:px-3.5 py-2 md:py-2.5 rounded-xl font-bold transition-all whitespace-nowrap text-slate-400 hover:text-white hover:bg-[#20201E] cursor-pointer">
+            <div class="flex items-center gap-2.5"><span>🏬</span> <span>Inventory & Restock</span></div>
+            <span id="sideBadgeStock" class="text-[9.5px] bg-red-500/20 text-red-400 px-1.5 py-0.5 rounded font-mono">Alert</span>
+          </button>
+
+          <button onclick="switchAdminTab('coupons')" id="adminNav-coupons" class="shrink-0 md:shrink md:w-full flex items-center justify-between px-3 md:px-3.5 py-2 md:py-2.5 rounded-xl font-bold transition-all whitespace-nowrap text-slate-400 hover:text-white hover:bg-[#20201E] cursor-pointer">
+            <div class="flex items-center gap-2.5"><span>🎟️</span> <span>Coupons & Promos</span></div>
+            <span class="text-[9.5px] bg-[#2A2A28] text-slate-300 px-1.5 py-0.5 rounded">2 Active</span>
+          </button>
+
+          <button onclick="switchAdminTab('customers')" id="adminNav-customers" class="shrink-0 md:shrink md:w-full flex items-center justify-between px-3 md:px-3.5 py-2 md:py-2.5 rounded-xl font-bold transition-all whitespace-nowrap text-slate-400 hover:text-white hover:bg-[#20201E] cursor-pointer">
+            <div class="flex items-center gap-2.5"><span>👥</span> <span>Customer CRM</span></div>
+          </button>
+
+          <button onclick="switchAdminTab('tax')" id="adminNav-tax" class="shrink-0 md:shrink md:w-full flex items-center justify-between px-3 md:px-3.5 py-2 md:py-2.5 rounded-xl font-bold transition-all whitespace-nowrap text-slate-400 hover:text-white hover:bg-[#20201E] cursor-pointer">
+            <div class="flex items-center gap-2.5"><span>📑</span> <span>Tax & GST (HSN 7418)</span></div>
+            <span class="text-[9.5px] bg-brand-gold/20 text-brand-gold px-1.5 py-0.5 rounded">12%</span>
+          </button>
+
+          <button onclick="switchAdminTab('settings')" id="adminNav-settings" class="shrink-0 md:shrink md:w-full flex items-center justify-between px-3 md:px-3.5 py-2 md:py-2.5 rounded-xl font-bold transition-all whitespace-nowrap text-slate-400 hover:text-white hover:bg-[#20201E] cursor-pointer">
+            <div class="flex items-center gap-2.5"><span>⚙️</span> <span>Store Settings</span></div>
+          </button>
+        </nav>
+
+        <!-- Sidebar Footer Actions -->
+        <div class="p-3 border-t border-[#242422] space-y-1.5 text-xs bg-[#10100F]">
+          <div class="px-2 py-1 flex items-center justify-between text-[10px] text-slate-500">
+            <span>Admin: <strong>Zeefaham Rais</strong></span>
+            <span class="font-mono">UP-244001</span>
+          </div>
+          <button onclick="exportDatabaseJson()" class="w-full py-2 px-3 bg-[#20201E] hover:bg-[#2A2A28] text-slate-300 hover:text-white rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <span>💾</span> <span>Backup JSON Data</span>
+          </button>
+          <div class="grid grid-cols-2 gap-1.5 pt-1">
+            <button onclick="handleAdminLogout()" class="py-2 px-2 bg-red-950/40 hover:bg-red-900/60 text-red-300 rounded-xl text-[11px] font-bold text-center cursor-pointer transition-all">
+              🔒 Lock
+            </button>
+            <button onclick="closeAdminModal()" class="py-2 px-2 bg-brand-gold/20 hover:bg-brand-gold/30 text-brand-gold rounded-xl text-[11px] font-bold text-center cursor-pointer transition-all">
+              🚪 View Store
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- RIGHT MAIN WORKSPACE -->
+      <main class="flex-1 flex flex-col min-w-0 h-full overflow-hidden">
         
-        <!-- Top Operations Bar -->
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 gap-3">
-          <div>
-            <div class="flex items-center gap-2">
-              <span class="px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-bold uppercase">Live Operations Console</span>
-              <span class="text-xs text-slate-400 font-mono">Foundry: Moradabad (244001)</span>
+        <!-- Top Workspace Bar -->
+        <header class="h-16 bg-white border-b border-slate-200 px-4 sm:px-6 flex items-center justify-between shrink-0">
+          <div class="flex items-center gap-3">
+            <h2 id="adminHeaderTitle" class="text-base sm:text-lg font-black text-slate-800 tracking-tight">Executive Dashboard & KPIs</h2>
+            <span class="hidden sm:inline-block text-xs bg-slate-100 text-slate-500 font-mono px-2.5 py-0.5 rounded-full">Foundry Live Suite</span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <div class="relative hidden sm:block">
+              <input type="text" id="adminGlobalSearch" oninput="handleAdminGlobalSearch(this.value)" placeholder="Search SKU, order ID, customer..." class="w-48 lg:w-64 bg-slate-100 border border-slate-200 rounded-xl px-3 py-1.5 text-xs pl-8 focus:outline-none focus:bg-white focus:border-brand-gold">
+              <span class="absolute left-2.5 top-2 text-slate-400 text-xs">🔍</span>
             </div>
-            <h3 class="text-2xl font-black text-brand-charcoal uppercase mt-0.5">TAG Zee Store Management</h3>
-          </div>
-          <div class="flex items-center gap-2">
-            <button onclick="exportDatabaseJson()" class="px-3.5 py-1.5 bg-brand-sand border border-brand-stone hover:border-brand-charcoal rounded-xl text-xs font-bold text-brand-charcoal flex items-center gap-1 cursor-pointer">
-              <span>💾</span> <span>Backup JSON</span>
+
+            <button onclick="openAddProductModal()" class="px-3.5 py-1.5 bg-brand-charcoal hover:bg-brand-gold text-white text-xs font-bold rounded-xl transition-all shadow-sm flex items-center gap-1.5 cursor-pointer">
+              <span>+</span> <span>New Product</span>
             </button>
-            <button onclick="handleAdminLogout()" class="px-3.5 py-1.5 bg-red-50 hover:bg-red-100 text-red-600 rounded-xl text-xs font-bold transition-all cursor-pointer">
-              Lock Console
-            </button>
-          </div>
-        </div>
 
-        <!-- KPI Metrics Summary -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-          <div class="p-4 bg-brand-sand rounded-2xl border border-brand-stone">
-            <span class="text-[10px] uppercase font-bold text-slate-500 block">Total Revenue</span>
-            <span id="kpiRevenue" class="text-xl sm:text-2xl font-black text-brand-charcoal block mt-0.5">₹18,440</span>
-            <span class="text-[10px] text-emerald-700 font-semibold">↑ Verified Orders</span>
+            <button onclick="closeAdminModal()" class="p-2 text-slate-400 hover:text-slate-800 rounded-xl hover:bg-slate-100 text-lg cursor-pointer" title="Exit to storefront">✕</button>
           </div>
-          <div class="p-4 bg-brand-sand rounded-2xl border border-brand-stone">
-            <span class="text-[10px] uppercase font-bold text-slate-500 block">Total Orders</span>
-            <span id="kpiOrders" class="text-xl sm:text-2xl font-black text-brand-charcoal block mt-0.5">5 Orders</span>
-            <span class="text-[10px] text-slate-500">Domestic & B2B</span>
-          </div>
-          <div class="p-4 bg-brand-sand rounded-2xl border border-brand-stone">
-            <span class="text-[10px] uppercase font-bold text-slate-500 block">Catalog SKUs</span>
-            <span id="kpiCatalogCount" class="text-xl sm:text-2xl font-black text-brand-charcoal block mt-0.5">12 Products</span>
-            <span class="text-[10px] text-slate-500">Brass & Copperware</span>
-          </div>
-          <div class="p-4 bg-brand-sand rounded-2xl border border-brand-stone">
-            <span class="text-[10px] uppercase font-bold text-slate-500 block">Low Stock Alert</span>
-            <span id="kpiLowStock" class="text-xl sm:text-2xl font-black text-amber-600 block mt-0.5">2 SKUs</span>
-            <span class="text-[10px] text-amber-600">&lt; 20 units remaining</span>
-          </div>
-        </div>
+        </header>
 
-        <!-- Navigation Tabs -->
-        <div class="flex items-center gap-2 border-b border-slate-200 overflow-x-auto text-xs font-bold pb-2">
-          <button onclick="switchAdminTab('products')" id="admTab-products" class="px-3.5 py-1.5 rounded-lg bg-brand-charcoal text-white">Product Catalog</button>
-          <button onclick="switchAdminTab('orders')" id="admTab-orders" class="px-3.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100">Orders & Fulfillment</button>
-          <button onclick="switchAdminTab('inventory')" id="admTab-inventory" class="px-3.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100">Inventory Control</button>
-          <button onclick="switchAdminTab('promotions')" id="admTab-promotions" class="px-3.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100">Coupons & Offers</button>
-          <button onclick="switchAdminTab('cms')" id="admTab-cms" class="px-3.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100">Storefront CMS</button>
-        </div>
-
-        <!-- TAB 1: Product Management -->
-        <div id="admSection-products" class="space-y-4">
-          <div class="flex items-center justify-between">
-            <h4 class="font-bold text-sm text-brand-charcoal">Manage Store Products</h4>
-            <button onclick="openAddProductModal()" class="px-3.5 py-1.5 bg-brand-charcoal hover:bg-brand-gold text-white text-xs font-bold rounded-xl transition-all cursor-pointer">
-              + Add New Metalware Product
-            </button>
-          </div>
-          <div class="overflow-x-auto rounded-2xl border border-slate-200">
-            <table class="w-full text-left text-xs">
-              <thead class="bg-slate-50 text-slate-500 font-bold uppercase text-[10px] border-b border-slate-200">
-                <tr>
-                  <th class="p-3">Product</th>
-                  <th class="p-3">Category</th>
-                  <th class="p-3">Price</th>
-                  <th class="p-3">Stock</th>
-                  <th class="p-3">SKU</th>
-                  <th class="p-3 text-right">Actions</th>
-                </tr>
-              </thead>
-              <tbody id="adminProductsTable" class="divide-y divide-slate-100">
-                <!-- Rendered dynamically -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- TAB 2: Orders & Fulfillment -->
-        <div id="admSection-orders" class="hidden space-y-4">
-          <h4 class="font-bold text-sm text-brand-charcoal">Customer Orders Queue</h4>
-          <div class="overflow-x-auto rounded-2xl border border-slate-200">
-            <table class="w-full text-left text-xs">
-              <thead class="bg-slate-50 text-slate-500 font-bold uppercase text-[10px] border-b border-slate-200">
-                <tr>
-                  <th class="p-3">Order ID</th>
-                  <th class="p-3">Customer</th>
-                  <th class="p-3">Items</th>
-                  <th class="p-3">Total</th>
-                  <th class="p-3">Payment</th>
-                  <th class="p-3">Status</th>
-                  <th class="p-3 text-right">Action</th>
-                </tr>
-              </thead>
-              <tbody id="adminOrdersTable" class="divide-y divide-slate-100">
-                <!-- Rendered dynamically -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- TAB 3: Inventory Control -->
-        <div id="admSection-inventory" class="hidden space-y-4">
-          <h4 class="font-bold text-sm text-brand-charcoal">Real-Time Foundry Stock Levels</h4>
-          <div class="overflow-x-auto rounded-2xl border border-slate-200">
-            <table class="w-full text-left text-xs">
-              <thead class="bg-slate-50 text-slate-500 font-bold uppercase text-[10px] border-b border-slate-200">
-                <tr>
-                  <th class="p-3">Item</th>
-                  <th class="p-3">SKU</th>
-                  <th class="p-3">Current Stock</th>
-                  <th class="p-3">Status</th>
-                  <th class="p-3 text-right">Quick Restock</th>
-                </tr>
-              </thead>
-              <tbody id="adminInventoryTable" class="divide-y divide-slate-100">
-                <!-- Rendered dynamically -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- TAB 4: Coupons & Promotions -->
-        <div id="admSection-promotions" class="hidden space-y-4">
-          <div class="flex items-center justify-between">
-            <h4 class="font-bold text-sm text-brand-charcoal">Active Store Coupons</h4>
-            <button onclick="promptCreateCoupon()" class="px-3.5 py-1.5 bg-brand-charcoal hover:bg-brand-gold text-white text-xs font-bold rounded-xl transition-all cursor-pointer">
-              + Create New Coupon
-            </button>
-          </div>
-          <div id="adminCouponsList" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <!-- Rendered dynamically -->
-          </div>
-        </div>
-
-        <!-- TAB 5: Storefront CMS Settings -->
-        <div id="admSection-cms" class="hidden space-y-4 text-xs">
-          <h4 class="font-bold text-sm text-brand-charcoal">Storefront Copy & Brand Settings</h4>
-          <form onsubmit="handleSaveCmsSettings(event)" class="space-y-3 max-w-2xl">
-            <div>
-              <label class="block mb-1 font-bold text-slate-700">Top Announcement Bar Text</label>
-              <input type="text" id="cmsAnnouncement" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2">
-            </div>
-            <div>
-              <label class="block mb-1 font-bold text-slate-700">Hero Main Headline</label>
-              <input type="text" id="cmsHeroHeadline" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 font-bold">
-            </div>
-            <div>
-              <label class="block mb-1 font-bold text-slate-700">Hero Supporting Subtitle</label>
-              <textarea id="cmsHeroSubhead" rows="2" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2"></textarea>
-            </div>
-            <div class="grid grid-cols-2 gap-3">
-              <div>
-                <label class="block mb-1 font-bold text-slate-700">Owner 1 Phone (Zeefaham Rais)</label>
-                <input type="text" id="cmsPhone1" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 font-mono">
+        <!-- Scrollable Workspace Body -->
+        <div class="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 space-y-6">
+          
+          <!-- TAB 1: EXECUTIVE DASHBOARD -->
+          <div id="admSection-dashboard" class="space-y-6">
+            <!-- 4 Top KPI Cards -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+              <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                <span class="text-[10px] uppercase font-bold text-slate-400 block">Gross Revenue</span>
+                <span id="kpiRevenue" class="text-xl sm:text-2xl font-black text-slate-900 block mt-0.5">₹0</span>
+                <span class="text-[10px] text-emerald-600 font-bold">↑ Verified Domestic & B2B</span>
               </div>
-              <div>
-                <label class="block mb-1 font-bold text-slate-700">Owner 2 Phone (Atir Rais)</label>
-                <input type="text" id="cmsPhone2" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2 font-mono">
+              <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                <span class="text-[10px] uppercase font-bold text-slate-400 block">Total Orders Placed</span>
+                <span id="kpiOrders" class="text-xl sm:text-2xl font-black text-slate-900 block mt-0.5">0 Orders</span>
+                <span class="text-[10px] text-slate-500">Live Active Orders</span>
+              </div>
+              <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                <span class="text-[10px] uppercase font-bold text-slate-400 block">Catalog SKUs</span>
+                <span id="kpiCatalogCount" class="text-xl sm:text-2xl font-black text-slate-900 block mt-0.5">12 SKUs</span>
+                <span class="text-[10px] text-slate-500">Brass, Copper & Iron</span>
+              </div>
+              <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                <span class="text-[10px] uppercase font-bold text-slate-400 block">Low Stock Alert</span>
+                <span id="kpiLowStock" class="text-xl sm:text-2xl font-black text-amber-600 block mt-0.5">0 SKUs</span>
+                <span class="text-[10px] text-amber-600 font-semibold">&lt; 25 units remaining</span>
               </div>
             </div>
-            <button type="submit" class="px-6 py-2.5 bg-brand-charcoal hover:bg-brand-gold text-white font-bold rounded-xl uppercase tracking-wider transition-all cursor-pointer">
-              Save Storefront Changes
-            </button>
-          </form>
+
+            <!-- 7-Day Revenue Trend Visualizer (CSS / SVG Bar Chart) -->
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h4 class="font-extrabold text-sm text-slate-800">Weekly Revenue & Dispatch Velocity</h4>
+                  <p class="text-xs text-slate-400">Daily sales breakdown across Moradabad foundry fulfillment centers.</p>
+                </div>
+                <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+                  +38% vs Last Week
+                </span>
+              </div>
+
+              <!-- Bar Chart Container -->
+              <div class="h-44 pt-4 flex items-end justify-between gap-2 sm:gap-4 border-b border-slate-100 pb-2">
+                <div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end group">
+                  <div class="w-full max-w-[42px] bg-brand-stone hover:bg-brand-gold rounded-t-xl transition-all duration-300 relative" style="height: 40%;">
+                    <span class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[9px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">₹14k</span>
+                  </div>
+                  <span class="text-[10px] text-slate-400 font-mono font-bold">Mon</span>
+                </div>
+                <div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end group">
+                  <div class="w-full max-w-[42px] bg-brand-stone hover:bg-brand-gold rounded-t-xl transition-all duration-300 relative" style="height: 55%;">
+                    <span class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[9px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">₹21k</span>
+                  </div>
+                  <span class="text-[10px] text-slate-400 font-mono font-bold">Tue</span>
+                </div>
+                <div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end group">
+                  <div class="w-full max-w-[42px] bg-brand-stone hover:bg-brand-gold rounded-t-xl transition-all duration-300 relative" style="height: 48%;">
+                    <span class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[9px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">₹18k</span>
+                  </div>
+                  <span class="text-[10px] text-slate-400 font-mono font-bold">Wed</span>
+                </div>
+                <div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end group">
+                  <div class="w-full max-w-[42px] bg-brand-stone hover:bg-brand-gold rounded-t-xl transition-all duration-300 relative" style="height: 70%;">
+                    <span class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[9px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">₹29k</span>
+                  </div>
+                  <span class="text-[10px] text-slate-400 font-mono font-bold">Thu</span>
+                </div>
+                <div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end group">
+                  <div class="w-full max-w-[42px] bg-brand-stone hover:bg-brand-gold rounded-t-xl transition-all duration-300 relative" style="height: 85%;">
+                    <span class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[9px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">₹38k</span>
+                  </div>
+                  <span class="text-[10px] text-slate-400 font-mono font-bold">Fri</span>
+                </div>
+                <div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end group">
+                  <div class="w-full max-w-[42px] bg-brand-charcoal hover:bg-brand-gold rounded-t-xl transition-all duration-300 relative" style="height: 98%;">
+                    <span class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[9px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">₹44k</span>
+                  </div>
+                  <span class="text-[10px] text-brand-charcoal font-mono font-black">Sat</span>
+                </div>
+                <div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end group">
+                  <div class="w-full max-w-[42px] bg-brand-gold rounded-t-xl transition-all duration-300 relative" style="height: 88%;">
+                    <span class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[9px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">₹40k</span>
+                  </div>
+                  <span class="text-[10px] text-brand-gold font-mono font-black">Sun</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Action Tiles -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <button onclick="switchAdminTab('products')" class="p-4 bg-white hover:bg-brand-sand/50 rounded-2xl border border-slate-200 text-left transition-all cursor-pointer shadow-sm">
+                <span class="text-xl mb-1 block">📦</span>
+                <strong class="text-xs text-slate-800 block">Manage Product Catalog</strong>
+                <span class="text-[10.5px] text-slate-500">Update prices, finishes, and stock</span>
+              </button>
+              <button onclick="switchAdminTab('orders')" class="p-4 bg-white hover:bg-brand-sand/50 rounded-2xl border border-slate-200 text-left transition-all cursor-pointer shadow-sm">
+                <span class="text-xl mb-1 block">🛒</span>
+                <strong class="text-xs text-slate-800 block">Fulfill & Dispatch Orders</strong>
+                <span class="text-[10.5px] text-slate-500">Print tax invoices & WhatsApp tracking</span>
+              </button>
+              <button onclick="switchAdminTab('b2b')" class="p-4 bg-white hover:bg-brand-sand/50 rounded-2xl border border-slate-200 text-left transition-all cursor-pointer shadow-sm">
+                <span class="text-xl mb-1 block">🏢</span>
+                <strong class="text-xs text-slate-800 block">B2B Wholesale Inquiries</strong>
+                <span class="text-[10.5px] text-slate-500">Tier volume RFQs and export quotes</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- TAB 2: PRODUCTS & SKUS -->
+          <div id="admSection-products" class="hidden space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="font-extrabold text-sm text-slate-800">Master Product Catalog</h3>
+                <p class="text-xs text-slate-500">Foundry metalware, dimensions, pricing, and live inventory levels.</p>
+              </div>
+              <button onclick="openAddProductModal()" class="px-4 py-2 bg-brand-charcoal hover:bg-brand-gold text-white text-xs font-bold rounded-xl transition-all shadow-sm cursor-pointer">
+                + Add Handcrafted SKU
+              </button>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-x-auto">
+              <table class="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr class="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase text-[10px]">
+                    <th class="p-3.5">Artifact Name</th>
+                    <th class="p-3.5">Category</th>
+                    <th class="p-3.5">Retail Price</th>
+                    <th class="p-3.5">Stock</th>
+                    <th class="p-3.5">SKU</th>
+                    <th class="p-3.5 text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="adminProductsTable" class="divide-y divide-slate-100">
+                  <!-- Populated via JavaScript -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TAB 3: ORDERS & DISPATCH -->
+          <div id="admSection-orders" class="hidden space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="font-extrabold text-sm text-slate-800">Orders & Shipment Pipeline</h3>
+                <p class="text-xs text-slate-500">Live order status, Delhivery AWB logistics, tax invoice printing and customer updates.</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-x-auto">
+              <table class="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr class="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase text-[10px]">
+                    <th class="p-3.5">Order ID</th>
+                    <th class="p-3.5">Customer & Phone</th>
+                    <th class="p-3.5">Items</th>
+                    <th class="p-3.5">Amount</th>
+                    <th class="p-3.5">Payment</th>
+                    <th class="p-3.5">Status</th>
+                    <th class="p-3.5 text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="adminOrdersTable" class="divide-y divide-slate-100">
+                  <!-- Populated via JavaScript -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TAB 4: B2B WHOLESALE RFQS -->
+          <div id="admSection-b2b" class="hidden space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="font-extrabold text-sm text-slate-800">B2B Wholesale & Export Inquiries</h3>
+                <p class="text-xs text-slate-500">Direct factory volume requests from retailers, hotels, and export buyers.</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-x-auto">
+              <table class="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr class="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase text-[10px]">
+                    <th class="p-3.5">Buyer / Firm Name</th>
+                    <th class="p-3.5">Contact Phone</th>
+                    <th class="p-3.5">Requested Volume</th>
+                    <th class="p-3.5">Specifications Required</th>
+                    <th class="p-3.5 text-right">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="adminB2BTable" class="divide-y divide-slate-100">
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 font-bold text-slate-800">Oberoi Luxury Heritage Resort<br><span class="text-[10.5px] text-slate-400">Jaipur, Rajasthan</span></td>
+                    <td class="p-3.5 font-mono text-slate-700">+91 98290 11442</td>
+                    <td class="p-3.5"><span class="px-2 py-0.5 rounded text-[10.5px] font-bold bg-amber-100 text-amber-800">51-200 Pcs (45% Tier)</span></td>
+                    <td class="p-3.5 text-slate-600">60x Imperial Brass Urlis with custom laser logo engraving</td>
+                    <td class="p-3.5 text-right">
+                      <a href="https://wa.me/919829011442?text=Hi,%20this%20is%20Zeefaham%20Rais%20from%20TAG%20ZEE%20Moradabad.%20Regarding%20your%20wholesale%20urli%20inquiry..." target="_blank" class="px-3 py-1 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-bold inline-block">💬 WhatsApp Reply</a>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 font-bold text-slate-800">Vedic Wellness Boutique<br><span class="text-[10.5px] text-slate-400">Dubai, UAE (Export)</span></td>
+                    <td class="p-3.5 font-mono text-slate-700">+971 50 123 4567</td>
+                    <td class="p-3.5"><span class="px-2 py-0.5 rounded text-[10.5px] font-bold bg-brand-charcoal text-white">200-1000 Pcs (55% Tier)</span></td>
+                    <td class="p-3.5 text-slate-600">Hammered Pure Copper Dispensers (5L) with drop-test packaging</td>
+                    <td class="p-3.5 text-right">
+                      <a href="https://wa.me/971501234567?text=Hi,%20this%20is%20Zeefaham%20from%20TAG%20ZEE.%20Regarding%20your%20export%20inquiry%20for%20copper%20dispensers..." target="_blank" class="px-3 py-1 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-bold inline-block">💬 WhatsApp Reply</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TAB 5: INVENTORY & STOCK -->
+          <div id="admSection-inventory" class="hidden space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="font-extrabold text-sm text-slate-800">Inventory & Foundry Restock Controller</h3>
+                <p class="text-xs text-slate-500">Live units in Moradabad foundry warehouse with 1-click batch restock.</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-x-auto">
+              <table class="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr class="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase text-[10px]">
+                    <th class="p-3.5">Product</th>
+                    <th class="p-3.5">SKU</th>
+                    <th class="p-3.5">Stock Level</th>
+                    <th class="p-3.5">Status</th>
+                    <th class="p-3.5 text-right">Quick Restock</th>
+                  </tr>
+                </thead>
+                <tbody id="adminInventoryTable" class="divide-y divide-slate-100">
+                  <!-- Populated via JavaScript -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TAB 6: COUPONS & PROMOS -->
+          <div id="admSection-coupons" class="hidden space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="font-extrabold text-sm text-slate-800">Promotions & Discount Codes</h3>
+                <p class="text-xs text-slate-500">Active discount rules and instant promotional codes.</p>
+              </div>
+              <button onclick="promptCreateCoupon()" class="px-4 py-2 bg-brand-charcoal hover:bg-brand-gold text-white text-xs font-bold rounded-xl transition-all shadow-sm cursor-pointer">
+                + Create Coupon
+              </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="font-mono text-base font-black text-brand-gold">TAGZEE10</span>
+                  <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">Active</span>
+                </div>
+                <p class="text-xs text-slate-600">10% Off on entire order above ₹1,999.</p>
+                <span class="text-[10px] text-slate-400 block font-mono">Used 48 times this month</span>
+              </div>
+
+              <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="font-mono text-base font-black text-brand-gold">WELCOME500</span>
+                  <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">Active</span>
+                </div>
+                <p class="text-xs text-slate-600">Flat ₹500 discount on first purchase above ₹2,999.</p>
+                <span class="text-[10px] text-slate-400 block font-mono">Used 23 times this month</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 7: CUSTOMER CRM -->
+          <div id="admSection-customers" class="hidden space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="font-extrabold text-sm text-slate-800">Customer Roster & Connoisseur Profiles</h3>
+                <p class="text-xs text-slate-500">Buyer contact profiles and historical transaction volume.</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-x-auto">
+              <table class="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr class="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold uppercase text-[10px]">
+                    <th class="p-3.5">Customer Name</th>
+                    <th class="p-3.5">Phone Number</th>
+                    <th class="p-3.5">City / State</th>
+                    <th class="p-3.5">Orders</th>
+                    <th class="p-3.5 text-right">Lifetime Spend</th>
+                  </tr>
+                </thead>
+                <tbody id="adminCustomersTable" class="divide-y divide-slate-100">
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 font-bold text-slate-800">Pooja Sharma</td>
+                    <td class="p-3.5 font-mono text-slate-600">+91 98101 23456</td>
+                    <td class="p-3.5 text-slate-600">South Delhi, Delhi</td>
+                    <td class="p-3.5 font-bold">2 Orders</td>
+                    <td class="p-3.5 text-right font-black text-slate-900">₹6,997</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 font-bold text-slate-800">Vikramaditya Singhania</td>
+                    <td class="p-3.5 font-mono text-slate-600">+91 98200 87654</td>
+                    <td class="p-3.5 text-slate-600">Bandra West, Mumbai</td>
+                    <td class="p-3.5 font-bold">1 Order</td>
+                    <td class="p-3.5 text-right font-black text-slate-900">₹4,498</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3.5 font-bold text-slate-800">Ananya Singhal</td>
+                    <td class="p-3.5 font-mono text-slate-600">+91 97400 33211</td>
+                    <td class="p-3.5 text-slate-600">Indiranagar, Bengaluru</td>
+                    <td class="p-3.5 font-bold">1 Order</td>
+                    <td class="p-3.5 text-right font-black text-slate-900">₹3,899</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TAB 8: TAX & GST -->
+          <div id="admSection-tax" class="hidden space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="font-extrabold text-sm text-slate-800">GST Sales Register & HSN Tax Accounting</h3>
+                <p class="text-xs text-slate-500">TAG ZEE Foundry GSTIN: <strong>09AAACT9821R1Z5</strong> • Moradabad Circle</p>
+              </div>
+              <button onclick="exportDatabaseJson()" class="px-4 py-2 bg-brand-charcoal text-white rounded-xl text-xs font-bold cursor-pointer">
+                📥 Export Tax Register
+              </button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                <span class="text-[10px] text-slate-400 font-bold block uppercase">HSN Code 7418 (Brass)</span>
+                <span class="text-lg font-black text-slate-800 block mt-1">12% GST Rate</span>
+                <span class="text-[11px] text-slate-500">CGST 6% + SGST 6%</span>
+              </div>
+              <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                <span class="text-[10px] text-slate-400 font-bold block uppercase">HSN Code 7419 (Copper)</span>
+                <span class="text-lg font-black text-slate-800 block mt-1">12% GST Rate</span>
+                <span class="text-[11px] text-slate-500">Food-grade Ayurvedic vessels</span>
+              </div>
+              <div class="p-4 bg-emerald-50 rounded-2xl border border-emerald-200 shadow-sm">
+                <span class="text-[10px] text-emerald-800 font-bold block uppercase">Total GST Output Tax</span>
+                <span class="text-lg font-black text-emerald-900 block mt-1">₹3,184</span>
+                <span class="text-[11px] text-emerald-700 font-semibold">100% Compliant</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 9: STORE SETTINGS -->
+          <div id="admSection-settings" class="hidden space-y-4">
+            <div>
+              <h3 class="font-extrabold text-sm text-slate-800">Storefront CMS & Operations Configuration</h3>
+              <p class="text-xs text-slate-500">Update announcement text, threshold limits, and support contact.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-4 text-xs">
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Announcement Bar Message:</label>
+                <input type="text" id="settingAnnouncement" value="✦ MORADABAD FOUNDRY DIRECT • 100% SOLID BRASS & COPPER • FREE WOODEN CRATE DELIVERY ABOVE ₹1,499 ✦" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs focus:outline-none">
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block font-bold text-slate-700 mb-1">Free Shipping Threshold (INR ₹):</label>
+                  <input type="number" id="settingFreeShip" value="1499" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs focus:outline-none">
+                </div>
+                <div>
+                  <label class="block font-bold text-slate-700 mb-1">Master WhatsApp Support Number:</label>
+                  <input type="text" id="settingPhone" value="+91 7351366786" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs font-mono focus:outline-none">
+                </div>
+              </div>
+
+              <button type="button" onclick="saveStoreSettings()" class="px-6 py-2.5 bg-brand-charcoal hover:bg-brand-gold text-white font-bold rounded-xl transition-all shadow-sm cursor-pointer">
+                Save & Apply Settings
+              </button>
+            </div>
+          </div>
+
         </div>
 
-      </div>
+      </main>
+
     </div>
   </div>
 
-  <!-- Add/Edit Product Modal -->
-  <div id="productFormModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
-    <div onclick="closeProductFormModal()" class="absolute inset-0 drawer-backdrop"></div>
-    <div class="relative bg-white rounded-3xl max-w-lg w-full max-h-[92vh] overflow-y-auto shadow-2xl border border-brand-charcoal z-10 p-6">
-      <button onclick="closeProductFormModal()" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-800 rounded-full hover:bg-slate-100 text-lg cursor-pointer">✕</button>
-
-      <h3 id="productFormTitle" class="text-xl font-black text-brand-charcoal uppercase mb-3">Add Product</h3>
-      <form onsubmit="handleSaveProduct(event)" class="space-y-3 text-xs">
-        <input type="hidden" id="pfId">
-        <div>
-          <label class="block mb-1 font-bold text-slate-700">Product Title *</label>
-          <input type="text" id="pfTitle" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2">
-        </div>
-        <div class="grid grid-cols-2 gap-3">
-          <div>
-            <label class="block mb-1 font-bold text-slate-700">Category *</label>
-            <select id="pfCategory" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 font-bold">
-              <option value="Metal Handicrafts">Metal Handicrafts</option>
-              <option value="Home & Kitchen">Home & Kitchen</option>
-              <option value="Garden Decor">Garden Decor</option>
-              <option value="Ornaments">Ornaments</option>
-              <option value="Lanterns">Lanterns</option>
-              <option value="Tableware">Tableware</option>
-            </select>
-          </div>
-          <div>
-            <label class="block mb-1 font-bold text-slate-700">Price (INR ₹) *</label>
-            <input type="number" id="pfPrice" required min="1" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 font-mono">
-          </div>
-        </div>
-        <div class="grid grid-cols-2 gap-3">
-          <div>
-            <label class="block mb-1 font-bold text-slate-700">Old / MRP Price</label>
-            <input type="number" id="pfOldPrice" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 font-mono">
-          </div>
-          <div>
-            <label class="block mb-1 font-bold text-slate-700">Stock Quantity *</label>
-            <input type="number" id="pfStock" required min="0" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 font-mono">
-          </div>
-        </div>
-        <div>
-          <label class="block mb-1 font-bold text-slate-700">Image URL</label>
-          <input type="url" id="pfImage" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2">
-        </div>
-        <div>
-          <label class="block mb-1 font-bold text-slate-700">Product Description</label>
-          <textarea id="pfDesc" rows="3" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2"></textarea>
-        </div>
-        <button type="submit" class="w-full py-3 bg-brand-charcoal hover:bg-brand-gold text-white font-bold rounded-xl uppercase tracking-wider transition-all cursor-pointer">
-          Save Product to Catalogue
-        </button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Customer Account Modal -->
-  <div id="accountModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
-    <div onclick="closeAccountModal()" class="absolute inset-0 drawer-backdrop"></div>
-    <div class="relative bg-white rounded-3xl max-w-md w-full max-h-[92vh] overflow-y-auto shadow-2xl border border-brand-gold z-10 p-6 sm:p-8">
-      <button onclick="closeAccountModal()" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-800 rounded-full hover:bg-slate-100 text-lg cursor-pointer">✕</button>
-
-      <div id="accountLoggedOutView" class="space-y-4">
-        <div class="text-center space-y-1">
-          <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold">CUSTOMER PORTAL</span>
-          <h3 class="text-xl font-black text-brand-charcoal uppercase">Welcome to TAG Zee</h3>
-          <p class="text-xs text-slate-500">Sign in to view orders, saved addresses & wishlist.</p>
-        </div>
-
-        <form onsubmit="handleCustomerLogin(event)" class="space-y-3 text-xs">
-          <div>
-            <label class="block mb-1 font-bold text-slate-700">Email or Mobile Phone</label>
-            <input type="text" id="custLoginEmail" required placeholder="name@example.com" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs focus:outline-none focus:border-brand-charcoal">
-          </div>
-          <div>
-            <label class="block mb-1 font-bold text-slate-700">Password</label>
-            <input type="password" id="custLoginPassword" required placeholder="••••••••" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs focus:outline-none focus:border-brand-charcoal">
-          </div>
-          <button type="submit" class="w-full py-3 bg-brand-charcoal hover:bg-brand-gold text-white font-bold text-xs uppercase rounded-xl tracking-wider transition-all cursor-pointer">
-            SIGN IN
-          </button>
-        </form>
-
-        <div class="text-center text-xs text-slate-400 pt-2 border-t border-slate-100">
-          <span>New connoisseur? </span>
-          <button onclick="handleQuickDemoLogin()" class="text-brand-gold font-bold hover:underline cursor-pointer">Explore with Demo Account</button>
-        </div>
-      </div>
-
-      <div id="accountLoggedInView" class="hidden space-y-4 text-xs">
-        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
-          <div>
-            <h4 id="custProfileName" class="font-black text-base text-brand-charcoal">Customer Profile</h4>
-            <span id="custProfileEmail" class="text-slate-400 text-xs">customer@example.com</span>
-          </div>
-          <button onclick="handleCustomerLogout()" class="text-red-500 font-bold hover:underline text-xs">Sign Out</button>
-        </div>
-
-        <div class="space-y-2">
-          <h5 class="font-extrabold uppercase tracking-wider text-slate-700">Your Recent Orders</h5>
-          <div id="custOrdersList" class="space-y-2 max-h-48 overflow-y-auto">
-            <!-- Injected via JavaScript -->
-          </div>
-        </div>
-
-        <div class="pt-2">
-          <button onclick="openTrackOrderModal()" class="w-full py-2 bg-brand-sand border border-brand-stone hover:border-brand-charcoal text-brand-charcoal font-bold rounded-xl text-xs">
-            📦 Track Dispatched Orders
-          </button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Wishlist Modal -->
-  <div id="wishlistModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
-    <div onclick="closeWishlistModal()" class="absolute inset-0 drawer-backdrop"></div>
-    <div class="relative bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-brand-gold z-10 p-6 sm:p-8">
-      <button onclick="closeWishlistModal()" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-800 rounded-full hover:bg-slate-100 text-lg cursor-pointer">✕</button>
-
-      <div class="space-y-1 mb-4">
-        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-goldDark">SAVED HEIRLOOMS</span>
-        <h3 class="text-2xl font-black text-brand-charcoal uppercase">Your Wishlist</h3>
-        <p class="text-xs text-slate-500">Saved metalware pieces for your upcoming home accents or festive gifting.</p>
-      </div>
-
-      <div id="wishlistItemsContainer" class="space-y-3">
-        <!-- Rendered via JavaScript -->
-      </div>
-    </div>
-  </div>
-
-  
-  <!-- ================= 19. TRANSPARENT MARKET BENCHMARK MODAL (TAG ZEE vs TOP PLATFORMS) ================= -->
+<!-- ================= 19. TRANSPARENT MARKET BENCHMARK MODAL (TAG ZEE vs TOP PLATFORMS) ================= -->
   <div id="benchmarkModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6">
     <div onclick="closeBenchmarkModal()" class="absolute inset-0 drawer-backdrop"></div>
     <div class="relative bg-white rounded-3xl max-w-4xl w-full max-h-[92vh] overflow-y-auto shadow-2xl border-2 border-brand-gold z-10 p-5 sm:p-8">
@@ -2291,7 +2472,7 @@
         rating: 4.8,
         reviewsCount: 76,
         image: "https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?auto=format&fit=crop&w=600&q=80",
-        thumb2: "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=600&q=80",
+        thumb2: "https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?auto=format&fit=crop&w=600&q=80",
         desc: "Electroplated rust-resistant gold metal botanical planter bowl resting upon a sturdy matte black wrought-iron tripod stand. Brings contemporary luxury botanical aesthetics to living spaces and balconies.",
         dimensions: "9\" Pot Diameter x 18\" Total Height",
         weight: "1.40 kg",
@@ -2350,7 +2531,7 @@
         discount: "-26%",
         rating: 5.0,
         reviewsCount: 110,
-        image: "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?auto=format&fit=crop&w=600&q=80",
         thumb2: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
         desc: "Solid brass consecrated Lord Ganesha seated in blessing posture on a double-petaled lotus pedestal. Intricate crown, modak, and trunk etching. Hand-buffed by Moradabad artisans.",
         dimensions: "6\" Width x 4.5\" Depth x 8.5\" Height",
@@ -2391,7 +2572,7 @@
         rating: 4.9,
         reviewsCount: 120,
         image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=600&q=80",
-        thumb2: "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=600&q=80",
+        thumb2: "https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?auto=format&fit=crop&w=600&q=80",
         desc: "Solid brass traditional loban and sambrani burner fitted with a heat-insulated turned rosewood handle. Features intricate perforated dome cover for aromatic diffusion.",
         dimensions: "9\" Length x 4.5\" Height",
         weight: "650 grams",
@@ -2459,7 +2640,7 @@
       } catch (e) {}
     }
 
-    let productsDB = loadStorage('tagzee_products_v2', initialProductsDB);
+    let productsDB = loadStorage('tagzee_products_v4', initialProductsDB);
     let cart = loadStorage('tagzee_cart_v2', [
       { id: 1, title: productsDB[0].title, price: productsDB[0].price, qty: 1, image: productsDB[0].image },
       { id: 2, title: productsDB[1].title, price: productsDB[1].price, qty: 1, image: productsDB[1].image }
@@ -3278,6 +3459,7 @@
       if (adminSession) {
         document.getElementById('adminGateView').classList.add('hidden');
         document.getElementById('adminDashboardView').classList.remove('hidden');
+        switchAdminTab('dashboard');
         renderAdminDashboard();
       } else {
         document.getElementById('adminGateView').classList.remove('hidden');
@@ -3311,20 +3493,66 @@
     }
 
     function switchAdminTab(tabName) {
-      const tabs = ['products', 'orders', 'inventory', 'promotions', 'cms'];
-      tabs.forEach(t => {
-        const sec = document.getElementById(`admSection-${t}`);
-        const btn = document.getElementById(`admTab-${t}`);
-        if (sec && btn) {
+      const allTabs = ['dashboard', 'products', 'orders', 'b2b', 'inventory', 'coupons', 'customers', 'tax', 'settings'];
+      const titles = {
+        dashboard: 'Executive Dashboard & Live Sales KPIs',
+        products: 'Master Product Catalog & SKUs',
+        orders: 'Customer Orders & Shipment Pipeline',
+        b2b: 'B2B Wholesale & Export Inquiries',
+        inventory: 'Foundry Warehouse Stock Controller',
+        coupons: 'Promotions & Discount Codes',
+        customers: 'Customer Relationship Roster (CRM)',
+        tax: 'GST & Tax Accounting (HSN 7418/7419)',
+        settings: 'Storefront CMS & Operations Settings'
+      };
+
+      allTabs.forEach(t => {
+        const sec = document.getElementById('admSection-' + t);
+        const navBtn = document.getElementById('adminNav-' + t);
+        if (sec) {
+          if (t === tabName) sec.classList.remove('hidden');
+          else sec.classList.add('hidden');
+        }
+        if (navBtn) {
           if (t === tabName) {
-            sec.classList.remove('hidden');
-            btn.className = 'px-3.5 py-1.5 rounded-lg bg-brand-charcoal text-white font-bold';
+            navBtn.className = 'shrink-0 md:shrink md:w-full flex items-center justify-between px-3 md:px-3.5 py-2 md:py-2.5 rounded-xl font-bold transition-all bg-brand-gold text-white shadow-sm cursor-pointer whitespace-nowrap';
           } else {
-            sec.classList.add('hidden');
-            btn.className = 'px-3.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 font-bold';
+            navBtn.className = 'shrink-0 md:shrink md:w-full flex items-center justify-between px-3 md:px-3.5 py-2 md:py-2.5 rounded-xl font-bold transition-all text-slate-400 hover:text-white hover:bg-[#20201E] cursor-pointer whitespace-nowrap';
           }
         }
       });
+
+      const headerTitleEl = document.getElementById('adminHeaderTitle');
+      if (headerTitleEl && titles[tabName]) {
+        headerTitleEl.innerText = titles[tabName];
+      }
+    }
+
+    function handleAdminGlobalSearch(query) {
+      const q = (query || '').toLowerCase().trim();
+      const prodRows = document.querySelectorAll('#adminProductsTable tr');
+      prodRows.forEach(r => {
+        const text = r.innerText.toLowerCase();
+        r.style.display = text.includes(q) ? '' : 'none';
+      });
+
+      const orderRows = document.querySelectorAll('#adminOrdersTable tr');
+      orderRows.forEach(r => {
+        const text = r.innerText.toLowerCase();
+        r.style.display = text.includes(q) ? '' : 'none';
+      });
+    }
+
+    function saveStoreSettings() {
+      const ann = document.getElementById('settingAnnouncement')?.value;
+      const ship = document.getElementById('settingFreeShip')?.value;
+      const phone = document.getElementById('settingPhone')?.value;
+
+      if (ann) {
+        const annEl = document.getElementById('announcementText');
+        if (annEl) annEl.innerText = ann;
+      }
+      showToast('Store settings saved & applied to live storefront!', '⚙️');
     }
 
     function renderAdminDashboard() {
@@ -3334,6 +3562,13 @@
       document.getElementById('kpiOrders').innerText = `${ordersDB.length} Orders`;
       document.getElementById('kpiCatalogCount').innerText = `${productsDB.length} SKUs`;
       document.getElementById('kpiLowStock').innerText = `${lowStock} SKUs`;
+
+      const sideProd = document.getElementById('sideBadgeProducts');
+      if (sideProd) sideProd.innerText = productsDB.length;
+      const sideOrders = document.getElementById('sideBadgeOrders');
+      if (sideOrders) sideOrders.innerText = ordersDB.length + ' Live';
+      const sideStock = document.getElementById('sideBadgeStock');
+      if (sideStock) sideStock.innerText = lowStock > 0 ? `${lowStock} Alerts` : 'Good';
 
       // Products Table
       const prodTbody = document.getElementById('adminProductsTable');
@@ -3674,7 +3909,7 @@
     const heroImages = [
       { img: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80", caption: "Imperial Mughal Handcrafted Urli Ensemble" },
       { img: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80", caption: "Ayurvedic Hammered Pure Copper Dispenser" },
-      { img: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80", caption: "Moroccan Filigree Punched Metal Lantern" }
+      { img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80", caption: "Moroccan Filigree Punched Metal Lantern" }
     ];
     let currentHeroIndex = 0;
 
