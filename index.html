@@ -113,31 +113,41 @@
 <body class="bg-brand-ivory text-brand-charcoal antialiased selection:bg-brand-gold selection:text-white">
 
   <!-- ================= 01. ROYAL TOP ANNOUNCEMENT TICKER ================= -->
-  <div class="bg-brand-charcoalDark text-brand-ivory text-xs border-b border-brand-gold/30 sticky top-0 z-40 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between gap-3 text-[11px]">
+  <div class="bg-[#141412] text-stone-300 text-xs border-b border-brand-gold/25 sticky top-0 z-40 h-9 flex items-center">
+    <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 text-[11px]">
       
-      <!-- Left: Rotating News Ticker -->
-      <div class="flex items-center gap-2 overflow-hidden w-full lg:w-3/4">
-        <span class="inline-block w-2 h-2 rounded-full bg-brand-gold animate-ping shrink-0"></span>
-        <div class="overflow-hidden whitespace-nowrap">
-          <button onclick="openBenchmarkModal()" class="mr-3 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/10 hover:bg-white/20 text-brand-gold text-[10px] font-black border border-brand-gold/40 transition-all cursor-pointer">
-       <span>🏆</span> <span class="hidden sm:inline">VS MARKET:</span> <span>WHY TAG ZEE?</span>
-     </button>
-     <p id="announcementText" class="font-bold tracking-wider uppercase text-brand-stone truncate">
-            ✦ MORADABAD FOUNDRY DIRECT • 100% SOLID BRASS & COPPER • FREE WOODEN CRATE DELIVERY ABOVE ₹1,499 • B2B EXPORT WHOLESALE AVAILABLE ✦
-          </p>
+      <!-- Left: Provenance Heritage Tag -->
+      <div class="hidden md:flex items-center gap-2 text-stone-400 font-medium tracking-wider shrink-0 text-[10.5px]">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+        <span class="tracking-widest uppercase">Moradabad Foundry Direct</span>
+      </div>
+
+      <!-- Center: Broadcast Offer Ticker (Dynamic via Admin) -->
+      <div class="flex-1 flex items-center justify-center overflow-hidden text-center px-2">
+        <div class="inline-flex items-center gap-2 truncate">
+          <span class="text-brand-gold text-[10px] select-none shrink-0">✦</span>
+          <span id="announcementText" class="font-bold tracking-[0.14em] uppercase text-stone-200 text-[10.5px] sm:text-[11px] truncate">
+            FREE WHITE-GLOVE CRATE DELIVERY ON ORDERS ABOVE ₹1,499 • 100% SOLID BRASS & COPPER
+          </span>
+          <span class="text-brand-gold text-[10px] select-none shrink-0">✦</span>
         </div>
       </div>
 
-      <!-- Right: Fast Actions (B2B RFQ, Track Order, WhatsApp) -->
-      <div class="hidden sm:flex items-center gap-3 shrink-0">
-        <button onclick="openTrackOrderModal()" class="text-slate-300 hover:text-brand-gold transition-colors font-semibold flex items-center gap-1 cursor-pointer">
-          <span>📦</span> <span>Track Order</span>
+      <!-- Right: Fast Actions (Why TAG Zee, Track Order, B2B RFQ) -->
+      <div class="hidden sm:flex items-center gap-3 shrink-0 text-[10.5px] font-semibold text-stone-300">
+        <button onclick="openBenchmarkModal()" class="hover:text-brand-gold transition-colors flex items-center gap-1 cursor-pointer">
+          <span>🏆</span>
+          <span class="tracking-wide">Why TAG Zee?</span>
         </button>
-        <span class="text-slate-600">|</span>
-        <button onclick="openB2BModal()" class="px-3 py-1 rounded bg-brand-gold hover:bg-brand-goldDark text-white font-extrabold transition-all flex items-center gap-1 shadow-sm cursor-pointer active:scale-95">
-          <span>B2B WHOLESALE RFQ</span>
-          <span>→</span>
+        <span class="text-stone-600 select-none">|</span>
+        <button onclick="openTrackOrderModal()" class="hover:text-brand-gold transition-colors flex items-center gap-1 cursor-pointer">
+          <span>📦</span>
+          <span class="tracking-wide">Track Order</span>
+        </button>
+        <span class="text-stone-600 select-none">|</span>
+        <button onclick="openB2BModal()" class="hover:text-brand-gold text-brand-goldLight transition-colors flex items-center gap-1 cursor-pointer font-bold">
+          <span class="tracking-wide">B2B RFQ</span>
+          <span class="text-[9px]">→</span>
         </button>
       </div>
 
@@ -145,12 +155,12 @@
   </div>
 
   <!-- ================= 02. MAIN HEADER & LUXURY NAVIGATION ================= -->
-  <header class="bg-white/95 backdrop-blur-md border-b border-brand-stone sticky top-[33px] z-30 transition-all duration-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between gap-4">
+  <header class="bg-white/95 backdrop-blur-md border-b border-brand-stone/80 sticky top-[36px] z-30 transition-all duration-200 shadow-[0_2px_12px_-3px_rgba(0,0,0,0.03)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       
-      <!-- Brand Logo (Triangle TZ Monogram Replica) -->
+      <!-- Brand Logo (Triangle TZ Monogram + Royal Wordmark) -->
       <a href="#home" class="flex items-center gap-3 group shrink-0">
-        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-charcoal border-2 border-brand-gold text-brand-gold flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-brand-charcoal border-2 border-brand-gold text-brand-gold flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
           <svg class="w-7 h-7 text-brand-gold fill-current" viewBox="0 0 100 100">
             <polygon points="50,12 88,82 12,82" fill="none" stroke="#B88E3E" stroke-width="6" stroke-linejoin="round"/>
             <path d="M30,36 L70,36 M50,36 L50,56 M42,56 L62,56 L42,74 L66,74" fill="none" stroke="#B88E3E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -161,56 +171,86 @@
             <span class="font-serif font-black text-2xl sm:text-3xl tracking-widest text-brand-charcoal">TAG</span>
             <span class="font-serif font-black text-2xl sm:text-3xl tracking-widest text-brand-gold">Zee</span>
           </div>
-          <span class="text-[8px] sm:text-[9.5px] tracking-[0.22em] text-brand-grey font-bold uppercase block mt-0.5">PEETAL NAGRI • MORADABAD FOUNDRY</span>
+          <span class="text-[8.5px] sm:text-[9.5px] tracking-[0.24em] text-stone-500 font-bold uppercase block mt-1">PEETAL NAGRI • MORADABAD FOUNDRY</span>
         </div>
       </a>
 
       <!-- Desktop Navigation Menu -->
-      <nav class="hidden lg:flex items-center gap-7 text-[12px] font-bold text-slate-700 tracking-wider uppercase">
-        <a href="#home" class="text-brand-charcoal hover:text-brand-gold transition-colors">HOME</a>
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-[12px] font-bold text-slate-700 tracking-wider uppercase">
+        <a href="#home" class="text-brand-charcoal hover:text-brand-gold transition-colors relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-brand-gold after:transition-all">HOME</a>
         
         <!-- Shop Dropdown / Mega Menu -->
         <div class="relative group cursor-pointer py-2">
           <span class="hover:text-brand-gold transition-colors flex items-center gap-1">
-            SHOP COLLECTIONS <span class="text-[9px] text-slate-400">▼</span>
+            <span>COLLECTIONS</span>
+            <svg class="w-3 h-3 text-stone-400 group-hover:text-brand-gold group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
           </span>
-          <div class="absolute top-full left-0 hidden group-hover:block w-72 bg-white border border-brand-stone rounded-2xl shadow-2xl py-3 mt-1 z-50 transition-all">
-            <a href="javascript:void(0)" onclick="filterByCategory('All')" class="block px-5 py-2.5 hover:bg-brand-sand text-brand-charcoal text-xs font-bold border-b border-slate-100 flex items-center justify-between">
-              <span>✦ Shop Complete Catalog</span>
-              <span class="text-[10px] text-brand-gold font-mono">12+ Pieces</span>
-            </a>
-            <a href="javascript:void(0)" onclick="filterByCategory('Metal Handicrafts')" class="block px-5 py-2 hover:bg-brand-sand text-slate-700 text-xs font-semibold">🔨 Royal Brass Urlis & Sculptures</a>
-            <a href="javascript:void(0)" onclick="filterByCategory('Home & Kitchen')" class="block px-5 py-2 hover:bg-brand-sand text-slate-700 text-xs font-semibold">🍶 Pure Hammered Copperware</a>
-            <a href="javascript:void(0)" onclick="filterByCategory('Garden Decor')" class="block px-5 py-2 hover:bg-brand-sand text-slate-700 text-xs font-semibold">🌿 Fluted Brass Garden Planters</a>
-            <a href="javascript:void(0)" onclick="filterByCategory('Ornaments')" class="block px-5 py-2 hover:bg-brand-sand text-slate-700 text-xs font-semibold">🪔 Sculpted Peacock Diyas & Idols</a>
-            <a href="javascript:void(0)" onclick="filterByCategory('Lanterns')" class="block px-5 py-2 hover:bg-brand-sand text-slate-700 text-xs font-semibold">🏮 Moroccan Filigree Lanterns</a>
-            <a href="javascript:void(0)" onclick="filterByCategory('Tableware')" class="block px-5 py-2 hover:bg-brand-sand text-slate-700 text-xs font-semibold">🍴 Gold Brass Cutlery Sets</a>
+          <div class="absolute top-full left-0 hidden group-hover:block w-80 bg-white border border-stone-200 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.12)] py-3 mt-1 z-50 transition-all divide-y divide-stone-100">
+            <div class="p-2">
+              <a href="javascript:void(0)" onclick="filterByCategory('All')" class="block px-4 py-2.5 rounded-xl hover:bg-brand-sand text-brand-charcoal text-xs font-bold flex items-center justify-between transition-colors">
+                <span class="flex items-center gap-2">✦ <span>Shop All Pieces</span></span>
+                <span class="text-[10px] text-brand-gold font-mono font-bold">12+ SKUs</span>
+              </a>
+            </div>
+            <div class="p-2 space-y-1">
+              <a href="javascript:void(0)" onclick="filterByCategory('Metal Handicrafts')" class="flex items-center gap-3 px-4 py-2 rounded-xl hover:bg-brand-sand text-stone-700 hover:text-brand-charcoal text-xs font-semibold transition-colors">
+                <span class="text-base">🔨</span>
+                <span>Royal Brass Urlis & Sculptures</span>
+              </a>
+              <a href="javascript:void(0)" onclick="filterByCategory('Home & Kitchen')" class="flex items-center gap-3 px-4 py-2 rounded-xl hover:bg-brand-sand text-stone-700 hover:text-brand-charcoal text-xs font-semibold transition-colors">
+                <span class="text-base">🍶</span>
+                <span>Pure Hammered Copperware</span>
+              </a>
+              <a href="javascript:void(0)" onclick="filterByCategory('Garden Decor')" class="flex items-center gap-3 px-4 py-2 rounded-xl hover:bg-brand-sand text-stone-700 hover:text-brand-charcoal text-xs font-semibold transition-colors">
+                <span class="text-base">🌿</span>
+                <span>Fluted Brass Garden Planters</span>
+              </a>
+              <a href="javascript:void(0)" onclick="filterByCategory('Ornaments')" class="flex items-center gap-3 px-4 py-2 rounded-xl hover:bg-brand-sand text-stone-700 hover:text-brand-charcoal text-xs font-semibold transition-colors">
+                <span class="text-base">🪔</span>
+                <span>Sculpted Peacock Diyas & Idols</span>
+              </a>
+              <a href="javascript:void(0)" onclick="filterByCategory('Lanterns')" class="flex items-center gap-3 px-4 py-2 rounded-xl hover:bg-brand-sand text-stone-700 hover:text-brand-charcoal text-xs font-semibold transition-colors">
+                <span class="text-base">🏮</span>
+                <span>Moroccan Filigree Lanterns</span>
+              </a>
+              <a href="javascript:void(0)" onclick="filterByCategory('Tableware')" class="flex items-center gap-3 px-4 py-2 rounded-xl hover:bg-brand-sand text-stone-700 hover:text-brand-charcoal text-xs font-semibold transition-colors">
+                <span class="text-base">🍴</span>
+                <span>Gold Brass Cutlery Sets</span>
+              </a>
+            </div>
           </div>
         </div>
 
-        <a href="#trending" class="hover:text-brand-gold transition-colors">THE SIGNATURE EDIT</a>
-        <a href="javascript:void(0)" onclick="openB2BModal()" class="text-brand-goldDark hover:text-brand-gold font-extrabold transition-colors flex items-center gap-1.5">
-          <span>🏢 B2B WHOLESALE</span>
-          <span class="bg-brand-gold/15 text-brand-goldDark text-[8.5px] px-1.5 py-0.5 rounded font-black border border-brand-gold/30">FACTORY PRICING</span>
+        <a href="#trending" class="hover:text-brand-gold transition-colors relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-brand-gold after:transition-all">SIGNATURE EDIT</a>
+        
+        <a href="javascript:void(0)" onclick="openB2BModal()" class="text-stone-700 hover:text-brand-gold transition-colors relative py-2 flex items-center gap-1.5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-brand-gold after:transition-all">
+          <span>B2B WHOLESALE</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
         </a>
-        <a href="#about" class="hover:text-brand-gold transition-colors">HERITAGE</a>
-        <a href="#contact" class="hover:text-brand-gold transition-colors">CONTACT</a>
+        
+        <a href="#about" class="hover:text-brand-gold transition-colors relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-brand-gold after:transition-all">HERITAGE</a>
+        <a href="#contact" class="hover:text-brand-gold transition-colors relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-brand-gold after:transition-all">CONTACT</a>
       </nav>
 
-      <!-- Right Header Controls: Search, Currency, Account, Wishlist, Cart -->
+      <!-- Right Header Controls: Currency, Search, Account, Wishlist, Cart, Mobile Toggle -->
       <div class="flex items-center gap-2 sm:gap-3">
         
-        <!-- Currency Selector Dropdown -->
-        <select id="currencySelector" onchange="changeCurrency(this.value)" class="bg-brand-sand border border-brand-stone text-xs font-bold rounded-xl px-2.5 py-1.5 text-slate-800 focus:outline-none focus:border-brand-charcoal cursor-pointer hidden sm:inline-block" title="Select Currency">
-          <option value="INR">₹ INR (India)</option>
-          <option value="USD">$ USD (US)</option>
-          <option value="AED">د.إ AED (UAE)</option>
-          <option value="GBP">£ GBP (UK)</option>
-          <option value="EUR">€ EUR (Europe)</option>
-        </select>
+        <!-- Luxury Currency Selector Pill -->
+        <div class="relative hidden sm:block">
+          <select id="currencySelector" onchange="changeCurrency(this.value)" class="appearance-none bg-stone-50 hover:bg-stone-100 border border-stone-200/90 text-stone-800 text-[11px] font-bold rounded-full pl-3 pr-7 py-1.5 focus:outline-none focus:ring-1 focus:ring-brand-gold cursor-pointer transition-all shadow-sm" title="Currency">
+            <option value="INR">₹ INR</option>
+            <option value="USD">$ USD</option>
+            <option value="AED">د.إ AED</option>
+            <option value="GBP">£ GBP</option>
+            <option value="EUR">€ EUR</option>
+          </select>
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 text-stone-400">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+          </div>
+        </div>
 
         <!-- Search Trigger Button -->
-        <button onclick="toggleSearchBar()" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-slate-700 hover:text-brand-charcoal hover:bg-brand-sand transition-colors cursor-pointer border border-transparent hover:border-brand-stone" title="Search Metalware">
+        <button onclick="toggleSearchBar()" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-stone-700 hover:text-brand-charcoal hover:bg-stone-100 transition-all border border-transparent hover:border-stone-200 cursor-pointer" title="Search Metalware">
           <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -218,7 +258,7 @@
         </button>
 
         <!-- Customer Account / Auth Button -->
-        <button onclick="openAccountModal()" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-slate-700 hover:text-brand-charcoal hover:bg-brand-sand transition-colors cursor-pointer border border-transparent hover:border-brand-stone relative" title="Customer Account">
+        <button onclick="openAccountModal()" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-stone-700 hover:text-brand-charcoal hover:bg-stone-100 transition-all border border-transparent hover:border-stone-200 cursor-pointer relative" title="Customer Account">
           <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
@@ -227,28 +267,28 @@
         </button>
 
         <!-- Wishlist Button with Badge -->
-        <button onclick="openWishlistModal()" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-slate-700 hover:text-brand-charcoal hover:bg-brand-sand transition-colors cursor-pointer border border-transparent hover:border-brand-stone relative" title="Saved Wishlist">
+        <button onclick="openWishlistModal()" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-stone-700 hover:text-brand-charcoal hover:bg-stone-100 transition-all border border-transparent hover:border-stone-200 cursor-pointer relative" title="Saved Wishlist">
           <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
           </svg>
-          <span id="headerWishlistBadge" class="absolute -top-1 -right-1 bg-brand-gold text-white text-[9px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center shadow">1</span>
+          <span id="headerWishlistBadge" class="absolute top-1 right-1 bg-brand-gold text-white text-[9px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center shadow-sm ring-1 ring-white">1</span>
         </button>
 
         <!-- Cart Trigger Button with Counter & Live Price -->
-        <button onclick="openCartDrawer()" class="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-brand-stone hover:border-brand-charcoal bg-brand-sand hover:bg-white transition-all cursor-pointer shadow-sm active:scale-95" aria-label="Cart">
-          <div class="relative">
-            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-charcoal" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <button onclick="openCartDrawer()" class="flex items-center gap-2 pl-3 sm:pl-3.5 pr-3.5 sm:pr-4 py-1.5 sm:py-2 rounded-full bg-brand-charcoal hover:bg-brand-gold text-white transition-all duration-300 cursor-pointer shadow-sm group active:scale-95" aria-label="Cart">
+          <div class="relative flex items-center">
+            <svg class="w-4 h-4 sm:w-4.5 sm:h-4.5 text-stone-200 group-hover:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
               <line x1="3" y1="6" x2="21" y2="6"></line>
               <path d="M16 10a4 4 0 0 1-8 0"></path>
             </svg>
-            <span id="headerCartBadge" class="absolute -top-1.5 -right-2 bg-brand-charcoal text-brand-gold text-[9px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center ring-2 ring-white">2</span>
+            <span id="headerCartBadge" class="absolute -top-2 -right-2.5 bg-brand-gold group-hover:bg-brand-charcoal text-white group-hover:text-brand-gold text-[9px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center ring-2 ring-brand-charcoal group-hover:ring-brand-gold transition-colors">2</span>
           </div>
-          <span id="headerCartTotal" class="text-xs font-extrabold text-brand-charcoal hidden sm:inline">₹4,498</span>
+          <span id="headerCartTotal" class="text-xs font-bold tracking-tight text-brand-goldLight group-hover:text-white hidden sm:inline ml-0.5">₹4,498</span>
         </button>
 
-        <!-- Mobile Menu Hamburger -->
-        <button onclick="toggleMobileNav()" class="lg:hidden w-9 h-9 rounded-xl border border-brand-stone flex items-center justify-center text-slate-800 hover:bg-slate-100 cursor-pointer" aria-label="Toggle navigation">
+        <!-- Mobile Menu Hamburger Button -->
+        <button onclick="toggleMobileNav()" class="lg:hidden w-9 h-9 rounded-xl border border-stone-200 flex items-center justify-center text-stone-800 hover:bg-stone-100 cursor-pointer transition-colors" aria-label="Toggle navigation">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -272,29 +312,71 @@
         </div>
         <!-- Popular Search Tags -->
         <div class="flex items-center gap-2 overflow-x-auto text-[11px] text-slate-500 pt-1">
-          <span class="font-bold text-slate-700">Trending Searches:</span>
-          <button onclick="fillSearch('Urli')" class="px-2.5 py-1 bg-white rounded-lg border border-slate-200 hover:border-brand-gold text-slate-700 font-semibold cursor-pointer">Mughal Urli</button>
-          <button onclick="fillSearch('Copper')" class="px-2.5 py-1 bg-white rounded-lg border border-slate-200 hover:border-brand-gold text-slate-700 font-semibold cursor-pointer">Copper Dispenser</button>
-          <button onclick="fillSearch('Planter')" class="px-2.5 py-1 bg-white rounded-lg border border-slate-200 hover:border-brand-gold text-slate-700 font-semibold cursor-pointer">Brass Planters</button>
-          <button onclick="fillSearch('Diya')" class="px-2.5 py-1 bg-white rounded-lg border border-slate-200 hover:border-brand-gold text-slate-700 font-semibold cursor-pointer">Peacock Diya</button>
-          <button onclick="fillSearch('Lantern')" class="px-2.5 py-1 bg-white rounded-lg border border-slate-200 hover:border-brand-gold text-slate-700 font-semibold cursor-pointer">Moroccan Lantern</button>
+          <span class="font-bold text-slate-700 shrink-0">Trending Searches:</span>
+          <button onclick="fillSearch('Urli')" class="px-2.5 py-1 bg-white rounded-lg border border-slate-200 hover:border-brand-gold text-slate-700 font-semibold cursor-pointer shrink-0">Mughal Urli</button>
+          <button onclick="fillSearch('Copper')" class="px-2.5 py-1 bg-white rounded-lg border border-slate-200 hover:border-brand-gold text-slate-700 font-semibold cursor-pointer shrink-0">Copper Dispenser</button>
+          <button onclick="fillSearch('Planter')" class="px-2.5 py-1 bg-white rounded-lg border border-slate-200 hover:border-brand-gold text-slate-700 font-semibold cursor-pointer shrink-0">Brass Planters</button>
+          <button onclick="fillSearch('Diya')" class="px-2.5 py-1 bg-white rounded-lg border border-slate-200 hover:border-brand-gold text-slate-700 font-semibold cursor-pointer shrink-0">Peacock Diya</button>
+          <button onclick="fillSearch('Lantern')" class="px-2.5 py-1 bg-white rounded-lg border border-slate-200 hover:border-brand-gold text-slate-700 font-semibold cursor-pointer shrink-0">Moroccan Lantern</button>
         </div>
       </div>
     </div>
 
     <!-- Mobile Slide Navigation Menu -->
-    <div id="mobileNavMenu" class="hidden lg:hidden border-t border-brand-stone bg-white px-5 py-5 space-y-3.5 text-xs font-bold uppercase tracking-wider">
-      <a href="#home" onclick="toggleMobileNav()" class="block py-2 border-b border-slate-100 text-brand-charcoal">Home</a>
-      <a href="#categories" onclick="toggleMobileNav()" class="block py-2 border-b border-slate-100 text-slate-700">Browse Collections</a>
-      <a href="#trending" onclick="toggleMobileNav()" class="block py-2 border-b border-slate-100 text-slate-700">The Signature Edit</a>
-      <a href="javascript:void(0)" onclick="toggleMobileNav(); openB2BModal()" class="block py-2 border-b border-slate-100 text-brand-gold font-black flex items-center justify-between">
-        <span>🏢 B2B Bulk Wholesale & Exports</span>
-        <span class="text-[9px] bg-brand-gold/15 text-brand-goldDark px-2 py-0.5 rounded font-black">RFQ</span>
+    <div id="mobileNavMenu" class="hidden lg:hidden border-t border-stone-200 bg-white px-5 py-6 space-y-3.5 text-xs font-bold uppercase tracking-wider shadow-xl animate-fadeIn">
+      <div class="flex items-center justify-between pb-3 border-b border-stone-100">
+        <span class="text-stone-400 text-[10px] tracking-widest font-mono">EXPLORE STORE</span>
+        <div class="sm:hidden">
+          <select onchange="changeCurrency(this.value); document.getElementById('currencySelector').value=this.value;" class="bg-stone-50 border border-stone-200 text-stone-800 text-[10.5px] font-bold rounded-lg px-2 py-1 focus:outline-none">
+            <option value="INR">₹ INR</option>
+            <option value="USD">$ USD</option>
+            <option value="AED">د.إ AED</option>
+            <option value="GBP">£ GBP</option>
+            <option value="EUR">€ EUR</option>
+          </select>
+        </div>
+      </div>
+      <a href="#home" onclick="toggleMobileNav()" class="block py-2 text-brand-charcoal hover:text-brand-gold flex items-center justify-between">
+        <span>Home</span>
+        <span class="text-stone-400">→</span>
       </a>
-      <a href="javascript:void(0)" onclick="toggleMobileNav(); openTrackOrderModal()" class="block py-2 border-b border-slate-100 text-slate-700">📦 Track Your Order</a>
-      <a href="javascript:void(0)" onclick="toggleMobileNav(); openAccountModal()" class="block py-2 border-b border-slate-100 text-slate-700">👤 Customer Account</a>
-      <a href="#about" onclick="toggleMobileNav()" class="block py-2 border-b border-slate-100 text-slate-700">Moradabad Foundry Heritage</a>
-      <a href="#contact" onclick="toggleMobileNav()" class="block py-2 text-slate-700">Contact Owners Desk</a>
+      <a href="#categories" onclick="toggleMobileNav()" class="block py-2 text-stone-700 hover:text-brand-gold flex items-center justify-between">
+        <span>Browse Collections</span>
+        <span class="text-stone-400">→</span>
+      </a>
+      <a href="#trending" onclick="toggleMobileNav()" class="block py-2 text-stone-700 hover:text-brand-gold flex items-center justify-between">
+        <span>The Signature Edit</span>
+        <span class="text-stone-400">→</span>
+      </a>
+      <a href="javascript:void(0)" onclick="toggleMobileNav(); openB2BModal()" class="block py-2.5 px-3 rounded-xl bg-brand-gold/10 text-brand-goldDark font-extrabold flex items-center justify-between border border-brand-gold/20">
+        <span class="flex items-center gap-2"><span>🏢</span> <span>B2B Bulk Wholesale & RFQ</span></span>
+        <span class="text-[9px] bg-brand-gold text-white px-2 py-0.5 rounded font-black">EXPORT</span>
+      </a>
+      <a href="javascript:void(0)" onclick="toggleMobileNav(); openBenchmarkModal()" class="block py-2 text-stone-700 hover:text-brand-gold flex items-center justify-between">
+        <span class="flex items-center gap-2"><span>🏆</span> <span>Why TAG Zee? (Market Benchmark)</span></span>
+        <span class="text-stone-400">→</span>
+      </a>
+      <a href="javascript:void(0)" onclick="toggleMobileNav(); openTrackOrderModal()" class="block py-2 text-stone-700 hover:text-brand-gold flex items-center justify-between">
+        <span class="flex items-center gap-2"><span>📦</span> <span>Track Your Order</span></span>
+        <span class="text-stone-400">→</span>
+      </a>
+      <a href="javascript:void(0)" onclick="toggleMobileNav(); openAccountModal()" class="block py-2 text-stone-700 hover:text-brand-gold flex items-center justify-between">
+        <span class="flex items-center gap-2"><span>👤</span> <span>Customer Account</span></span>
+        <span class="text-stone-400">→</span>
+      </a>
+      <a href="#about" onclick="toggleMobileNav()" class="block py-2 text-stone-700 hover:text-brand-gold flex items-center justify-between">
+        <span>Moradabad Foundry Heritage</span>
+        <span class="text-stone-400">→</span>
+      </a>
+      <a href="#contact" onclick="toggleMobileNav()" class="block py-2 text-stone-700 hover:text-brand-gold flex items-center justify-between">
+        <span>Contact Desk</span>
+        <span class="text-stone-400">→</span>
+      </a>
+      <div class="pt-2 border-t border-stone-100 flex items-center justify-between">
+        <button onclick="toggleMobileNav(); openAdminModal()" class="text-stone-500 hover:text-brand-charcoal text-[11px] font-semibold flex items-center gap-1.5 py-1 cursor-pointer">
+          <span>⚙️</span> <span>Admin Console</span>
+        </button>
+      </div>
     </div>
   </header>
 
