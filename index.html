@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>TAGZEE | Everything. For Everyone. Best Quality, Best Prices!</title>
-  <meta name="description" content="Shop luxe essentials at Tagzee. Discover trending fashion, electronics, accessories, beauty, home living and more with best prices, fast delivery and easy returns.">
+  <title>TAG Zee | Handcrafted Metalware, Brass Decor & Kitchen Heirlooms • Moradabad</title>
+  <meta name="description" content="Official TAG Zee Moradabad Storefront. Premium Handcrafted Metal Handicrafts, Home & Kitchen Brassware, Garden Decor, and Artisanal Ornaments. Domestic Retail & B2B Export Wholesale.">
 
-  <!-- Google Fonts: Plus Jakarta Sans (Modern Clean UI) & Dancing Script/Caveat (Luxury Calligraphy) -->
+  <!-- Google Fonts: Plus Jakarta Sans (Modern UI) & Dancing Script/Caveat (Artisanal Luxury Script) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dancing+Script:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dancing+Script:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -20,18 +20,22 @@
           colors: {
             brand: {
               black: '#111827',
-              dark: '#0C111D',
-              caramel: '#C29B78',
-              caramelDark: '#A8815F',
-              sand: '#F5EFEB',
-              sandLight: '#FAF7F2',
+              dark: '#0A0E17',
+              gold: '#D4AF37',
+              goldLight: '#F3E5AB',
+              goldDark: '#AA820A',
+              caramel: '#C5A059',
+              caramelDark: '#9E7830',
+              sand: '#F7F3EC',
+              sandLight: '#FAF8F5',
               grayBg: '#F8F9FB',
               grayCard: '#F3F4F6',
-              accent: '#BA9575'
+              accent: '#B8860B'
             }
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Cinzel"', 'serif'],
             script: ['"Dancing Script"', '"Caveat"', 'cursive']
           }
         }
@@ -47,7 +51,7 @@
       color: #1F2937;
     }
 
-    /* Custom subtle scrollbar */
+    /* Custom subtle gold/slate scrollbar */
     ::-webkit-scrollbar {
       width: 7px;
       height: 7px;
@@ -56,42 +60,48 @@
       background: #F3F4F6;
     }
     ::-webkit-scrollbar-thumb {
-      background: #D1D5DB;
+      background: #D4AF37;
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #9CA3AF;
+      background: #AA820A;
     }
 
     /* Smooth Drawer & Modal Backdrop */
     .drawer-backdrop {
-      background: rgba(17, 24, 39, 0.65);
-      backdrop-filter: blur(4px);
+      background: rgba(10, 14, 23, 0.72);
+      backdrop-filter: blur(5px);
     }
 
-    /* Badge Pulse */
-    @keyframes subtlePulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
+    /* Badge Pulse Animation */
+    @keyframes goldGlowPulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.5); }
+      50% { transform: scale(1.04); box-shadow: 0 0 16px 2px rgba(212, 175, 55, 0.4); }
     }
     .badge-pulse {
-      animation: subtlePulse 2.5s ease-in-out infinite;
+      animation: goldGlowPulse 2.8s ease-in-out infinite;
+    }
+
+    /* Mandala pattern background accent */
+    .mandala-bg {
+      background-image: radial-gradient(#D4AF37 0.9px, transparent 0.9px);
+      background-size: 28px 28px;
     }
   </style>
 </head>
-<body class="bg-white text-slate-800 antialiased selection:bg-brand-caramel selection:text-white">
+<body class="bg-white text-slate-800 antialiased selection:bg-brand-gold selection:text-brand-dark">
 
   <!-- ================= 1. TOP ANNOUNCEMENT BAR ================= -->
-  <div class="bg-brand-black text-white text-xs py-2.5 px-4 sm:px-8 border-b border-white/10 sticky top-0 z-40">
+  <div class="bg-brand-black text-white text-xs py-2.5 px-4 sm:px-8 border-b border-brand-gold/25 sticky top-0 z-40">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
       <div class="flex items-center gap-2 overflow-hidden">
-        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping shrink-0"></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-brand-gold animate-ping shrink-0"></span>
         <p class="font-bold tracking-wider text-[11px] sm:text-xs truncate uppercase">
-          FOR MODERN E-COMMERCE & B2B WHOLESALE, <span class="text-brand-caramel font-extrabold underline cursor-pointer" onclick="openB2BModal()">CONTACT US!</span>
+          MORADABAD'S FINEST ARTISANAL BRASS & METAL HANDICRAFTS • <span class="text-brand-gold font-extrabold underline cursor-pointer" onclick="openB2BModal()">DOMESTIC & B2B WHOLESALE</span>
         </p>
       </div>
       <div class="flex items-center gap-3 shrink-0">
-        <button onclick="openB2BModal()" class="px-3.5 py-1 rounded-md text-[11px] font-bold bg-[#E4D5C7] text-brand-black hover:bg-white transition-all flex items-center gap-1 shadow-sm active:scale-95 cursor-pointer">
+        <button onclick="openB2BModal()" class="px-3.5 py-1 rounded-md text-[11px] font-extrabold bg-gradient-to-r from-brand-gold to-brand-goldLight text-brand-dark hover:brightness-110 transition-all flex items-center gap-1 shadow-sm active:scale-95 cursor-pointer">
           <span>LET'S TALK</span>
           <span>→</span>
         </button>
@@ -103,69 +113,66 @@
   <header class="bg-white border-b border-slate-100 sticky top-[39px] z-30 transition-all duration-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 sm:py-4 flex items-center justify-between gap-4">
       
-      <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-2.5 group shrink-0">
-        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-black text-white flex items-center justify-center font-bold text-lg shadow-md group-hover:bg-brand-caramel transition-colors">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-            <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
+      <!-- Brand Logo (Exact Replica of Visiting Card Logo) -->
+      <a href="#" class="flex items-center gap-3 group shrink-0">
+        <!-- Golden Triangle TZ Emblem -->
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-brand-dark border border-brand-gold/60 text-brand-gold flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+          <svg class="w-7 h-7 text-brand-gold fill-current" viewBox="0 0 100 100">
+            <!-- Triangle Outline -->
+            <polygon points="50,12 88,82 12,82" fill="none" stroke="#D4AF37" stroke-width="6" stroke-linejoin="round"/>
+            <!-- Stylized TZ Monogram -->
+            <path d="M30,36 L70,36 M50,36 L50,56 M42,56 L62,56 L42,74 L66,74" fill="none" stroke="#D4AF37" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
+        
         <div class="leading-none">
-          <span class="font-extrabold text-xl sm:text-2xl tracking-tight text-brand-black block">TAGZEE</span>
-          <span class="text-[9px] sm:text-[10px] tracking-widest text-slate-400 font-bold uppercase block mt-0.5">EVERYTHING YOU NEED</span>
+          <div class="flex items-center gap-1.5">
+            <span class="font-serif font-black text-xl sm:text-2xl tracking-widest text-brand-black">TAG</span>
+            <span class="font-serif font-black text-xl sm:text-2xl tracking-widest text-brand-caramel">Zee</span>
+          </div>
+          <span class="text-[8px] sm:text-[9px] tracking-[0.2em] text-slate-400 font-bold uppercase block mt-0.5">METAL HANDICRAFTS • MORADABAD</span>
         </div>
       </a>
 
       <!-- Desktop Navigation Links -->
-      <nav class="hidden lg:flex items-center gap-7 text-[12px] font-bold text-slate-700 tracking-wide uppercase">
+      <nav class="hidden lg:flex items-center gap-6 text-[11.5px] font-bold text-slate-700 tracking-wide uppercase">
         <a href="#home" class="text-brand-black hover:text-brand-caramel transition-colors">HOME</a>
         <div class="relative group cursor-pointer">
           <span class="hover:text-brand-caramel transition-colors flex items-center gap-1">
-            SHOP <span class="text-[10px] text-slate-400">▼</span>
+            COLLECTIONS <span class="text-[9px] text-slate-400">▼</span>
           </span>
-          <div class="absolute top-full left-0 hidden group-hover:block w-48 bg-white border border-slate-100 rounded-xl shadow-xl py-2 mt-2 z-50">
-            <a href="#trending" class="block px-4 py-2 hover:bg-slate-50 text-slate-700 text-xs font-semibold">Trending Drops</a>
-            <a href="#categories" class="block px-4 py-2 hover:bg-slate-50 text-slate-700 text-xs font-semibold">All Categories</a>
-            <a href="#trending" class="block px-4 py-2 hover:bg-slate-50 text-slate-700 text-xs font-semibold">Flash Sale (Up to 50% Off)</a>
+          <div class="absolute top-full left-0 hidden group-hover:block w-52 bg-white border border-slate-100 rounded-xl shadow-xl py-2 mt-2 z-50">
+            <a href="#categories" onclick="filterByCategory('Metal Handicrafts')" class="block px-4 py-2 hover:bg-slate-50 text-slate-700 text-xs font-semibold">Metal Handicrafts</a>
+            <a href="#categories" onclick="filterByCategory('Home & Kitchen')" class="block px-4 py-2 hover:bg-slate-50 text-slate-700 text-xs font-semibold">Home & Kitchen Brassware</a>
+            <a href="#categories" onclick="filterByCategory('Garden Decor')" class="block px-4 py-2 hover:bg-slate-50 text-slate-700 text-xs font-semibold">Garden Decor & Planters</a>
+            <a href="#categories" onclick="filterByCategory('Ornaments')" class="block px-4 py-2 hover:bg-slate-50 text-slate-700 text-xs font-semibold">Ornaments & Diyas</a>
           </div>
         </div>
-        <div class="relative group cursor-pointer">
-          <span class="hover:text-brand-caramel transition-colors flex items-center gap-1">
-            COLLECTIONS <span class="text-[10px] text-slate-400">▼</span>
-          </span>
-          <div class="absolute top-full left-0 hidden group-hover:block w-48 bg-white border border-slate-100 rounded-xl shadow-xl py-2 mt-2 z-50">
-            <a href="#categories" class="block px-4 py-2 hover:bg-slate-50 text-slate-700 text-xs font-semibold">Electronics & Audio</a>
-            <a href="#categories" class="block px-4 py-2 hover:bg-slate-50 text-slate-700 text-xs font-semibold">Travel & Daily Backpacks</a>
-            <a href="#categories" class="block px-4 py-2 hover:bg-slate-50 text-slate-700 text-xs font-semibold">Luxury Fragrances</a>
-            <a href="#categories" class="block px-4 py-2 hover:bg-slate-50 text-slate-700 text-xs font-semibold">Smart Home & Lamps</a>
-          </div>
-        </div>
-        <a href="#about" class="hover:text-brand-caramel transition-colors">ABOUT US</a>
-        <a href="javascript:void(0)" onclick="openB2BModal()" class="hover:text-brand-caramel text-brand-caramel font-extrabold transition-colors flex items-center gap-1">
+        <a href="#trending" class="hover:text-brand-caramel transition-colors">BESTSELLERS</a>
+        <a href="#about" class="hover:text-brand-caramel transition-colors">ABOUT MORADABAD HERITAGE</a>
+        <a href="javascript:void(0)" onclick="openB2BModal()" class="text-brand-caramelDark hover:text-brand-caramel font-black transition-colors flex items-center gap-1.5">
           <span>B2B WHOLESALE</span>
-          <span class="bg-brand-caramel/15 text-brand-caramelDark text-[9px] px-1.5 py-0.5 rounded font-black">BULK</span>
+          <span class="bg-brand-gold/15 text-brand-caramelDark text-[8.5px] px-1.5 py-0.5 rounded font-black border border-brand-gold/30">BULK / EXPORT</span>
         </a>
         <a href="#contact" class="hover:text-brand-caramel transition-colors">CONTACT US</a>
       </nav>
 
       <!-- Right Header Utility Actions -->
-      <div class="flex items-center gap-2 sm:gap-4">
+      <div class="flex items-center gap-2 sm:gap-3.5">
         
         <!-- Search Trigger -->
-        <button onclick="toggleSearchBar()" class="w-9 h-9 rounded-full flex items-center justify-center text-slate-700 hover:text-brand-black hover:bg-slate-100 transition-colors cursor-pointer" aria-label="Search Catalog">
+        <button onclick="toggleSearchBar()" class="w-9 h-9 rounded-full flex items-center justify-center text-slate-700 hover:text-brand-black hover:bg-slate-100 transition-colors cursor-pointer" aria-label="Search Handcrafted Metalware">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
         </button>
 
-        <!-- User Profile -->
-        <button onclick="openB2BModal('login')" class="w-9 h-9 rounded-full flex items-center justify-center text-slate-700 hover:text-brand-black hover:bg-slate-100 transition-colors cursor-pointer" aria-label="Account">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
-        </button>
+        <!-- Direct WhatsApp Call/Chat with Owners -->
+        <a href="https://wa.me/917351366786?text=Hello%20TAG%20Zee%20Moradabad,%20I%20am%20interested%20in%20your%20metal%20handicrafts%20and%20home%20decor." target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-emerald-500/40 bg-emerald-50 text-emerald-800 hover:bg-emerald-100 text-xs font-bold transition-all shadow-sm">
+          <span>💬</span>
+          <span class="text-[11px] font-mono">+91 7351366786</span>
+        </a>
 
         <!-- Cart Bag Button with Badge & Total -->
         <button onclick="openCartDrawer()" class="flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-full border border-slate-200 hover:border-brand-black bg-white hover:bg-slate-50 transition-all cursor-pointer shadow-sm active:scale-95">
@@ -175,9 +182,9 @@
               <line x1="3" y1="6" x2="21" y2="6"></line>
               <path d="M16 10a4 4 0 0 1-8 0"></path>
             </svg>
-            <span id="headerCartBadge" class="absolute -top-1.5 -right-2 bg-brand-black text-white text-[9px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center ring-2 ring-white">2</span>
+            <span id="headerCartBadge" class="absolute -top-1.5 -right-2 bg-brand-black text-brand-gold text-[9px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center ring-2 ring-white">2</span>
           </div>
-          <span id="headerCartTotal" class="text-xs font-bold text-slate-900 hidden sm:inline">₹2,499</span>
+          <span id="headerCartTotal" class="text-xs font-extrabold text-slate-900 hidden sm:inline">₹4,498</span>
         </button>
 
         <!-- Mobile Menu Hamburger -->
@@ -195,7 +202,7 @@
     <!-- Collapsible Search Bar Drawer -->
     <div id="searchDrawer" class="hidden border-t border-slate-100 bg-slate-50 py-3 px-4 sm:px-8">
       <div class="max-w-3xl mx-auto relative flex items-center">
-        <input type="text" id="searchInput" oninput="handleSearch(this.value)" placeholder="Search products, brands, categories (e.g. Smart Watch, Backpack, Earbuds)..." class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-xs sm:text-sm pl-10 focus:outline-none focus:border-brand-black shadow-inner">
+        <input type="text" id="searchInput" oninput="handleSearch(this.value)" placeholder="Search brass urli, copper dispensers, planters, Moroccan lanterns, diyas..." class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-xs sm:text-sm pl-10 focus:outline-none focus:border-brand-black shadow-inner">
         <svg class="w-4 h-4 text-slate-400 absolute left-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -208,71 +215,72 @@
     <div id="mobileNavMenu" class="hidden lg:hidden border-t border-slate-100 bg-white px-5 py-4 space-y-3 text-xs font-bold uppercase tracking-wider">
       <a href="#home" onclick="toggleMobileNav()" class="block py-2 border-b border-slate-50 text-brand-black">Home</a>
       <a href="#categories" onclick="toggleMobileNav()" class="block py-2 border-b border-slate-50 text-slate-700">Browse Categories</a>
-      <a href="#trending" onclick="toggleMobileNav()" class="block py-2 border-b border-slate-50 text-slate-700">Trending Products</a>
-      <a href="javascript:void(0)" onclick="toggleMobileNav(); openB2BModal()" class="block py-2 border-b border-slate-50 text-brand-caramel font-black">🏢 B2B Wholesale Portal</a>
-      <a href="#about" onclick="toggleMobileNav()" class="block py-2 border-b border-slate-50 text-slate-700">About Tagzee</a>
-      <a href="#contact" onclick="toggleMobileNav()" class="block py-2 text-slate-700">Contact Us</a>
+      <a href="#trending" onclick="toggleMobileNav()" class="block py-2 border-b border-slate-50 text-slate-700">Bestseller Metalware</a>
+      <a href="javascript:void(0)" onclick="toggleMobileNav(); openB2BModal()" class="block py-2 border-b border-slate-50 text-brand-caramel font-black">🏢 B2B Bulk Wholesale & Exports</a>
+      <a href="#about" onclick="toggleMobileNav()" class="block py-2 border-b border-slate-50 text-slate-700">Moradabad Artisanal Heritage</a>
+      <a href="#contact" onclick="toggleMobileNav()" class="block py-2 text-slate-700">Contact Owners</a>
     </div>
   </header>
 
-  <!-- ================= 3. HERO SHOWCASE SECTION (MATCHING TEMPLATE DESIGN) ================= -->
-  <section id="home" class="relative bg-gradient-to-br from-brand-sandLight via-white to-brand-grayBg overflow-hidden border-b border-slate-100 py-10 sm:py-16 lg:py-20">
+  <!-- ================= 3. HERO SHOWCASE SECTION (BRASS & METALWARE ARTISTRY) ================= -->
+  <section id="home" class="relative bg-gradient-to-br from-brand-sandLight via-white to-brand-sand/60 overflow-hidden border-b border-slate-100 py-10 sm:py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
         <!-- Left Hero Copy & Actions -->
         <div class="lg:col-span-6 space-y-5 sm:space-y-6">
           
-          <span class="text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-slate-400 block">
-            WELCOME TO TAGZEE
-          </span>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/15 border border-brand-gold/40 text-[10.5px] sm:text-xs font-bold tracking-widest uppercase text-brand-caramelDark">
+            <span>✨</span>
+            <span>MORADABAD • THE BRASS CITY OF INDIA</span>
+          </div>
 
           <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-brand-black tracking-tight leading-[1.08]">
-            EVERYTHING.<br>
-            FOR EVERYONE.
+            TIMELESS METAL.<br>
+            HANDCRAFTED LUXURY.
           </h1>
 
           <!-- Luxury Cursive Calligraphy Line -->
           <div class="font-script text-3xl sm:text-4xl lg:text-5xl text-brand-caramel font-bold tracking-wide -mt-2">
-            Best Quality, Best Prices!
+            Authentic Brass, Artisanal Heritage!
           </div>
 
           <p class="text-slate-600 text-xs sm:text-sm sm:leading-relaxed max-w-lg font-medium">
-            Discover a wide range of top-quality lifestyle gear, electronics, apparel, and modern essentials handpicked just for you.
+            Directly from master craftsmen of Moradabad. Handcrafted royal brass urlis, hammered pure copper dispensers, Moroccan filigree lanterns, and luxury garden accents.
           </p>
 
           <!-- Action Buttons -->
           <div class="flex flex-wrap items-center gap-3 pt-2">
-            <a href="#trending" class="px-7 py-3.5 rounded-full bg-brand-black text-white hover:bg-brand-caramel text-xs font-bold tracking-wider uppercase transition-all shadow-lg hover:shadow-xl active:scale-95 flex items-center gap-2">
-              <span>SHOP NOW</span>
+            <a href="#trending" class="px-7 py-3.5 rounded-full bg-brand-black text-brand-gold hover:bg-brand-caramel hover:text-white text-xs font-bold tracking-wider uppercase transition-all shadow-lg hover:shadow-xl active:scale-95 flex items-center gap-2">
+              <span>EXPLORE COLLECTION</span>
               <span>→</span>
             </a>
-            <a href="#categories" class="px-7 py-3.5 rounded-full bg-white border border-slate-300 text-slate-800 hover:border-brand-black text-xs font-bold tracking-wider uppercase transition-all shadow-sm active:scale-95">
-              EXPLORE COLLECTIONS
-            </a>
+            <button onclick="openB2BModal()" class="px-7 py-3.5 rounded-full bg-white border border-brand-gold/60 text-slate-900 hover:border-brand-black text-xs font-bold tracking-wider uppercase transition-all shadow-sm active:scale-95 flex items-center gap-1.5 cursor-pointer">
+              <span>🏢 B2B WHOLESALE RFQ</span>
+            </button>
           </div>
 
           <!-- 3 Mini Trust Icons in a Row -->
           <div class="pt-6 sm:pt-8 border-t border-slate-200/70 grid grid-cols-3 gap-3 sm:gap-4 text-slate-700">
             <div class="flex items-start gap-2">
-              <span class="text-base sm:text-lg">🚚</span>
+              <span class="text-base sm:text-lg">🔨</span>
               <div>
-                <span class="font-bold text-[10.5px] sm:text-xs block text-brand-black">FREE SHIPPING</span>
-                <span class="text-[9.5px] sm:text-[10px] text-slate-500 block leading-tight">On orders over ₹999</span>
+                <span class="font-bold text-[10.5px] sm:text-xs block text-brand-black">100% HANDCRAFTED</span>
+                <span class="text-[9.5px] sm:text-[10px] text-slate-500 block leading-tight">Master Moradabad Artisans</span>
               </div>
             </div>
             <div class="flex items-start gap-2">
-              <span class="text-base sm:text-lg">🔄</span>
+              <span class="text-base sm:text-lg">🛡️</span>
               <div>
-                <span class="font-bold text-[10.5px] sm:text-xs block text-brand-black">EASY RETURNS</span>
-                <span class="text-[9.5px] sm:text-[10px] text-slate-500 block leading-tight">7-day return policy</span>
+                <span class="font-bold text-[10.5px] sm:text-xs block text-brand-black">GENUINE BRASS & METAL</span>
+                <span class="text-[9.5px] sm:text-[10px] text-slate-500 block leading-tight">Lifetime heirloom durability</span>
               </div>
             </div>
             <div class="flex items-start gap-2">
-              <span class="text-base sm:text-lg">🔒</span>
+              <span class="text-base sm:text-lg">📦</span>
               <div>
-                <span class="font-bold text-[10.5px] sm:text-xs block text-brand-black">SECURE PAYMENT</span>
-                <span class="text-[9.5px] sm:text-[10px] text-slate-500 block leading-tight">100% secure checkout</span>
+                <span class="font-bold text-[10.5px] sm:text-xs block text-brand-black">CRATE PACKING</span>
+                <span class="text-[9.5px] sm:text-[10px] text-slate-500 block leading-tight">Safe all-India & global transit</span>
               </div>
             </div>
           </div>
@@ -283,21 +291,21 @@
         <div class="lg:col-span-6 relative flex items-center justify-center">
           
           <!-- Floating "UP TO 50% OFF" Circle Badge -->
-          <div class="absolute -top-3 left-6 sm:left-12 z-20 w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-brand-black text-white flex flex-col items-center justify-center text-center shadow-2xl badge-pulse border-2 border-white">
-            <span class="text-[9px] sm:text-[10px] tracking-wider uppercase font-bold text-slate-300">UP TO</span>
-            <span class="text-lg sm:text-2xl font-black text-brand-caramel leading-none my-0.5">50%</span>
-            <span class="text-[9px] sm:text-[10px] tracking-wider uppercase font-extrabold text-white">OFF</span>
+          <div class="absolute -top-3 left-6 sm:left-12 z-20 w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-brand-dark text-white flex flex-col items-center justify-center text-center shadow-2xl badge-pulse border-2 border-brand-gold">
+            <span class="text-[8.5px] sm:text-[9.5px] tracking-wider uppercase font-bold text-slate-300">WHOLESALE</span>
+            <span class="text-lg sm:text-2xl font-black text-brand-gold leading-none my-0.5">DIRECT</span>
+            <span class="text-[8.5px] sm:text-[9.5px] tracking-wider uppercase font-extrabold text-white">FACTORY</span>
           </div>
 
           <!-- Hero Image Composite Card -->
-          <div class="relative w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl bg-white border border-slate-100 p-4 sm:p-6 group">
-            <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-b from-slate-100 to-slate-200 flex items-center justify-center">
-              <img id="heroMainImage" src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80" alt="Tagzee Premium Canvas Travel Backpack" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="relative w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl bg-white border border-brand-gold/30 p-4 sm:p-6 group">
+            <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900 flex items-center justify-center">
+              <img id="heroMainImage" src="https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=800&q=80" alt="Royal Moradabad Handcrafted Brass Urli Bowl" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
               
-              <!-- Subtle Tagzee Brand Overlay Tag -->
-              <div class="absolute bottom-4 left-4 bg-brand-black/90 backdrop-blur-md px-3.5 py-1.5 rounded-full text-white text-[11px] font-bold flex items-center gap-1.5 shadow-lg border border-white/20">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>Tagzee Urban Nomad Series</span>
+              <!-- Tagzee Authentic Hallmark Overlay Tag -->
+              <div class="absolute bottom-4 left-4 bg-brand-dark/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-white text-[11px] font-bold flex items-center gap-1.5 shadow-lg border border-brand-gold/50">
+                <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+                <span>Royal Mughal Handcrafted Urli Ensemble</span>
               </div>
             </div>
 
@@ -319,79 +327,80 @@
     </div>
   </section>
 
-  <!-- ================= 4. BROWSE BY CATEGORY SECTION ================= -->
+  <!-- ================= 4. BROWSE BY CATEGORY SECTION (MATCHING CARD CATEGORIES) ================= -->
   <section id="categories" class="py-12 sm:py-16 bg-white border-b border-slate-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
       
       <!-- Section Title -->
       <div class="text-center mb-8 sm:mb-12">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-brand-caramel block mb-1">CURATED METALWARE</span>
         <h2 class="text-xl sm:text-2xl font-extrabold uppercase tracking-wider text-brand-black">
           BROWSE BY CATEGORY
         </h2>
         <div class="w-12 h-0.5 bg-brand-caramel mx-auto mt-2"></div>
       </div>
 
-      <!-- Categories 8-Grid (Matching Reference Screenshot) -->
+      <!-- Categories 8-Grid (Aligned with TAG Zee Business Card) -->
       <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 sm:gap-4">
         
-        <!-- Category 1: Accessories -->
-        <div onclick="filterByCategory('Accessories')" class="category-card group bg-brand-grayBg hover:bg-white rounded-2xl p-3 sm:p-4 text-center border border-slate-100 hover:border-brand-caramel/50 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col items-center justify-between">
+        <!-- Cat 1: Metal Handicrafts -->
+        <div onclick="filterByCategory('Metal Handicrafts')" class="category-card group bg-brand-grayBg hover:bg-white rounded-2xl p-3 sm:p-4 text-center border border-slate-100 hover:border-brand-gold/70 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col items-center justify-between">
           <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-white p-2 flex items-center justify-center mb-2.5 group-hover:scale-105 transition-transform">
-            <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=200&q=80" alt="Accessories" class="w-full h-full object-contain">
+            <img src="https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=200&q=80" alt="Metal Handicrafts" class="w-full h-full object-cover rounded-lg">
           </div>
-          <span class="text-xs font-bold text-slate-800 group-hover:text-brand-caramel transition-colors">Accessories</span>
+          <span class="text-xs font-bold text-slate-800 group-hover:text-brand-caramel transition-colors">Metal Crafts</span>
         </div>
 
-        <!-- Category 2: Electronics -->
-        <div onclick="filterByCategory('Electronics')" class="category-card group bg-brand-grayBg hover:bg-white rounded-2xl p-3 sm:p-4 text-center border border-slate-100 hover:border-brand-caramel/50 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col items-center justify-between">
+        <!-- Cat 2: Home & Kitchen -->
+        <div onclick="filterByCategory('Home & Kitchen')" class="category-card group bg-brand-grayBg hover:bg-white rounded-2xl p-3 sm:p-4 text-center border border-slate-100 hover:border-brand-gold/70 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col items-center justify-between">
           <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-white p-2 flex items-center justify-center mb-2.5 group-hover:scale-105 transition-transform">
-            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=200&q=80" alt="Electronics" class="w-full h-full object-contain">
+            <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=200&q=80" alt="Home & Kitchen" class="w-full h-full object-cover rounded-lg">
           </div>
-          <span class="text-xs font-bold text-slate-800 group-hover:text-brand-caramel transition-colors">Electronics</span>
+          <span class="text-xs font-bold text-slate-800 group-hover:text-brand-caramel transition-colors">Home & Kitchen</span>
         </div>
 
-        <!-- Category 3: Home & Living -->
-        <div onclick="filterByCategory('Home & Living')" class="category-card group bg-brand-grayBg hover:bg-white rounded-2xl p-3 sm:p-4 text-center border border-slate-100 hover:border-brand-caramel/50 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col items-center justify-between">
+        <!-- Cat 3: Garden Decor -->
+        <div onclick="filterByCategory('Garden Decor')" class="category-card group bg-brand-grayBg hover:bg-white rounded-2xl p-3 sm:p-4 text-center border border-slate-100 hover:border-brand-gold/70 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col items-center justify-between">
           <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-white p-2 flex items-center justify-center mb-2.5 group-hover:scale-105 transition-transform">
-            <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=200&q=80" alt="Home & Living" class="w-full h-full object-contain">
+            <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=200&q=80" alt="Garden Decor" class="w-full h-full object-cover rounded-lg">
           </div>
-          <span class="text-xs font-bold text-slate-800 group-hover:text-brand-caramel transition-colors">Home & Living</span>
+          <span class="text-xs font-bold text-slate-800 group-hover:text-brand-caramel transition-colors">Garden Decor</span>
         </div>
 
-        <!-- Category 4: Fashion -->
-        <div onclick="filterByCategory('Fashion')" class="category-card group bg-brand-grayBg hover:bg-white rounded-2xl p-3 sm:p-4 text-center border border-slate-100 hover:border-brand-caramel/50 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col items-center justify-between">
+        <!-- Cat 4: Ornaments -->
+        <div onclick="filterByCategory('Ornaments')" class="category-card group bg-brand-grayBg hover:bg-white rounded-2xl p-3 sm:p-4 text-center border border-slate-100 hover:border-brand-gold/70 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col items-center justify-between">
           <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-white p-2 flex items-center justify-center mb-2.5 group-hover:scale-105 transition-transform">
-            <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=200&q=80" alt="Fashion" class="w-full h-full object-contain">
+            <img src="https://images.unsplash.com/photo-1605371924599-2d0365da1ae0?auto=format&fit=crop&w=200&q=80" alt="Ornaments" class="w-full h-full object-cover rounded-lg">
           </div>
-          <span class="text-xs font-bold text-slate-800 group-hover:text-brand-caramel transition-colors">Fashion</span>
+          <span class="text-xs font-bold text-slate-800 group-hover:text-brand-caramel transition-colors">Ornaments</span>
         </div>
 
-        <!-- Category 5: Beauty -->
-        <div onclick="filterByCategory('Beauty')" class="category-card group bg-brand-grayBg hover:bg-white rounded-2xl p-3 sm:p-4 text-center border border-slate-100 hover:border-brand-caramel/50 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col items-center justify-between">
+        <!-- Cat 5: Lanterns -->
+        <div onclick="filterByCategory('Lanterns')" class="category-card group bg-brand-grayBg hover:bg-white rounded-2xl p-3 sm:p-4 text-center border border-slate-100 hover:border-brand-gold/70 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col items-center justify-between">
           <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-white p-2 flex items-center justify-center mb-2.5 group-hover:scale-105 transition-transform">
-            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=200&q=80" alt="Beauty" class="w-full h-full object-contain">
+            <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=200&q=80" alt="Lanterns" class="w-full h-full object-cover rounded-lg">
           </div>
-          <span class="text-xs font-bold text-slate-800 group-hover:text-brand-caramel transition-colors">Beauty</span>
+          <span class="text-xs font-bold text-slate-800 group-hover:text-brand-caramel transition-colors">Lanterns</span>
         </div>
 
-        <!-- Category 6: Sports -->
-        <div onclick="filterByCategory('Sports')" class="category-card group bg-brand-grayBg hover:bg-white rounded-2xl p-3 sm:p-4 text-center border border-slate-100 hover:border-brand-caramel/50 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col items-center justify-between">
+        <!-- Cat 6: Pooja Brassware -->
+        <div onclick="filterByCategory('Pooja')" class="category-card group bg-brand-grayBg hover:bg-white rounded-2xl p-3 sm:p-4 text-center border border-slate-100 hover:border-brand-gold/70 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col items-center justify-between">
           <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-white p-2 flex items-center justify-center mb-2.5 group-hover:scale-105 transition-transform">
-            <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=200&q=80" alt="Sports" class="w-full h-full object-contain">
+            <img src="https://images.unsplash.com/photo-1567591414240-e1451b6a22f7?auto=format&fit=crop&w=200&q=80" alt="Pooja Brassware" class="w-full h-full object-cover rounded-lg">
           </div>
-          <span class="text-xs font-bold text-slate-800 group-hover:text-brand-caramel transition-colors">Sports</span>
+          <span class="text-xs font-bold text-slate-800 group-hover:text-brand-caramel transition-colors">Pooja Items</span>
         </div>
 
-        <!-- Category 7: Toys & Games -->
-        <div onclick="filterByCategory('Toys & Games')" class="category-card group bg-brand-grayBg hover:bg-white rounded-2xl p-3 sm:p-4 text-center border border-slate-100 hover:border-brand-caramel/50 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col items-center justify-between">
+        <!-- Cat 7: Cutlery & Tableware -->
+        <div onclick="filterByCategory('Tableware')" class="category-card group bg-brand-grayBg hover:bg-white rounded-2xl p-3 sm:p-4 text-center border border-slate-100 hover:border-brand-gold/70 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col items-center justify-between">
           <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-white p-2 flex items-center justify-center mb-2.5 group-hover:scale-105 transition-transform">
-            <img src="https://images.unsplash.com/photo-1559454403-b8fb88521f11?auto=format&fit=crop&w=200&q=80" alt="Toys & Games" class="w-full h-full object-contain">
+            <img src="https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=200&q=80" alt="Tableware" class="w-full h-full object-cover rounded-lg">
           </div>
-          <span class="text-xs font-bold text-slate-800 group-hover:text-brand-caramel transition-colors">Toys & Games</span>
+          <span class="text-xs font-bold text-slate-800 group-hover:text-brand-caramel transition-colors">Cutlery Sets</span>
         </div>
 
-        <!-- Category 8: More Categories (All) -->
-        <div onclick="filterByCategory('All')" class="category-card group bg-brand-grayBg hover:bg-white rounded-2xl p-3 sm:p-4 text-center border border-slate-100 hover:border-brand-caramel/50 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col items-center justify-between">
+        <!-- Cat 8: All Collections -->
+        <div onclick="filterByCategory('All')" class="category-card group bg-brand-grayBg hover:bg-white rounded-2xl p-3 sm:p-4 text-center border border-slate-100 hover:border-brand-gold/70 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col items-center justify-between">
           <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-white p-2 flex items-center justify-center mb-2.5 group-hover:scale-105 transition-transform text-slate-400 group-hover:text-brand-caramel">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <rect x="3" y="3" width="7" height="7"></rect>
@@ -400,7 +409,7 @@
               <rect x="3" y="14" width="7" height="7"></rect>
             </svg>
           </div>
-          <span class="text-xs font-bold text-slate-800 group-hover:text-brand-caramel transition-colors">All Categories</span>
+          <span class="text-xs font-bold text-slate-800 group-hover:text-brand-caramel transition-colors">All Crafts</span>
         </div>
 
       </div>
@@ -418,9 +427,9 @@
           <h2 class="text-xl sm:text-2xl font-extrabold uppercase tracking-wider text-brand-black">
             TRENDING PRODUCTS
           </h2>
-          <span id="activeCategoryBadge" class="text-xs text-brand-caramel font-bold tracking-wide">Showing: All Items</span>
+          <span id="activeCategoryBadge" class="text-xs text-brand-caramel font-bold tracking-wide">Showing: All Handcrafted Metalware</span>
         </div>
-        <button onclick="filterByCategory('All')" class="text-xs font-bold text-slate-700 hover:text-brand-caramel transition-colors flex items-center gap-1 group">
+        <button onclick="filterByCategory('All')" class="text-xs font-bold text-slate-700 hover:text-brand-caramel transition-colors flex items-center gap-1 group cursor-pointer">
           <span>VIEW ALL PRODUCTS</span>
           <span class="group-hover:translate-x-1 transition-transform">→</span>
         </button>
@@ -428,7 +437,7 @@
 
       <!-- 5-Column Responsive Product Grid -->
       <div id="productsGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
-        <!-- Dynamically injected via JavaScript with high-res images and 1-click add to cart -->
+        <!-- Dynamically injected via JavaScript with authentic Moradabad metalware -->
       </div>
 
     </div>
@@ -440,44 +449,44 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
         
         <!-- Tile 1: Black Box (FREE SHIPPING) -->
-        <div class="bg-brand-black text-white p-6 sm:p-8 rounded-2xl flex items-center gap-5 shadow-lg group hover:-translate-y-1 transition-all duration-300">
+        <div class="bg-brand-black text-white p-6 sm:p-8 rounded-2xl flex items-center gap-5 shadow-lg group hover:-translate-y-1 transition-all duration-300 border border-white/10">
           <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-3xl shrink-0 group-hover:scale-110 transition-transform">
             📦
           </div>
           <div class="space-y-1">
-            <h3 class="font-extrabold text-sm sm:text-base tracking-wide uppercase">FREE SHIPPING</h3>
-            <p class="text-slate-400 text-xs font-medium">On orders over ₹999</p>
-            <a href="#trending" class="inline-block text-xs font-bold text-brand-caramel hover:text-white pt-1">
-              Shop Now →
+            <h3 class="font-extrabold text-sm sm:text-base tracking-wide uppercase text-white">FREE SHIPPING</h3>
+            <p class="text-slate-400 text-xs font-medium">On domestic orders over ₹1,499</p>
+            <a href="#trending" class="inline-block text-xs font-bold text-brand-gold hover:text-white pt-1">
+              Shop Collection →
             </a>
           </div>
         </div>
 
-        <!-- Tile 2: Caramel / Sand Box (SPECIAL OFFER) -->
+        <!-- Tile 2: Caramel / Gold Box (SPECIAL B2B OFFER) -->
         <div class="bg-[#C29B78] text-white p-6 sm:p-8 rounded-2xl flex items-center gap-5 shadow-lg group hover:-translate-y-1 transition-all duration-300">
           <div class="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center text-3xl font-black shrink-0 group-hover:scale-110 transition-transform">
             %
           </div>
           <div class="space-y-1">
-            <h3 class="font-extrabold text-sm sm:text-base tracking-wide uppercase text-white">SPECIAL OFFER</h3>
-            <p class="text-white/80 text-xs font-medium">Save up to 50% off</p>
-            <a href="#trending" class="inline-block text-xs font-bold text-brand-black hover:underline pt-1">
-              Grab the Deal →
-            </a>
+            <h3 class="font-extrabold text-sm sm:text-base tracking-wide uppercase text-white">B2B BULK DISCOUNTS</h3>
+            <p class="text-white/90 text-xs font-medium">Tiered pricing for retailers & hotels</p>
+            <button onclick="openB2BModal()" class="inline-block text-xs font-bold text-brand-black hover:underline pt-1 cursor-pointer">
+              Grab Wholesale Deal →
+            </button>
           </div>
         </div>
 
-        <!-- Tile 3: Pale Ivory / Cream Box (MEMBER BENEFITS) -->
+        <!-- Tile 3: Pale Ivory / Sand Box (MEMBER & EXPORT BENEFITS) -->
         <div class="bg-brand-sand text-slate-800 p-6 sm:p-8 rounded-2xl flex items-center gap-5 shadow-md border border-slate-200/60 group hover:-translate-y-1 transition-all duration-300">
           <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-3xl shrink-0 shadow-sm group-hover:scale-110 transition-transform">
-            🎁
+            🏆
           </div>
           <div class="space-y-1">
-            <h3 class="font-extrabold text-sm sm:text-base tracking-wide uppercase text-brand-black">MEMBER BENEFITS</h3>
-            <p class="text-slate-500 text-xs font-medium">Join now & get exclusive deals</p>
-            <button onclick="openB2BModal('member')" class="inline-block text-xs font-bold text-brand-black hover:text-brand-caramel pt-1">
-              Join Free →
-            </button>
+            <h3 class="font-extrabold text-sm sm:text-base tracking-wide uppercase text-brand-black">EXPORT QUALITY</h3>
+            <p class="text-slate-500 text-xs font-medium">Authentic Moradabad Hallmark Finish</p>
+            <a href="#about" class="inline-block text-xs font-bold text-brand-black hover:text-brand-caramel pt-1">
+              Know Our Craft →
+            </a>
           </div>
         </div>
 
@@ -485,7 +494,50 @@
     </div>
   </section>
 
-  <!-- ================= 7. SOCIAL PROOF & NEWSLETTER SUBSCRIPTION BAR ================= -->
+  <!-- ================= 7. ABOUT MORADABAD HERITAGE STRIP ================= -->
+  <section id="about" class="py-14 bg-brand-sandLight border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-7 space-y-4">
+          <span class="text-xs uppercase font-extrabold tracking-widest text-brand-caramelDark">ARTISANAL HERITAGE</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-black">
+            Crafted with Devotion in <span class="font-serif italic text-brand-caramel">Peetal Nagri, Moradabad.</span>
+          </h2>
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+            Founded by <strong>Zeefaham Rais</strong> and <strong>Atir Rais</strong> in Civil Lines, Moradabad, <strong>TAG Zee</strong> bridges centuries-old metalcasting heritage with modern contemporary interior design. Every urli bowl, copper water vessel, garden lantern, and sacred brass diya is cast, hand-hammered, and polished by master multigenerational karigars.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2 text-xs">
+            <div class="p-3 bg-white rounded-xl border border-slate-200 shadow-sm">
+              <span class="font-bold text-brand-black block text-sm">Moradabad Hub</span>
+              <span class="text-slate-500 text-[11px]">Jigar Colony, Civil Lines</span>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 shadow-sm">
+              <span class="font-bold text-brand-black block text-sm">Direct B2B Supply</span>
+              <span class="text-slate-500 text-[11px]">Hotels, Temples & Retail</span>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 shadow-sm col-span-2 sm:col-span-1">
+              <span class="font-bold text-brand-black block text-sm">Pure Metals</span>
+              <span class="text-slate-500 text-[11px]">Virgin Brass & Copper</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 relative">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border-2 border-brand-gold/40">
+            <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=700&q=80" alt="Moradabad Metal Casting" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-brand-dark text-brand-gold text-xs font-bold p-3.5 rounded-2xl shadow-xl border border-brand-gold/50 flex items-center gap-2">
+            <span>✨</span>
+            <span>Tagzee.in Official</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 8. SOCIAL PROOF & NEWSLETTER SUBSCRIPTION BAR ================= -->
   <section class="py-12 bg-white border-b border-slate-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
       <div class="bg-brand-grayBg rounded-3xl p-6 sm:p-10 border border-slate-200/80 flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -497,9 +549,9 @@
           </div>
           <div class="space-y-1">
             <h4 class="font-extrabold text-xs sm:text-sm uppercase tracking-wider text-brand-black">
-              TRUSTED BY THOUSANDS
+              TRUSTED BY 10,000+ HOMES & ARCHITECTS
             </h4>
-            <p class="text-slate-500 text-xs">Quality products, happy customers.</p>
+            <p class="text-slate-500 text-xs">Exquisite metal artifacts, happy connoisseurs across India.</p>
             
             <div class="flex items-center justify-center sm:justify-start gap-3 pt-2">
               <!-- Avatar Stack -->
@@ -510,9 +562,9 @@
                 <img class="w-7 h-7 rounded-full border-2 border-white object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=80" alt="Customer 4">
               </div>
               <div class="text-xs font-bold text-slate-800">
-                <span>4.8/5</span>
+                <span>4.9/5</span>
                 <span class="text-amber-400">★★★★★</span>
-                <span class="text-[10px] text-slate-500 block font-normal">Based on 2,500+ Reviews</span>
+                <span class="text-[10px] text-slate-500 block font-normal">Based on 1,800+ Verified Reviews</span>
               </div>
             </div>
           </div>
@@ -521,9 +573,9 @@
         <!-- Right: Newsletter Form -->
         <div class="w-full lg:max-w-md space-y-2 text-center lg:text-left">
           <h4 class="font-extrabold text-xs sm:text-sm uppercase tracking-wider text-brand-black">
-            SUBSCRIBE TO OUR NEWSLETTER
+            SUBSCRIBE TO OUR CONNOISSEURS CLUB
           </h4>
-          <p class="text-slate-500 text-xs">Get the latest updates on new drops, secret VIP coupons and sales.</p>
+          <p class="text-slate-500 text-xs">Get first access to limited artisanal drops, festive catalogues, and private discounts.</p>
           
           <form onsubmit="handleNewsletter(event)" class="flex items-center gap-2 pt-1">
             <input type="email" id="newsletterEmail" required placeholder="Enter your email address" class="flex-1 bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-xs text-slate-800 focus:outline-none focus:border-brand-black shadow-sm">
@@ -537,110 +589,116 @@
     </div>
   </section>
 
-  <!-- ================= 8. LUXURY MULTI-COLUMN FOOTER ================= -->
-  <footer id="contact" class="bg-brand-black text-slate-400 text-xs pt-16 pb-12 border-t border-white/10">
+  <!-- ================= 9. OFFICIAL FOOTER (WITH EXACT VISITING CARD DETAILS) ================= -->
+  <footer id="contact" class="bg-brand-black text-slate-400 text-xs pt-16 pb-12 border-t border-brand-gold/30">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 pb-12 border-b border-white/10">
         
-        <!-- Col 1: Brand Intro & Socials -->
+        <!-- Col 1: Brand Intro & Card Details -->
         <div class="space-y-4 lg:col-span-1">
-          <div class="flex items-center gap-2">
-            <div class="w-8 h-8 rounded-lg bg-white text-brand-black flex items-center justify-center font-bold text-sm">
-              T
+          <div class="flex items-center gap-2.5">
+            <!-- Triangle TZ Icon -->
+            <div class="w-8 h-8 rounded-lg bg-white/10 border border-brand-gold/50 flex items-center justify-center font-serif text-brand-gold text-sm font-black">
+              TZ
             </div>
             <div>
-              <span class="font-extrabold text-lg text-white block leading-none">TAGZEE</span>
-              <span class="text-[8px] tracking-widest text-slate-400 font-bold uppercase block mt-0.5">EVERYTHING YOU NEED</span>
+              <span class="font-serif font-black text-lg text-white block leading-none">TAG Zee</span>
+              <span class="text-[7.5px] tracking-[0.2em] text-brand-gold font-bold uppercase block mt-0.5">PEETAL NAGRI • MORADABAD</span>
             </div>
           </div>
           <p class="text-slate-400 text-[11px] leading-relaxed">
-            Your one-stop destination for quality lifestyle products at the best prices. Shop smart, live better.
+            Deals In: Metal Handicrafts | Home & Kitchen | Garden Decor | Ornaments. Export quality direct from master artisans.
           </p>
-          <div class="flex items-center gap-3 pt-1 text-white">
-            <a href="#" class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-caramel hover:text-brand-black flex items-center justify-center transition-all cursor-pointer">f</a>
-            <a href="#" class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-caramel hover:text-brand-black flex items-center justify-center transition-all cursor-pointer">📸</a>
-            <a href="#" class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-caramel hover:text-brand-black flex items-center justify-center transition-all cursor-pointer">𝕏</a>
-            <a href="#" class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-caramel hover:text-brand-black flex items-center justify-center transition-all cursor-pointer">p</a>
+          <div class="pt-1 text-slate-300 text-[11px] space-y-1">
+            <div>🌐 Official: <strong class="text-white font-mono">tagzee.in</strong></div>
+            <div>✉️ <a href="mailto:contact@tagzee.in" class="hover:text-brand-gold">contact@tagzee.in</a></div>
+            <div>✉️ <a href="mailto:contact.tagzee@gmail.com" class="hover:text-brand-gold">contact.tagzee@gmail.com</a></div>
           </div>
         </div>
 
-        <!-- Col 2: Quick Links -->
+        <!-- Col 2: Owners Direct Contacts -->
         <div class="space-y-3">
-          <h4 class="font-extrabold text-white text-xs uppercase tracking-wider">QUICK LINKS</h4>
+          <h4 class="font-extrabold text-white text-xs uppercase tracking-wider text-brand-gold">OWNERS DESK</h4>
+          <div class="space-y-3 text-[11px]">
+            <div class="p-2.5 rounded-xl bg-white/5 border border-white/10">
+              <span class="font-bold text-white block">ZEEFAHAM RAIS</span>
+              <span class="text-[10px] text-brand-gold font-semibold uppercase block">OWNER</span>
+              <a href="tel:+917351366786" class="text-slate-300 font-mono font-bold hover:text-brand-gold block mt-0.5">+91 7351366786</a>
+              <a href="mailto:zeefaham@yahoo.com" class="text-[10px] text-slate-400 hover:text-white block">zeefaham@yahoo.com</a>
+            </div>
+            <div class="p-2.5 rounded-xl bg-white/5 border border-white/10">
+              <span class="font-bold text-white block">ATIR RAIS</span>
+              <span class="text-[10px] text-brand-gold font-semibold uppercase block">OWNER</span>
+              <a href="tel:+917248257721" class="text-slate-300 font-mono font-bold hover:text-brand-gold block mt-0.5">+91 7248257721</a>
+              <a href="mailto:aatirrais@gmail.com" class="text-[10px] text-slate-400 hover:text-white block">aatirrais@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 3: Categories & Specialities -->
+        <div class="space-y-3">
+          <h4 class="font-extrabold text-white text-xs uppercase tracking-wider">PRODUCT CATEGORIES</h4>
           <ul class="space-y-2 text-[11px]">
-            <li><a href="#home" class="hover:text-brand-caramel transition-colors">Home</a></li>
-            <li><a href="#trending" class="hover:text-brand-caramel transition-colors">Shop</a></li>
-            <li><a href="#categories" class="hover:text-brand-caramel transition-colors">Collections</a></li>
-            <li><a href="#about" class="hover:text-brand-caramel transition-colors">About Us</a></li>
-            <li><a href="javascript:void(0)" onclick="openB2BModal()" class="text-brand-caramel font-bold hover:underline">B2B Wholesale Portal</a></li>
-            <li><a href="#contact" class="hover:text-brand-caramel transition-colors">Contact Us</a></li>
+            <li><a href="#categories" onclick="filterByCategory('Metal Handicrafts')" class="hover:text-brand-gold transition-colors">Metal Handicrafts</a></li>
+            <li><a href="#categories" onclick="filterByCategory('Home & Kitchen')" class="hover:text-brand-gold transition-colors">Home & Kitchen Brassware</a></li>
+            <li><a href="#categories" onclick="filterByCategory('Garden Decor')" class="hover:text-brand-gold transition-colors">Garden Decor & Metal Planters</a></li>
+            <li><a href="#categories" onclick="filterByCategory('Ornaments')" class="hover:text-brand-gold transition-colors">Ornaments & Diyas</a></li>
+            <li><a href="#categories" onclick="filterByCategory('Lanterns')" class="hover:text-brand-gold transition-colors">Moroccan Hanging Lanterns</a></li>
+            <li><a href="javascript:void(0)" onclick="openB2BModal()" class="text-brand-gold font-bold hover:underline">Bulk Wholesale Catalog</a></li>
           </ul>
         </div>
 
-        <!-- Col 3: Customer Service -->
+        <!-- Col 4: Quick Links & Customer Service -->
         <div class="space-y-3">
-          <h4 class="font-extrabold text-white text-xs uppercase tracking-wider">CUSTOMER SERVICE</h4>
+          <h4 class="font-extrabold text-white text-xs uppercase tracking-wider">CUSTOMER CARE</h4>
           <ul class="space-y-2 text-[11px]">
-            <li><a href="#" class="hover:text-brand-caramel transition-colors">FAQs</a></li>
-            <li><a href="#" class="hover:text-brand-caramel transition-colors">Shipping Policy</a></li>
-            <li><a href="#" class="hover:text-brand-caramel transition-colors">Returns & Refunds</a></li>
-            <li><a href="#" class="hover:text-brand-caramel transition-colors">Terms & Conditions</a></li>
-            <li><a href="#" class="hover:text-brand-caramel transition-colors">Privacy Policy</a></li>
+            <li><a href="#home" class="hover:text-brand-gold transition-colors">Home</a></li>
+            <li><a href="#about" class="hover:text-brand-gold transition-colors">About Our Foundry</a></li>
+            <li><a href="#" class="hover:text-brand-gold transition-colors">Care Instructions for Brass/Copper</a></li>
+            <li><a href="#" class="hover:text-brand-gold transition-colors">Shipping & Wooden Crate Delivery</a></li>
+            <li><a href="#" class="hover:text-brand-gold transition-colors">Returns & Guarantee</a></li>
+            <li><a href="javascript:void(0)" onclick="openCartDrawer()" class="hover:text-brand-gold transition-colors">Track Order / Cart</a></li>
           </ul>
         </div>
 
-        <!-- Col 4: My Account -->
+        <!-- Col 5: Moradabad Factory / Registered Address -->
         <div class="space-y-3">
-          <h4 class="font-extrabold text-white text-xs uppercase tracking-wider">MY ACCOUNT</h4>
-          <ul class="space-y-2 text-[11px]">
-            <li><a href="javascript:void(0)" onclick="openB2BModal('account')" class="hover:text-brand-caramel transition-colors">My Account</a></li>
-            <li><a href="javascript:void(0)" onclick="openB2BModal('orders')" class="hover:text-brand-caramel transition-colors">Order History</a></li>
-            <li><a href="javascript:void(0)" onclick="openCartDrawer()" class="hover:text-brand-caramel transition-colors">Wishlist & Cart</a></li>
-            <li><a href="#" class="hover:text-brand-caramel transition-colors">Track Order</a></li>
-            <li><a href="javascript:void(0)" onclick="openB2BModal('login')" class="hover:text-brand-caramel transition-colors">Login / Register</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 5: Contact Us -->
-        <div class="space-y-3">
-          <h4 class="font-extrabold text-white text-xs uppercase tracking-wider">CONTACT US</h4>
-          <ul class="space-y-2.5 text-[11px] leading-relaxed">
-            <li class="flex items-center gap-2">
-              <span>📞</span>
-              <span class="text-slate-300 font-mono font-bold">+91 96702 15052</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <span>✉️</span>
-              <span class="text-slate-300">support@tagzee.com</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span>📍</span>
-              <span class="text-slate-400">Commerce Hub, Cyber City, India</span>
-            </li>
-          </ul>
+          <h4 class="font-extrabold text-white text-xs uppercase tracking-wider">FOUNDRY & OFFICE</h4>
+          <div class="space-y-2 text-[11px] leading-relaxed">
+            <p class="text-slate-300">
+              📍 <strong>TAG Zee Workshop & Office:</strong><br>
+              A 305 Jigar Colony, Civil Lines,<br>
+              Moradabad - UP (244001), India.
+            </p>
+            <div class="pt-2">
+              <a href="https://wa.me/917351366786?text=Hello%20TAG%20Zee,%20I%20am%20inquiring%20about%20your%20Moradabad%20handicrafts." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-bold text-xs transition-colors">
+                <span>💬 WhatsApp Quick Connect</span>
+              </a>
+            </div>
+          </div>
         </div>
 
       </div>
 
       <!-- Footer Bottom Copyright & Payment Methods -->
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 gap-4">
-        <p>© 2026 Tagzee. All Rights Reserved.</p>
+        <p>© 2026 TAG Zee (tagzee.in). All Rights Reserved. Crafted with Devotion in Moradabad.</p>
         
-        <!-- Payment Badges (Visa, Mastercard, UPI, Apple Pay, GPay) -->
+        <!-- Payment Badges -->
         <div class="flex items-center gap-2 text-xs">
-          <span class="px-2.5 py-1 bg-white/10 rounded font-bold text-white tracking-wider">VISA</span>
-          <span class="px-2.5 py-1 bg-white/10 rounded font-bold text-white tracking-wider">MC</span>
           <span class="px-2.5 py-1 bg-white/10 rounded font-bold text-white tracking-wider">UPI</span>
-          <span class="px-2.5 py-1 bg-white/10 rounded font-bold text-white tracking-wider">PAYTM</span>
-          <span class="px-2.5 py-1 bg-white/10 rounded font-bold text-white tracking-wider">GPay</span>
+          <span class="px-2.5 py-1 bg-white/10 rounded font-bold text-white tracking-wider">NEFT / RTGS</span>
+          <span class="px-2.5 py-1 bg-white/10 rounded font-bold text-white tracking-wider">VISA</span>
+          <span class="px-2.5 py-1 bg-white/10 rounded font-bold text-white tracking-wider">MASTERCARD</span>
+          <span class="px-2.5 py-1 bg-white/10 rounded font-bold text-white tracking-wider">GST INVOICE</span>
         </div>
       </div>
 
     </div>
   </footer>
 
-  <!-- ================= 9. SLIDE-OVER CART DRAWER (INTERACTIVE) ================= -->
+  <!-- ================= 10. SLIDE-OVER CART DRAWER (INTERACTIVE) ================= -->
   <div id="cartDrawer" class="hidden fixed inset-0 z-50 transition-opacity duration-300">
     <!-- Backdrop -->
     <div onclick="closeCartDrawer()" class="absolute inset-0 drawer-backdrop"></div>
@@ -649,28 +707,28 @@
     <div class="absolute top-0 right-0 bottom-0 w-full max-w-md bg-white shadow-2xl flex flex-col transform transition-transform duration-300">
       
       <!-- Drawer Header -->
-      <div class="p-4 sm:p-5 border-b border-slate-100 flex items-center justify-between">
+      <div class="p-4 sm:p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50">
         <div class="flex items-center gap-2">
-          <h3 class="font-extrabold text-base text-brand-black uppercase tracking-wide">YOUR CART</h3>
-          <span id="drawerItemCountBadge" class="bg-brand-black text-white text-xs px-2 py-0.5 rounded-full font-bold">2 Items</span>
+          <h3 class="font-extrabold text-base text-brand-black uppercase tracking-wide">YOUR METALWARE CART</h3>
+          <span id="drawerItemCountBadge" class="bg-brand-black text-brand-gold text-xs px-2 py-0.5 rounded-full font-bold">2 Items</span>
         </div>
-        <button onclick="closeCartDrawer()" class="p-2 text-slate-400 hover:text-slate-800 rounded-full hover:bg-slate-100 transition-colors cursor-pointer text-lg">✕</button>
+        <button onclick="closeCartDrawer()" class="p-2 text-slate-400 hover:text-slate-800 rounded-full hover:bg-slate-200 transition-colors cursor-pointer text-lg">✕</button>
       </div>
 
       <!-- Free Shipping Progress Bar -->
-      <div class="bg-brand-grayBg px-5 py-3 border-b border-slate-100">
+      <div class="bg-brand-sandLight px-5 py-3 border-b border-slate-200/60">
         <div class="flex items-center justify-between text-xs font-bold mb-1.5">
-          <span id="freeShippingText" class="text-slate-700">Add ₹201 more to unlock FREE Shipping! 🚚</span>
-          <span id="freeShippingPercentage" class="text-brand-caramel font-black">80%</span>
+          <span id="freeShippingText" class="text-slate-700">Add ₹... more for FREE Safe Wooden Delivery!</span>
+          <span id="freeShippingPercentage" class="text-brand-caramelDark font-black">100%</span>
         </div>
         <div class="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
-          <div id="freeShippingBar" class="h-full bg-brand-caramel transition-all duration-500 rounded-full" style="width: 80%;"></div>
+          <div id="freeShippingBar" class="h-full bg-brand-gold transition-all duration-500 rounded-full" style="width: 100%;"></div>
         </div>
       </div>
 
       <!-- Cart Items List (Scrollable) -->
       <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-4 sm:p-5 space-y-4">
-        <!-- Rendered dynamically via JavaScript -->
+        <!-- Injected via JavaScript -->
       </div>
 
       <!-- Drawer Footer & Checkout -->
@@ -688,31 +746,31 @@
         <div class="space-y-1.5 text-xs text-slate-600 pt-1">
           <div class="flex justify-between">
             <span>Subtotal</span>
-            <span id="cartSubtotal" class="font-bold text-slate-800">₹2,499</span>
+            <span id="cartSubtotal" class="font-bold text-slate-800">₹4,498</span>
           </div>
           <div id="cartDiscountRow" class="hidden flex justify-between text-emerald-600 font-bold">
             <span>Coupon Discount (10%)</span>
-            <span id="cartDiscount">-₹250</span>
+            <span id="cartDiscount">-₹450</span>
           </div>
           <div class="flex justify-between">
-            <span>Shipping</span>
-            <span id="cartShipping" class="font-bold text-slate-800">FREE</span>
+            <span>Safe Packaging & Courier</span>
+            <span id="cartShipping" class="font-bold text-emerald-600">FREE</span>
           </div>
           <div class="flex justify-between text-sm font-extrabold text-brand-black pt-2 border-t border-slate-200">
             <span>Estimated Total</span>
-            <span id="cartTotal" class="text-base text-brand-black font-black">₹2,499</span>
+            <span id="cartTotal" class="text-base text-brand-black font-black">₹4,498</span>
           </div>
         </div>
 
         <!-- Checkout Buttons -->
         <div class="space-y-2 pt-1">
-          <button onclick="proceedToCheckout('online')" class="w-full py-3.5 rounded-xl bg-brand-black hover:bg-brand-caramel text-white font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-xl active:scale-95 transition-all cursor-pointer flex items-center justify-center gap-2">
-            <span>PROCEED TO CHECKOUT</span>
-            <span>→</span>
+          <button onclick="proceedToCheckout('whatsapp')" class="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-xl active:scale-95 transition-all cursor-pointer flex items-center justify-center gap-2">
+            <span>💬 DIRECT ORDER ON WHATSAPP</span>
+            <span>➔</span>
           </button>
           
-          <button onclick="proceedToCheckout('whatsapp')" class="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer">
-            <span>💬 Quick Order on WhatsApp</span>
+          <button onclick="openB2BModal()" class="w-full py-2.5 rounded-xl bg-brand-black hover:bg-brand-caramel text-brand-gold hover:text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer">
+            <span>🏢 Need Bulk Quantity? Get B2B Quote</span>
           </button>
         </div>
 
@@ -721,15 +779,15 @@
     </div>
   </div>
 
-  <!-- ================= 10. QUICK VIEW PRODUCT MODAL ================= -->
+  <!-- ================= 11. QUICK VIEW PRODUCT MODAL ================= -->
   <div id="quickViewModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
     <div onclick="closeQuickViewModal()" class="absolute inset-0 drawer-backdrop"></div>
-    <div class="relative bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-100 z-10 p-6 sm:p-8">
+    <div class="relative bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-brand-gold/40 z-10 p-6 sm:p-8">
       <button onclick="closeQuickViewModal()" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-800 rounded-full hover:bg-slate-100 text-lg cursor-pointer">✕</button>
       
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
-        <div class="aspect-square rounded-2xl overflow-hidden bg-brand-grayBg p-4 flex items-center justify-center">
-          <img id="qvImage" src="" alt="Product View" class="w-full h-full object-contain">
+        <div class="aspect-square rounded-2xl overflow-hidden bg-brand-grayBg p-3 flex items-center justify-center border border-slate-200">
+          <img id="qvImage" src="" alt="Metalware View" class="w-full h-full object-cover rounded-xl">
         </div>
         
         <div class="space-y-3.5">
@@ -738,21 +796,21 @@
           
           <div class="flex items-center gap-2 text-xs">
             <span class="text-amber-400 font-bold">★★★★★</span>
-            <span id="qvReviews" class="text-slate-500 font-semibold">(128 Reviews)</span>
+            <span id="qvReviews" class="text-slate-500 font-semibold">(184 Reviews)</span>
           </div>
 
           <div class="flex items-center gap-3 pt-1">
             <span id="qvPrice" class="text-2xl font-black text-brand-black">₹2,499</span>
             <span id="qvOldPrice" class="text-sm font-semibold text-slate-400 line-through">₹3,499</span>
-            <span id="qvBadge" class="text-[10px] font-extrabold text-white bg-brand-black px-2 py-0.5 rounded">-20%</span>
+            <span id="qvBadge" class="text-[10px] font-extrabold text-white bg-brand-black px-2 py-0.5 rounded">-28%</span>
           </div>
 
           <p id="qvDescription" class="text-xs text-slate-600 leading-relaxed">
-            Engineered with premium materials for maximum durability and aesthetic appeal. 100% authentic with 1-year warranty.
+            Handcrafted by Moradabad master artisans using pure metals and traditional lost-wax or hand-hammering techniques.
           </p>
 
           <div class="pt-3 flex items-center gap-3">
-            <button onclick="addCurrentQvToCart()" class="flex-1 py-3 bg-brand-black hover:bg-brand-caramel text-white font-bold text-xs uppercase rounded-xl tracking-wider transition-all shadow-md active:scale-95 cursor-pointer">
+            <button onclick="addCurrentQvToCart()" class="flex-1 py-3 bg-brand-black hover:bg-brand-caramel text-brand-gold hover:text-white font-bold text-xs uppercase rounded-xl tracking-wider transition-all shadow-md active:scale-95 cursor-pointer">
               🛒 ADD TO CART
             </button>
             <button onclick="buyNowCurrentQv()" class="px-5 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase rounded-xl transition-all cursor-pointer">
@@ -764,166 +822,166 @@
     </div>
   </div>
 
-  <!-- ================= 11. B2B WHOLESALE & CORPORATE INQUIRY MODAL ================= -->
+  <!-- ================= 12. B2B WHOLESALE & CORPORATE INQUIRY MODAL ================= -->
   <div id="b2bModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
     <div onclick="closeB2BModal()" class="absolute inset-0 drawer-backdrop"></div>
-    <div class="relative bg-white rounded-3xl max-w-lg w-full max-h-[92vh] overflow-y-auto shadow-2xl border border-slate-100 z-10 p-6 sm:p-8">
+    <div class="relative bg-white rounded-3xl max-w-lg w-full max-h-[92vh] overflow-y-auto shadow-2xl border border-brand-gold/60 z-10 p-6 sm:p-8">
       <button onclick="closeB2BModal()" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-800 rounded-full hover:bg-slate-100 text-lg cursor-pointer">✕</button>
 
       <div class="text-center space-y-1.5 mb-6">
-        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-caramel">TAGZEE BUSINESS SOLUTIONS</span>
-        <h3 class="text-2xl font-black text-brand-black uppercase">B2B & Bulk Inquiries</h3>
-        <p class="text-xs text-slate-600">Get custom branding, volume-based discounts, and GST tax credit invoices.</p>
+        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-goldDark">TAG ZEE MORADABAD • B2B DIVISION</span>
+        <h3 class="text-2xl font-black text-brand-black uppercase">Direct Wholesale & Export RFQ</h3>
+        <p class="text-xs text-slate-600">Connect directly with owners <strong>Zeefaham Rais</strong> & <strong>Atir Rais</strong> for factory wholesale pricing, custom engraving, and GST invoices.</p>
       </div>
 
       <form onsubmit="handleB2BSubmit(event)" class="space-y-3.5 text-xs">
         <div>
-          <label class="block mb-1 font-bold text-slate-700">Full Name</label>
-          <input type="text" id="b2bName" required placeholder="e.g. Rahul Sharma" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 focus:outline-none focus:border-brand-black">
+          <label class="block mb-1 font-bold text-slate-700">Full Name / Contact Person</label>
+          <input type="text" id="b2bName" required placeholder="e.g. Ramesh Agrawal" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 focus:outline-none focus:border-brand-black">
         </div>
         <div>
-          <label class="block mb-1 font-bold text-slate-700">Company / Store Name</label>
-          <input type="text" id="b2bCompany" required placeholder="e.g. Apex Retailers Pvt Ltd" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 focus:outline-none focus:border-brand-black">
+          <label class="block mb-1 font-bold text-slate-700">Business / Store / Firm Name</label>
+          <input type="text" id="b2bCompany" required placeholder="e.g. Royal Decor Emporium / Hotel Group" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 focus:outline-none focus:border-brand-black">
         </div>
         <div class="grid grid-cols-2 gap-3">
           <div>
-            <label class="block mb-1 font-bold text-slate-700">Phone / WhatsApp</label>
+            <label class="block mb-1 font-bold text-slate-700">WhatsApp / Phone</label>
             <input type="tel" id="b2bPhone" required placeholder="+91 98765 43210" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 focus:outline-none focus:border-brand-black font-mono">
           </div>
           <div>
             <label class="block mb-1 font-bold text-slate-700">Estimated Quantity</label>
             <select id="b2bQty" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 focus:outline-none focus:border-brand-black font-bold">
-              <option value="50-100">50 - 100 Units</option>
-              <option value="100-500">100 - 500 Units</option>
-              <option value="500-2000">500 - 2,000 Units</option>
-              <option value="2000+">2,000+ Units (Enterprise)</option>
+              <option value="25-50">25 - 50 Pieces</option>
+              <option value="50-200">50 - 200 Pieces</option>
+              <option value="200-1000">200 - 1,000 Pieces</option>
+              <option value="Export Bulk">Full Container / Export Bulk</option>
             </select>
           </div>
         </div>
         <div>
-          <label class="block mb-1 font-bold text-slate-700">Products of Interest / Specifications</label>
-          <textarea id="b2bMsg" rows="3" required placeholder="Tell us which products you need wholesale pricing for..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 focus:outline-none focus:border-brand-black"></textarea>
+          <label class="block mb-1 font-bold text-slate-700">Category / Specifications Required</label>
+          <textarea id="b2bMsg" rows="3" required placeholder="Tell us which items you need (e.g. Brass Urli bowls, Hammered copper dispensers, Garden planters, Hanging lanterns)..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-800 focus:outline-none focus:border-brand-black"></textarea>
         </div>
 
-        <button type="submit" class="w-full py-3.5 rounded-xl bg-brand-black hover:bg-brand-caramel text-white font-bold text-xs uppercase tracking-wider shadow-lg transition-all active:scale-95 cursor-pointer mt-2">
-          SUBMIT B2B RFQ QUOTATION REQUEST →
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-brand-black hover:bg-brand-caramel text-brand-gold hover:text-white font-bold text-xs uppercase tracking-wider shadow-lg transition-all active:scale-95 cursor-pointer mt-2">
+          SEND B2B WHOLESALE INQUIRY VIA WHATSAPP →
         </button>
       </form>
     </div>
   </div>
 
   <!-- Toast Notification Container -->
-  <div id="toast" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-brand-black text-white px-5 py-3 rounded-2xl shadow-2xl border border-white/20 text-xs font-bold flex items-center gap-2 transform transition-all">
-    <span id="toastIcon">🛍️</span>
+  <div id="toast" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-brand-black text-white px-5 py-3 rounded-2xl shadow-2xl border border-brand-gold/40 text-xs font-bold flex items-center gap-2 transform transition-all">
+    <span id="toastIcon">✨</span>
     <span id="toastMessage">Item added to cart!</span>
   </div>
 
   <!-- ================= JAVASCRIPT APP LOGIC ================= -->
   <script>
-    // --- 1. PRODUCT DATABASE ---
+    // --- 1. PRODUCT DATABASE (MORADABAD BRASS & METAL HANDICRAFTS) ---
     const productsDB = [
       {
         id: 1,
-        title: "Smart Watch Series 9",
-        category: "Electronics",
-        price: 2999,
-        oldPrice: 3999,
-        discount: "-20%",
+        title: "Royal Mughal Brass Urli (14-Inch)",
+        category: "Metal Handicrafts",
+        price: 2499,
+        oldPrice: 3499,
+        discount: "-28%",
         rating: 4.9,
-        reviewsCount: 128,
-        image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80",
-        desc: "Full OLED Retina display, 24/7 heart-rate and SpO2 tracking, water-resistant casing, and 7-day battery life."
+        reviewsCount: 184,
+        image: "https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=600&q=80",
+        desc: "Exquisitely cast virgin brass urli with traditional floral scalloped rims. Perfect for floating candles and rose petals in festive entrance foyers."
       },
       {
         id: 2,
-        title: "Travel Backpack",
-        category: "Accessories",
-        price: 1499,
-        oldPrice: 1999,
-        discount: "-15%",
+        title: "Hammered Pure Copper Dispenser (5L)",
+        category: "Home & Kitchen",
+        price: 1999,
+        oldPrice: 2799,
+        discount: "-28%",
         rating: 4.8,
-        reviewsCount: 96,
-        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80",
-        desc: "Durable water-repellent canvas with padded laptop compartment, anti-theft zipper, and ergonomic lumbar straps."
+        reviewsCount: 212,
+        image: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=600&q=80",
+        desc: "Hand-hammered pure copper pot with leakproof brass dispenser tap. Enriched with natural Ayurvedic wellness benefits for family hydration."
       },
       {
         id: 3,
-        title: "Wireless Earbuds",
-        category: "Electronics",
-        price: 999,
-        oldPrice: null,
-        discount: null,
-        rating: 4.7,
-        reviewsCount: 243,
-        image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80",
-        desc: "Crisp active noise isolation, low-latency Bluetooth 5.3, touch playback controls, and 30-hour charging case."
+        title: "Moroccan Filigree Metal Lantern",
+        category: "Lanterns",
+        price: 1299,
+        oldPrice: 1799,
+        discount: "-27%",
+        rating: 4.8,
+        reviewsCount: 98,
+        image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80",
+        desc: "Intricately laser-cut and punched sheet metal lantern with antique gold finish. Casts mesmerizing shadow patterns when lit with a tealight."
       },
       {
         id: 4,
-        title: "Perfume For Men",
-        category: "Beauty",
-        price: 1899,
-        oldPrice: 2499,
-        discount: null,
+        title: "Carved Brass Peacock Diya Set (Pair)",
+        category: "Ornaments",
+        price: 1699,
+        oldPrice: 2299,
+        discount: "-26%",
         rating: 4.9,
-        reviewsCount: 75,
-        image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=600&q=80",
-        desc: "Rich woody aromatic fragrance featuring notes of sandalwood, bergamot, cedar, and invigorating pink pepper."
+        reviewsCount: 142,
+        image: "https://images.unsplash.com/photo-1605371924599-2d0365da1ae0?auto=format&fit=crop&w=600&q=80",
+        desc: "Heirloom-grade solid brass oil lamps with intricately sculpted peacock finials and deep oil reservoirs for sacred pooja ceremonies."
       },
       {
         id: 5,
-        title: "Moon Lamp",
-        category: "Home & Living",
-        price: 799,
-        oldPrice: null,
-        discount: null,
+        title: "Ribbed Metal Planter with Stand",
+        category: "Garden Decor",
+        price: 1199,
+        oldPrice: 1599,
+        discount: "-25%",
         rating: 4.8,
-        reviewsCount: 58,
-        image: "https://images.unsplash.com/photo-1532767153582-b1a0e5145009?auto=format&fit=crop&w=600&q=80",
-        desc: "3D precision printed lunar surface with touch-controlled warm amber and cool white dimming, on wooden geometric stand."
+        reviewsCount: 76,
+        image: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=600&q=80",
+        desc: "Electroplated rust-resistant gold metal pot mounted on a matte black wrought-iron tripod stand. Ideal for living rooms and balcony gardens."
       },
       {
         id: 6,
-        title: "Retro Sunglasses",
-        category: "Accessories",
-        price: 899,
-        oldPrice: 1299,
-        discount: "-30%",
-        rating: 4.6,
-        reviewsCount: 42,
-        image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80",
-        desc: "UV400 polarized acetate frames designed for effortless urban aesthetic and maximum glare protection."
-      },
-      {
-        id: 7,
-        title: "Minimalist Flask",
-        category: "Sports",
-        price: 649,
-        oldPrice: 899,
-        discount: "-25%",
-        rating: 4.8,
-        reviewsCount: 88,
-        image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=600&q=80",
-        desc: "Double-walled vacuum insulated stainless steel canteen keeping beverages 24h ice cold or 12h steaming hot."
-      },
-      {
-        id: 8,
-        title: "Studio Headphones",
-        category: "Electronics",
+        title: "Antique Gold Brass Cutlery Set (24-Pc)",
+        category: "Tableware",
         price: 3499,
         oldPrice: 4999,
         discount: "-30%",
         rating: 4.9,
-        reviewsCount: 195,
-        image: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=600&q=80",
-        desc: "Hi-Res certified audio drivers with ultra-plush memory foam earcups and dedicated studio bass enhancement."
+        reviewsCount: 65,
+        image: "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=600&q=80",
+        desc: "Heavyweight forged brass forks, spoons, and dinner knives with mirror gold electroplating. Luxury dining heirloom for royal feasts."
+      },
+      {
+        id: 7,
+        title: "Sunburst Celestial Metal Wall Art",
+        category: "Metal Handicrafts",
+        price: 2799,
+        oldPrice: 3999,
+        discount: "-30%",
+        rating: 4.7,
+        reviewsCount: 54,
+        image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80",
+        desc: "28-inch diameter multi-ray metallic wall sculpture in antique bronze and gold patina. Instant focal point for living room feature walls."
+      },
+      {
+        id: 8,
+        title: "Handcrafted Brass Ganesha Idol",
+        category: "Pooja",
+        price: 2199,
+        oldPrice: 2999,
+        discount: "-26%",
+        rating: 5.0,
+        reviewsCount: 110,
+        image: "https://images.unsplash.com/photo-1567591414240-e1451b6a22f7?auto=format&fit=crop&w=600&q=80",
+        desc: "Solid brass consecrated Lord Ganesha seated on a lotus pedestal with intricate trunk and crown detailing. Hand-polished to a radiant luster."
       }
     ];
 
     // --- 2. CART STATE ---
     let cart = [
-      { id: 1, title: "Smart Watch Series 9", price: 2999, qty: 1, image: productsDB[0].image },
-      { id: 3, title: "Wireless Earbuds", price: 999, qty: 1, image: productsDB[2].image }
+      { id: 1, title: "Royal Mughal Brass Urli (14-Inch)", price: 2499, qty: 1, image: productsDB[0].image },
+      { id: 2, title: "Hammered Pure Copper Dispenser (5L)", price: 1999, qty: 1, image: productsDB[1].image }
     ];
     let appliedDiscountPercent = 0;
     let currentQvProduct = null;
@@ -940,25 +998,25 @@
 
       const list = (filter === 'All') 
         ? productsDB.slice(0, 5) // Show top 5 on initial view matching screenshot
-        : productsDB.filter(p => p.category.toLowerCase() === filter.toLowerCase());
+        : productsDB.filter(p => p.category.toLowerCase().includes(filter.toLowerCase()));
 
       const displayList = list.length > 0 ? list : productsDB.slice(0, 5);
 
       container.innerHTML = displayList.map(p => `
-        <div class="product-card group bg-white border border-slate-100 hover:border-slate-300 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+        <div class="product-card group bg-white border border-slate-100 hover:border-brand-gold/60 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
           
           <!-- Image Box with Quick View -->
           <div class="relative aspect-square bg-brand-grayBg p-3 flex items-center justify-center overflow-hidden cursor-pointer" onclick="openQuickViewModal(${p.id})">
-            <img src="${p.image}" alt="${p.title}" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
+            <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
             
             ${p.discount ? `
-              <span class="absolute top-2.5 right-2.5 bg-brand-black text-white text-[9px] font-black px-2 py-0.5 rounded shadow-sm">
+              <span class="absolute top-2.5 right-2.5 bg-brand-black text-brand-gold text-[9px] font-black px-2 py-0.5 rounded shadow-sm border border-brand-gold/40">
                 ${p.discount}
               </span>
             ` : ''}
 
             <!-- Quick View Hover Button -->
-            <button onclick="event.stopPropagation(); openQuickViewModal(${p.id})" class="absolute inset-x-4 bottom-3 py-2 bg-white/95 hover:bg-brand-black hover:text-white text-slate-800 text-[10.5px] font-bold rounded-xl shadow-md opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0 cursor-pointer">
+            <button onclick="event.stopPropagation(); openQuickViewModal(${p.id})" class="absolute inset-x-4 bottom-3 py-2 bg-white/95 hover:bg-brand-black hover:text-brand-gold text-slate-800 text-[10.5px] font-bold rounded-xl shadow-md opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0 cursor-pointer">
               Quick View
             </button>
           </div>
@@ -986,7 +1044,7 @@
             </div>
 
             <!-- Add to Cart Outline Button (Matching Screenshot) -->
-            <button onclick="addToCart(${p.id})" class="w-full mt-2 py-2 px-2.5 border border-slate-200 hover:border-brand-black hover:bg-brand-black hover:text-white rounded-xl text-slate-700 font-bold text-[11px] flex items-center justify-center gap-1.5 transition-all active:scale-95 cursor-pointer shadow-sm">
+            <button onclick="addToCart(${p.id})" class="w-full mt-2 py-2 px-2.5 border border-slate-200 hover:border-brand-black hover:bg-brand-black hover:text-brand-gold rounded-xl text-slate-700 font-bold text-[11px] flex items-center justify-center gap-1.5 transition-all active:scale-95 cursor-pointer shadow-sm">
               <span>🛒</span>
               <span>ADD TO CART</span>
             </button>
@@ -1030,8 +1088,8 @@
         }
       }
 
-      // Free Shipping Threshold (Threshold: ₹999)
-      const threshold = 999;
+      // Free Shipping Threshold (Threshold: ₹1499)
+      const threshold = 1499;
       const progress = Math.min(100, Math.round((subtotal / threshold) * 100));
       const bar = document.getElementById('freeShippingBar');
       const pctText = document.getElementById('freeShippingPercentage');
@@ -1041,11 +1099,11 @@
       if (pctText) pctText.innerText = `${progress}%`;
       if (shipText) {
         if (subtotal >= threshold) {
-          shipText.innerText = "🎉 Congratulations! FREE Express Shipping Unlocked!";
+          shipText.innerText = "🎉 Congratulations! FREE Safe Wooden Box Delivery Unlocked!";
           shipText.classList.add('text-emerald-600');
         } else {
           const diff = threshold - subtotal;
-          shipText.innerText = `Add ₹${diff.toLocaleString('en-IN')} more to unlock FREE Shipping! 🚚`;
+          shipText.innerText = `Add ₹${diff.toLocaleString('en-IN')} more to unlock FREE Delivery! 🚚`;
           shipText.classList.remove('text-emerald-600');
         }
       }
@@ -1057,14 +1115,14 @@
           itemsContainer.innerHTML = `
             <div class="py-12 text-center space-y-3">
               <span class="text-4xl block">🛍️</span>
-              <p class="font-bold text-slate-800 text-sm">Your cart is currently empty</p>
-              <button onclick="closeCartDrawer()" class="px-5 py-2 bg-brand-black text-white text-xs font-bold rounded-xl uppercase">Start Shopping</button>
+              <p class="font-bold text-slate-800 text-sm">Your metalware cart is currently empty</p>
+              <button onclick="closeCartDrawer()" class="px-5 py-2 bg-brand-black text-brand-gold text-xs font-bold rounded-xl uppercase">Start Exploring</button>
             </div>
           `;
         } else {
           itemsContainer.innerHTML = cart.map(item => `
             <div class="flex items-center gap-3 p-3 bg-slate-50 border border-slate-100 rounded-2xl">
-              <img src="${item.image}" alt="${item.title}" class="w-16 h-16 rounded-xl object-contain bg-white p-1.5 shrink-0 border border-slate-200/60">
+              <img src="${item.image}" alt="${item.title}" class="w-16 h-16 rounded-xl object-cover bg-white p-1 shrink-0 border border-slate-200">
               <div class="flex-1 min-w-0">
                 <h4 class="font-bold text-xs text-brand-black truncate">${item.title}</h4>
                 <span class="text-xs font-extrabold text-slate-900 block mt-0.5">₹${item.price.toLocaleString('en-IN')}</span>
@@ -1124,7 +1182,7 @@
 
       if (code === 'TAGZEE10') {
         appliedDiscountPercent = 10;
-        showToast('🎉 10% Coupon "TAGZEE10" Applied Successfully!');
+        showToast('🎉 10% Discount "TAGZEE10" Applied Successfully!');
         updateCartUI();
       } else if (code === '') {
         showToast('Please enter a coupon code.');
@@ -1194,7 +1252,7 @@
       }
     }
 
-    // --- 6. CHECKOUT ACTIONS ---
+    // --- 6. CHECKOUT ACTIONS (WHATSAPP TO OFFICIAL OWNERS) ---
     function proceedToCheckout(type) {
       if (cart.length === 0) {
         showToast('Your cart is empty!');
@@ -1204,16 +1262,13 @@
       const total = document.getElementById('cartTotal').innerText;
       const itemsList = cart.map(i => `• ${i.title} (Qty: ${i.qty}) - ₹${(i.price * i.qty).toLocaleString('en-IN')}`).join('\n');
       
-      if (type === 'whatsapp') {
-        const msg = `Hello Tagzee! 👋\n\nI want to place an order for the following items:\n\n${itemsList}\n\n*Total Amount:* ${total}\n\nPlease confirm availability and delivery timelines.`;
-        window.open(`https://wa.me/919670215052?text=${encodeURIComponent(msg)}`, '_blank');
-      } else {
-        alert(`Order Received! Proceeding to Payment Gateway with Total: ${total}`);
-      }
+      // WhatsApp order to Zeefaham Rais (+91 7351366786)
+      const msg = `Namaste TAG Zee Moradabad! 🙏\n\nI want to place an order for the following handcrafted items:\n\n${itemsList}\n\n*Estimated Total:* ${total}\n\nPlease confirm availability, transit packaging, and dispatch details.\n\nWebsite: tagzee.in`;
+      window.open(`https://wa.me/917351366786?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
-    // --- 7. B2B MODAL & INQUIRIES ---
-    function openB2BModal(type = 'quote') {
+    // --- 7. B2B MODAL & WHOLESALE INQUIRIES ---
+    function openB2BModal() {
       const modal = document.getElementById('b2bModal');
       if (modal) modal.classList.remove('hidden');
     }
@@ -1231,12 +1286,12 @@
       const qty = document.getElementById('b2bQty').value;
       const msg = document.getElementById('b2bMsg').value;
 
-      const whatsappText = `*New B2B Wholesale RFQ Inquiry via Tagzee Portal:*\n\n• *Name:* ${name}\n• *Company:* ${company}\n• *Phone:* ${phone}\n• *Volume:* ${qty}\n• *Requirements:* ${msg}\n\nPlease share official wholesale quotation with GST breakdown.`;
+      const whatsappText = `*New B2B Wholesale / Export Inquiry via Tagzee.in:*\n\n• *Buyer:* ${name}\n• *Company/Store:* ${company}\n• *Phone:* ${phone}\n• *Estimated Volume:* ${qty}\n• *Requirements:* ${msg}\n\nPlease share official factory wholesale quotation with GST breakdown from Moradabad.`;
       
       closeB2BModal();
-      showToast('Thank you! Redirecting your RFQ to B2B Wholesale Desk...');
+      showToast('Redirecting RFQ to TAG Zee Owners (Zeefaham Rais & Atir Rais)...');
       setTimeout(() => {
-        window.open(`https://wa.me/919670215052?text=${encodeURIComponent(whatsappText)}`, '_blank');
+        window.open(`https://wa.me/917351366786?text=${encodeURIComponent(whatsappText)}`, '_blank');
       }, 700);
     }
 
@@ -1275,12 +1330,12 @@
       if (badge) badge.innerText = `Search Results for: "${query}" (${filtered.length} found)`;
       
       if (filtered.length === 0) {
-        container.innerHTML = `<div class="col-span-full py-12 text-center text-slate-400 font-bold">No products match your search. Try "Watch", "Backpack", or "Earbuds".</div>`;
+        container.innerHTML = `<div class="col-span-full py-12 text-center text-slate-400 font-bold">No handicrafts match your search. Try "Urli", "Copper", "Planter", or "Lantern".</div>`;
       } else {
         container.innerHTML = filtered.map(p => `
-          <div class="product-card group bg-white border border-slate-100 hover:border-slate-300 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+          <div class="product-card group bg-white border border-slate-100 hover:border-brand-gold/60 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
             <div class="relative aspect-square bg-brand-grayBg p-3 flex items-center justify-center overflow-hidden cursor-pointer" onclick="openQuickViewModal(${p.id})">
-              <img src="${p.image}" alt="${p.title}" class="w-full h-full object-contain group-hover:scale-105 transition-transform">
+              <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform">
             </div>
             <div class="p-3.5 space-y-2 flex-1 flex flex-col justify-between">
               <div>
@@ -1293,7 +1348,7 @@
                   <span class="text-sm sm:text-base font-extrabold text-brand-black">₹${p.price.toLocaleString('en-IN')}</span>
                 </div>
               </div>
-              <button onclick="addToCart(${p.id})" class="w-full mt-2 py-2 px-2.5 border border-slate-200 hover:bg-brand-black hover:text-white rounded-xl text-slate-700 font-bold text-[11px] flex items-center justify-center gap-1.5 transition-all">
+              <button onclick="addToCart(${p.id})" class="w-full mt-2 py-2 px-2.5 border border-slate-200 hover:bg-brand-black hover:text-brand-gold rounded-xl text-slate-700 font-bold text-[11px] flex items-center justify-center gap-1.5 transition-all">
                 <span>🛒</span> <span>ADD TO CART</span>
               </button>
             </div>
@@ -1310,15 +1365,15 @@
     function handleNewsletter(e) {
       e.preventDefault();
       const input = document.getElementById('newsletterEmail');
-      showToast(`Thank you! Subscribed with ${input.value}`);
+      showToast(`Thank you! Subscribed to TAG Zee Connoisseurs with ${input.value}`);
       input.value = '';
     }
 
     // --- 9. HERO CAROUSEL LOGIC ---
     const heroImages = [
-      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80"
     ];
     let currentHeroIndex = 0;
 
@@ -1347,12 +1402,11 @@
       updateHeroImage();
     }
 
-    // Auto rotate hero slide every 5 seconds
     setInterval(nextHeroSlide, 5000);
 
     // --- 10. TOAST NOTIFICATION HELPER ---
     let toastTimeout = null;
-    function showToast(message, icon = '🛍️') {
+    function showToast(message, icon = '✨') {
       const toast = document.getElementById('toast');
       const msgEl = document.getElementById('toastMessage');
       const iconEl = document.getElementById('toastIcon');
@@ -1368,7 +1422,7 @@
       }, 3000);
     }
 
-    // Initialize application on window load
+    // Initialize application on load
     window.addEventListener('DOMContentLoaded', () => {
       renderProducts('All');
       updateCartUI();
