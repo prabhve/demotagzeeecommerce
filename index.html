@@ -381,74 +381,79 @@
   </header>
 
   <!-- ================= 03. HERO BANNER (EDITORIAL SPLIT-LAYOUT) ================= -->
-  <section id="home" class="relative bg-gradient-to-br from-brand-sand via-white to-brand-ivory overflow-hidden border-b border-brand-stone py-10 sm:py-16 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+  <section id="home" class="relative bg-gradient-to-br from-brand-sand via-white to-brand-ivory overflow-hidden border-b border-brand-stone py-8 sm:py-12 lg:py-6 xl:py-8 lg:min-h-[calc(100vh-116px)] lg:flex lg:items-center">
+    <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
         
         <!-- Left Hero Copy & Actions -->
-        <div class="lg:col-span-6 space-y-5 sm:space-y-6">
+        <div class="lg:col-span-6 space-y-3.5 sm:space-y-4 lg:space-y-4.5">
           
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/15 border border-brand-gold/40 text-[10.5px] sm:text-xs font-bold tracking-widest uppercase text-brand-goldDark">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/15 border border-brand-gold/40 text-[10px] sm:text-[11px] font-bold tracking-widest uppercase text-brand-goldDark">
             <span>✨</span>
             <span>MORADABAD • THE BRASS CITY OF INDIA (PEETAL NAGRI)</span>
           </div>
 
-          <h1 id="heroHeadlineText" class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-brand-charcoal tracking-tight leading-[1.06]">
+          <h1 id="heroHeadlineText" class="text-3xl sm:text-4xl lg:text-[44px] xl:text-[52px] font-black text-brand-charcoal tracking-tight leading-[1.12]">
             TIMELESS METAL.<br>
             HANDCRAFTED LUXURY.
           </h1>
 
           <!-- Luxury Cursive Subhead -->
-          <div class="font-script text-3xl sm:text-4xl text-brand-gold font-bold tracking-wide -mt-2">
+          <div class="font-script text-2xl sm:text-3xl lg:text-[28px] text-brand-gold font-bold tracking-wide -mt-1 sm:-mt-1.5">
             Distinctive Details. Beautifully Considered Spaces.
           </div>
 
-          <p id="heroSubheadText" class="text-slate-600 text-xs sm:text-sm sm:leading-relaxed max-w-lg font-medium">
+          <p id="heroSubheadText" class="text-slate-600 text-xs sm:text-[13.5px] leading-relaxed max-w-lg font-medium">
             Hand-forged by master multigenerational karigars in Moradabad. Discover royal brass urlis, pure hammered copper dispensers, Moroccan filigree lanterns, and sculptural planters.
           </p>
 
           <!-- Primary & Secondary Action CTAs -->
-          <div class="flex flex-wrap items-center gap-3 pt-2">
-            <a href="#trending" class="px-7 py-3.5 rounded-full bg-brand-charcoal text-brand-ivory hover:bg-brand-gold hover:text-white text-xs font-bold tracking-wider uppercase transition-all shadow-xl hover:shadow-2xl active:scale-95 flex items-center gap-2">
+          <div class="flex flex-wrap items-center gap-3 pt-1">
+            <a href="#trending" class="px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-brand-charcoal text-brand-ivory hover:bg-brand-gold hover:text-white text-xs font-bold tracking-wider uppercase transition-all shadow-lg hover:shadow-xl active:scale-95 flex items-center gap-2">
               <span>SHOP CURATED EDIT</span>
               <span>→</span>
             </a>
-            <button onclick="openB2BModal()" class="px-7 py-3.5 rounded-full bg-white border border-brand-stone hover:border-brand-charcoal text-brand-charcoal text-xs font-bold tracking-wider uppercase transition-all shadow-sm active:scale-95 flex items-center gap-1.5 cursor-pointer">
+            <button onclick="openB2BModal()" class="px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white border border-brand-stone hover:border-brand-charcoal text-brand-charcoal text-xs font-bold tracking-wider uppercase transition-all shadow-sm active:scale-95 flex items-center gap-1.5 cursor-pointer">
               <span>🏢 B2B WHOLESALE RFQ</span>
             </button>
           </div>
 
-
+          <!-- Micro Trust Cues Under CTAs -->
+          <div class="pt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11px] font-semibold text-slate-500">
+            <span class="flex items-center gap-1.5"><span class="text-brand-gold text-[10px]">✦</span> 100% Solid Brass & Copper</span>
+            <span class="flex items-center gap-1.5"><span class="text-brand-gold text-[10px]">✦</span> Wooden Crate Transit</span>
+            <span class="flex items-center gap-1.5"><span class="text-brand-gold text-[10px]">✦</span> Foundry Direct Rates</span>
+          </div>
 
         </div>
 
         <!-- Right Hero Product Arrangement & Discount Badge -->
-        <div class="lg:col-span-6 relative flex items-center justify-center">
+        <div class="lg:col-span-6 relative flex items-center justify-center my-2 lg:my-0">
           
           <!-- Floating Badge -->
-          <div class="absolute -top-3 left-6 sm:left-10 z-20 w-22 h-22 sm:w-24 sm:h-24 rounded-full bg-brand-charcoal text-brand-ivory flex flex-col items-center justify-center text-center shadow-2xl badge-pulse border-2 border-brand-gold">
-            <span class="text-[8.5px] sm:text-[9.5px] tracking-wider uppercase font-bold text-brand-goldLight">PEETAL NAGRI</span>
-            <span class="text-lg sm:text-2xl font-black text-brand-gold leading-none my-0.5">DIRECT</span>
-            <span class="text-[8.5px] sm:text-[9.5px] tracking-wider uppercase font-extrabold text-white">FOUNDRY</span>
+          <div class="absolute -top-3 left-4 sm:left-8 z-20 w-20 h-20 sm:w-22 sm:h-22 rounded-full bg-brand-charcoal text-brand-ivory flex flex-col items-center justify-center text-center shadow-2xl badge-pulse border-2 border-brand-gold">
+            <span class="text-[8px] sm:text-[9px] tracking-wider uppercase font-bold text-brand-goldLight">PEETAL NAGRI</span>
+            <span class="text-base sm:text-xl font-black text-brand-gold leading-none my-0.5">DIRECT</span>
+            <span class="text-[8px] sm:text-[9px] tracking-wider uppercase font-extrabold text-white">FOUNDRY</span>
           </div>
 
           <!-- Hero Image Composite Card -->
-          <div class="relative w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl bg-white border border-brand-gold/40 p-4 sm:p-6 group">
+          <div class="relative w-full max-w-md lg:max-w-[470px] xl:max-w-[500px] rounded-3xl overflow-hidden shadow-2xl bg-white border border-brand-gold/40 p-3 sm:p-4 group">
             <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900 flex items-center justify-center">
               <img id="heroMainImage" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Royal Moradabad Handcrafted Brass Urli Bowl" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80';">
               
-              <div class="absolute bottom-4 left-4 bg-brand-charcoal/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-brand-ivory text-[11px] font-bold flex items-center gap-1.5 shadow-lg border border-brand-gold/50">
+              <div class="absolute bottom-3 left-3 bg-brand-charcoal/95 backdrop-blur-md px-3 py-1.5 rounded-full text-brand-ivory text-[10.5px] font-bold flex items-center gap-1.5 shadow-lg border border-brand-gold/50">
                 <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
                 <span id="heroCaption">Imperial Mughal Handcrafted Urli Ensemble</span>
               </div>
             </div>
 
             <!-- Carousel Controls -->
-            <button onclick="prevHeroSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-brand-charcoal shadow-md flex items-center justify-center font-bold text-sm transition-all hover:scale-110 active:scale-95 cursor-pointer" aria-label="Previous">❮</button>
-            <button onclick="nextHeroSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-brand-charcoal shadow-md flex items-center justify-center font-bold text-sm transition-all hover:scale-110 active:scale-95 cursor-pointer" aria-label="Next">❯</button>
+            <button onclick="prevHeroSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/90 hover:bg-white text-brand-charcoal shadow-md flex items-center justify-center font-bold text-sm transition-all hover:scale-110 active:scale-95 cursor-pointer" aria-label="Previous">❮</button>
+            <button onclick="nextHeroSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/90 hover:bg-white text-brand-charcoal shadow-md flex items-center justify-center font-bold text-sm transition-all hover:scale-110 active:scale-95 cursor-pointer" aria-label="Next">❯</button>
 
             <!-- Dots -->
-            <div class="flex items-center justify-center gap-1.5 pt-3">
+            <div class="flex items-center justify-center gap-1.5 pt-2.5">
               <span class="hero-dot w-2 h-2 rounded-full bg-brand-charcoal transition-all cursor-pointer" onclick="setHeroSlide(0)"></span>
               <span class="hero-dot w-2 h-2 rounded-full bg-slate-300 transition-all cursor-pointer" onclick="setHeroSlide(1)"></span>
               <span class="hero-dot w-2 h-2 rounded-full bg-slate-300 transition-all cursor-pointer" onclick="setHeroSlide(2)"></span>
