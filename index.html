@@ -381,82 +381,90 @@
   </header>
 
   <!-- ================= 03. HERO BANNER (EDITORIAL SPLIT-LAYOUT) ================= -->
-  <section id="home" class="relative bg-gradient-to-br from-brand-sand via-white to-brand-ivory overflow-hidden border-b border-brand-stone py-8 sm:py-12 lg:py-6 xl:py-8 lg:min-h-[calc(100vh-116px)] lg:flex lg:items-center">
+  <section id="home" class="relative bg-gradient-to-br from-brand-sand via-white to-brand-ivory overflow-hidden border-b border-brand-stone py-8 sm:py-12 lg:py-8 lg:min-h-[calc(100vh-116px)] lg:flex lg:items-center">
     <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
         
         <!-- Left Hero Copy & Actions -->
-        <div class="lg:col-span-6 space-y-3.5 sm:space-y-4 lg:space-y-4.5">
+        <div class="lg:col-span-6 space-y-4 sm:space-y-4.5">
           
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/15 border border-brand-gold/40 text-[10px] sm:text-[11px] font-bold tracking-widest uppercase text-brand-goldDark">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-[10.5px] font-bold tracking-widest uppercase text-brand-goldDark">
             <span>✨</span>
-            <span>MORADABAD • THE BRASS CITY OF INDIA (PEETAL NAGRI)</span>
+            <span>PEETAL NAGRI • MORADABAD FOUNDRY DIRECT</span>
           </div>
 
-          <h1 id="heroHeadlineText" class="text-3xl sm:text-4xl lg:text-[44px] xl:text-[52px] font-black text-brand-charcoal tracking-tight leading-[1.12]">
+          <h1 id="heroHeadlineText" class="font-serif font-black text-3xl sm:text-4xl lg:text-[40px] xl:text-[48px] text-brand-charcoal tracking-wide leading-[1.15]">
             TIMELESS METAL.<br>
-            HANDCRAFTED LUXURY.
+            <span class="text-brand-gold">HANDCRAFTED</span> LUXURY.
           </h1>
 
           <!-- Luxury Cursive Subhead -->
-          <div class="font-script text-2xl sm:text-3xl lg:text-[28px] text-brand-gold font-bold tracking-wide -mt-1 sm:-mt-1.5">
+          <div class="font-script text-2xl sm:text-3xl text-brand-gold font-bold tracking-wide -mt-1">
             Distinctive Details. Beautifully Considered Spaces.
           </div>
 
-          <p id="heroSubheadText" class="text-slate-600 text-xs sm:text-[13.5px] leading-relaxed max-w-lg font-medium">
+          <p id="heroSubheadText" class="text-stone-600 text-xs sm:text-[13.5px] leading-relaxed max-w-lg font-medium">
             Hand-forged by master multigenerational karigars in Moradabad. Discover royal brass urlis, pure hammered copper dispensers, Moroccan filigree lanterns, and sculptural planters.
           </p>
 
           <!-- Primary & Secondary Action CTAs -->
           <div class="flex flex-wrap items-center gap-3 pt-1">
-            <a href="#trending" class="px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-brand-charcoal text-brand-ivory hover:bg-brand-gold hover:text-white text-xs font-bold tracking-wider uppercase transition-all shadow-lg hover:shadow-xl active:scale-95 flex items-center gap-2">
+            <a href="#trending" class="px-7 py-3.5 rounded-full bg-brand-charcoal hover:bg-brand-gold text-white text-xs font-bold tracking-wider uppercase transition-all shadow-md hover:shadow-lg active:scale-95 flex items-center gap-2">
               <span>SHOP CURATED EDIT</span>
               <span>→</span>
             </a>
-            <button onclick="openB2BModal()" class="px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white border border-brand-stone hover:border-brand-charcoal text-brand-charcoal text-xs font-bold tracking-wider uppercase transition-all shadow-sm active:scale-95 flex items-center gap-1.5 cursor-pointer">
-              <span>🏢 B2B WHOLESALE RFQ</span>
+            <button onclick="openB2BModal()" class="px-6 py-3.5 rounded-full bg-white border border-brand-stone hover:border-brand-charcoal text-brand-charcoal text-xs font-bold tracking-wider uppercase transition-all shadow-sm active:scale-95 flex items-center gap-2 cursor-pointer">
+              <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+              <span>B2B WHOLESALE RFQ</span>
             </button>
           </div>
 
           <!-- Micro Trust Cues Under CTAs -->
-          <div class="pt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11px] font-semibold text-slate-500">
-            <span class="flex items-center gap-1.5"><span class="text-brand-gold text-[10px]">✦</span> 100% Solid Brass & Copper</span>
-            <span class="flex items-center gap-1.5"><span class="text-brand-gold text-[10px]">✦</span> Wooden Crate Transit</span>
-            <span class="flex items-center gap-1.5"><span class="text-brand-gold text-[10px]">✦</span> Foundry Direct Rates</span>
+          <div class="pt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11px] font-semibold text-stone-600">
+            <span class="inline-flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> 100% Solid Brass & Copper</span>
+            <span class="inline-flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Shockproof Wooden Crate Transit</span>
+            <span class="inline-flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span> Direct Foundry Rates</span>
           </div>
 
         </div>
 
-        <!-- Right Hero Product Arrangement & Discount Badge -->
+        <!-- Right Hero Product Arrangement & Museum Showcase Card -->
         <div class="lg:col-span-6 relative flex items-center justify-center my-2 lg:my-0">
           
-          <!-- Floating Badge -->
-          <div class="absolute -top-3 left-4 sm:left-8 z-20 w-20 h-20 sm:w-22 sm:h-22 rounded-full bg-brand-charcoal text-brand-ivory flex flex-col items-center justify-center text-center shadow-2xl badge-pulse border-2 border-brand-gold">
-            <span class="text-[8px] sm:text-[9px] tracking-wider uppercase font-bold text-brand-goldLight">PEETAL NAGRI</span>
-            <span class="text-base sm:text-xl font-black text-brand-gold leading-none my-0.5">DIRECT</span>
-            <span class="text-[8px] sm:text-[9px] tracking-wider uppercase font-extrabold text-white">FOUNDRY</span>
-          </div>
-
-          <!-- Hero Image Composite Card -->
-          <div class="relative w-full max-w-md lg:max-w-[470px] xl:max-w-[500px] rounded-3xl overflow-hidden shadow-2xl bg-white border border-brand-gold/40 p-3 sm:p-4 group">
-            <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900 flex items-center justify-center">
-              <img id="heroMainImage" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Royal Moradabad Handcrafted Brass Urli Bowl" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80';">
+          <!-- Hero Image Showcase Card -->
+          <div class="relative w-full max-w-md lg:max-w-[480px] xl:max-w-[510px] rounded-3xl overflow-hidden shadow-[0_20px_50px_-10px_rgba(26,26,24,0.18)] bg-white border border-brand-stone p-3 sm:p-4 group">
+            
+            <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-900 flex items-center justify-center">
+              <img id="heroMainImage" src="https://images.unsplash.com/photo-1566430971345-15d9b0231a97?auto=format&fit=crop&w=1000&q=80" alt="Royal Moradabad Handcrafted Brass Urli Bowl" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80';">
               
-              <div class="absolute bottom-3 left-3 bg-brand-charcoal/95 backdrop-blur-md px-3 py-1.5 rounded-full text-brand-ivory text-[10.5px] font-bold flex items-center gap-1.5 shadow-lg border border-brand-gold/50">
+              <!-- Direct Foundry Luxury Pill (Protected from overflow clipping) -->
+              <div class="absolute top-3.5 left-3.5 z-20 px-3 py-1.5 rounded-full bg-brand-charcoal/90 backdrop-blur-md border border-brand-gold/50 text-white shadow-lg flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
-                <span id="heroCaption">Imperial Mughal Handcrafted Urli Ensemble</span>
+                <span class="text-[9.5px] font-black tracking-widest uppercase text-brand-goldLight">PEETAL NAGRI FOUNDRY DIRECT</span>
               </div>
+
+              <!-- Bottom Interactive Product Pill -->
+              <div class="absolute bottom-3 inset-x-3 flex items-center justify-between gap-2 bg-brand-charcoal/90 backdrop-blur-md px-3.5 py-2 rounded-xl border border-brand-gold/40 text-brand-ivory shadow-lg">
+                <div class="flex items-center gap-2 truncate">
+                  <span class="w-2 h-2 rounded-full bg-brand-gold shrink-0"></span>
+                  <span id="heroCaption" class="text-xs font-bold text-stone-100 truncate">Imperial Mughal Handcrafted Urli Ensemble</span>
+                </div>
+                <button onclick="openQuickView(heroImages[currentHeroIndex].productId || 1)" class="shrink-0 px-2.5 py-1 rounded-lg bg-brand-gold hover:bg-brand-goldDark text-white text-[10px] font-extrabold tracking-wider uppercase transition-colors cursor-pointer">
+                  VIEW PIECE
+                </button>
+              </div>
+
+              <!-- Carousel Controls inside Image -->
+              <button onclick="prevHeroSlide()" class="absolute left-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 hover:bg-black/70 text-white backdrop-blur-sm flex items-center justify-center text-xs transition-all hover:scale-110 active:scale-95 cursor-pointer z-10" aria-label="Previous">❮</button>
+              <button onclick="nextHeroSlide()" class="absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/40 hover:bg-black/70 text-white backdrop-blur-sm flex items-center justify-center text-xs transition-all hover:scale-110 active:scale-95 cursor-pointer z-10" aria-label="Next">❯</button>
             </div>
 
-            <!-- Carousel Controls -->
-            <button onclick="prevHeroSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/90 hover:bg-white text-brand-charcoal shadow-md flex items-center justify-center font-bold text-sm transition-all hover:scale-110 active:scale-95 cursor-pointer" aria-label="Previous">❮</button>
-            <button onclick="nextHeroSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/90 hover:bg-white text-brand-charcoal shadow-md flex items-center justify-center font-bold text-sm transition-all hover:scale-110 active:scale-95 cursor-pointer" aria-label="Next">❯</button>
-
-            <!-- Dots -->
-            <div class="flex items-center justify-center gap-1.5 pt-2.5">
+            <!-- Dots Indicator -->
+            <div class="flex items-center justify-center gap-2 pt-2.5">
               <span class="hero-dot w-2 h-2 rounded-full bg-brand-charcoal transition-all cursor-pointer" onclick="setHeroSlide(0)"></span>
               <span class="hero-dot w-2 h-2 rounded-full bg-slate-300 transition-all cursor-pointer" onclick="setHeroSlide(1)"></span>
               <span class="hero-dot w-2 h-2 rounded-full bg-slate-300 transition-all cursor-pointer" onclick="setHeroSlide(2)"></span>
+              <span class="hero-dot w-2 h-2 rounded-full bg-slate-300 transition-all cursor-pointer" onclick="setHeroSlide(3)"></span>
             </div>
           </div>
 
@@ -544,7 +552,7 @@
         <!-- Cat 2: Home & Kitchen -->
         <div onclick="filterByCategory('Home & Kitchen')" class="category-card group bg-brand-sand hover:bg-white rounded-2xl p-3 text-center border border-brand-stone hover:border-brand-gold shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col items-center justify-between">
           <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-white p-1 flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
-            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=200&q=80" alt="Home & Kitchen" class="w-full h-full object-cover rounded-lg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=200&q=80';">
+            <img src="https://images.unsplash.com/photo-1739823956554-0c930115ee45?auto=format&fit=crop&w=200&q=80" alt="Home & Kitchen" class="w-full h-full object-cover rounded-lg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=200&q=80';">
           </div>
           <span class="text-xs font-bold text-slate-800 group-hover:text-brand-gold transition-colors">Home & Kitchen</span>
           <span class="text-[9px] text-slate-400 font-semibold mt-0.5">16+ Designs</span>
@@ -562,7 +570,7 @@
         <!-- Cat 4: Ornaments -->
         <div onclick="filterByCategory('Ornaments')" class="category-card group bg-brand-sand hover:bg-white rounded-2xl p-3 text-center border border-brand-stone hover:border-brand-gold shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col items-center justify-between">
           <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-white p-1 flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=200&q=80" alt="Ornaments" class="w-full h-full object-cover rounded-lg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=200&q=80';">
+            <img src="https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?auto=format&fit=crop&w=200&q=80" alt="Ornaments" class="w-full h-full object-cover rounded-lg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?auto=format&fit=crop&w=200&q=80';">
           </div>
           <span class="text-xs font-bold text-slate-800 group-hover:text-brand-gold transition-colors">Ornaments</span>
           <span class="text-[9px] text-slate-400 font-semibold mt-0.5">22+ Designs</span>
@@ -2498,7 +2506,7 @@
         discount: "-28%",
         rating: 4.8,
         reviewsCount: 212,
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1739823956554-0c930115ee45?auto=format&fit=crop&w=600&q=80",
         thumb2: "https://images.unsplash.com/photo-1579656381226-5fc0f0100c3b?auto=format&fit=crop&w=600&q=80",
         desc: "Hand-hammered pure copper vessel equipped with a food-grade, leakproof brass dispenser tap. Naturally energizes drinking water with Ayurvedic health benefits (Tamra Jal). Includes matching copper lid.",
         dimensions: "8.5\" Diameter x 13.5\" Height",
@@ -2579,7 +2587,7 @@
         rating: 4.9,
         reviewsCount: 65,
         image: "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=600&q=80",
-        thumb2: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        thumb2: "https://images.unsplash.com/photo-1566430971345-15d9b0231a97?auto=format&fit=crop&w=600&q=80",
         desc: "Heavyweight forged brass dinner forks, table knives, soup spoons, and dessert spoons coated in food-grade mirror gold electroplating. Comes in a royal velvet-lined wooden storage chest.",
         dimensions: "Standard Fine Dining 24-Piece Box",
         weight: "2.10 kg",
@@ -2639,7 +2647,7 @@
         rating: 4.8,
         reviewsCount: 89,
         image: "https://images.unsplash.com/photo-1579656381226-5fc0f0100c3b?auto=format&fit=crop&w=600&q=80",
-        thumb2: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        thumb2: "https://images.unsplash.com/photo-1739823956554-0c930115ee45?auto=format&fit=crop&w=600&q=80",
         desc: "Includes 1x 2-litre hammered copper water pitcher with ergonomic handle plus 4x matching copper glasses. Ideal for family dining tables.",
         dimensions: "Pitcher: 2L | Tumblers: 300ml each",
         weight: "1.45 kg (Complete Set)",
@@ -2727,7 +2735,7 @@
       } catch (e) {}
     }
 
-    let productsDB = loadStorage('tagzee_products_v4', initialProductsDB);
+    let productsDB = loadStorage('tagzee_products_v5', initialProductsDB);
     let cart = loadStorage('tagzee_cart_v2', [
       { id: 1, title: productsDB[0].title, price: productsDB[0].price, qty: 1, image: productsDB[0].image },
       { id: 2, title: productsDB[1].title, price: productsDB[1].price, qty: 1, image: productsDB[1].image }
@@ -3994,9 +4002,10 @@
 
     // --- 14. HERO CAROUSEL ---
     const heroImages = [
-      { img: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80", caption: "Imperial Mughal Handcrafted Urli Ensemble" },
-      { img: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80", caption: "Ayurvedic Hammered Pure Copper Dispenser" },
-      { img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80", caption: "Moroccan Filigree Punched Metal Lantern" }
+      { img: "https://images.unsplash.com/photo-1566430971345-15d9b0231a97?auto=format&fit=crop&w=1000&q=80", caption: "Imperial Mughal Handcrafted Urli Ensemble", productId: 1 },
+      { img: "https://images.unsplash.com/photo-1739823956554-0c930115ee45?auto=format&fit=crop&w=1000&q=80", caption: "Ayurvedic Hammered Pure Copper Dispenser", productId: 2 },
+      { img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1000&q=80", caption: "Moroccan Filigree Punched Metal Lantern", productId: 3 },
+      { img: "https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?auto=format&fit=crop&w=1000&q=80", caption: "Royal Peacock Consecrated Brass Diya Set", productId: 4 }
     ];
     let currentHeroIndex = 0;
 
@@ -4116,7 +4125,7 @@
     // --- 18. INTERIOR ROOM VISUALIZER MODAL ("SEE IN YOUR SPACE") ---
     const visualizerRooms = {
       console: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-      mandir: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1200&q=80',
+      mandir: 'https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?auto=format&fit=crop&w=1200&q=80',
       dining: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80',
       terrace: 'https://images.unsplash.com/photo-1579656381226-5fc0f0100c3b?auto=format&fit=crop&w=1200&q=80'
     };
