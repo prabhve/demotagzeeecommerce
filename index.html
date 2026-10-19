@@ -120,7 +120,10 @@
       <div class="flex items-center gap-2 overflow-hidden w-full lg:w-3/4">
         <span class="inline-block w-2 h-2 rounded-full bg-brand-gold animate-ping shrink-0"></span>
         <div class="overflow-hidden whitespace-nowrap">
-          <p id="announcementText" class="font-bold tracking-wider uppercase text-brand-stone truncate">
+          <button onclick="openBenchmarkModal()" class="mr-3 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/10 hover:bg-white/20 text-brand-gold text-[10px] font-black border border-brand-gold/40 transition-all cursor-pointer">
+       <span>🏆</span> <span class="hidden sm:inline">VS MARKET:</span> <span>WHY TAG ZEE?</span>
+     </button>
+     <p id="announcementText" class="font-bold tracking-wider uppercase text-brand-stone truncate">
             ✦ MORADABAD FOUNDRY DIRECT • 100% SOLID BRASS & COPPER • FREE WOODEN CRATE DELIVERY ABOVE ₹1,499 • B2B EXPORT WHOLESALE AVAILABLE ✦
           </p>
         </div>
@@ -580,6 +583,73 @@
         </div>
       </div>
 
+      
+      <!-- Secondary Faceted Filter Bar (Pottery Barn / West Elm Luxury Filter Standard) -->
+      <div class="bg-white border border-brand-stone rounded-2xl p-3 sm:p-4 mb-6 shadow-sm flex flex-wrap items-center justify-between gap-3 text-xs">
+        
+        <!-- Filter Controls -->
+        <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+          
+          <!-- Metal / Finish Filter -->
+          <div class="flex items-center gap-1.5">
+            <span class="text-slate-400 font-bold uppercase text-[10px]">Finish:</span>
+            <select id="filterFinish" onchange="applyFacetedFilters()" class="bg-brand-sand border border-brand-stone rounded-xl px-2.5 py-1.5 font-bold text-slate-700 focus:outline-none focus:border-brand-charcoal cursor-pointer">
+              <option value="All">All Finishes</option>
+              <option value="Brass">Solid Antique Brass</option>
+              <option value="Copper">Pure Hammered Copper</option>
+              <option value="Gold">High-Gloss Gold</option>
+              <option value="Bronze">Temple Bronze / Patina</option>
+              <option value="Black">Wrought Iron & Glass</option>
+            </select>
+          </div>
+
+          <!-- Price Tier Filter -->
+          <div class="flex items-center gap-1.5">
+            <span class="text-slate-400 font-bold uppercase text-[10px]">Price:</span>
+            <select id="filterPrice" onchange="applyFacetedFilters()" class="bg-brand-sand border border-brand-stone rounded-xl px-2.5 py-1.5 font-bold text-slate-700 focus:outline-none focus:border-brand-charcoal cursor-pointer">
+              <option value="All">All Prices</option>
+              <option value="under2000">Under ₹2,000</option>
+              <option value="2000to3500">₹2,000 – ₹3,500</option>
+              <option value="above3500">₹3,500 & Above (Heirloom)</option>
+            </select>
+          </div>
+
+          <!-- Room / Placement Filter -->
+          <div class="flex items-center gap-1.5">
+            <span class="text-slate-400 font-bold uppercase text-[10px]">Space:</span>
+            <select id="filterSpace" onchange="applyFacetedFilters()" class="bg-brand-sand border border-brand-stone rounded-xl px-2.5 py-1.5 font-bold text-slate-700 focus:outline-none focus:border-brand-charcoal cursor-pointer">
+              <option value="All">All Spaces</option>
+              <option value="Living">Living Room & Foyer</option>
+              <option value="Mandir">Sacred Puja Mandir</option>
+              <option value="Dining">Dining & Kitchen</option>
+              <option value="Garden">Balcony & Garden</option>
+            </select>
+          </div>
+
+          <!-- Reset Filter Button -->
+          <button id="resetFiltersBtn" onclick="resetFacetedFilters()" class="hidden px-2.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold text-[11px] transition-all cursor-pointer">
+            ✕ Clear Filters
+          </button>
+        </div>
+
+        <!-- Right Side: Item Count & Grid Density Switcher -->
+        <div class="flex items-center gap-3 ml-auto">
+          <span id="filteredCountText" class="text-slate-500 font-bold text-[11px]">Showing 12 Masterpieces</span>
+          <div class="h-4 w-[1px] bg-slate-200 hidden sm:block"></div>
+          
+          <!-- Grid Switcher (2-Col Editorial vs Compact 4/5-Col) -->
+          <div class="hidden sm:flex items-center gap-1 bg-brand-sand p-1 rounded-xl border border-brand-stone">
+            <button onclick="setGridDensity('compact')" id="gridCompactBtn" class="p-1.5 rounded-lg bg-brand-charcoal text-white text-xs font-bold transition-all cursor-pointer" title="Compact Catalog View">
+              ⊞ Compact
+            </button>
+            <button onclick="setGridDensity('editorial')" id="gridEditorialBtn" class="p-1.5 rounded-lg hover:bg-white text-slate-600 text-xs font-bold transition-all cursor-pointer" title="Large Editorial View">
+              𝍢 Editorial
+            </button>
+          </div>
+        </div>
+
+      </div>
+
       <!-- 5-Column Responsive Product Grid -->
       <div id="productsGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
         <!-- Injected via JavaScript with authentic Moradabad metalware -->
@@ -911,6 +981,26 @@
           <button onclick="fillCoupon('WELCOME500')" class="underline text-brand-gold font-bold">WELCOME500 (₹500 off)</button>
         </div>
 
+        
+        <!-- Luxury Gifting & Artisan Video Inspection Strip -->
+        <div class="bg-brand-sand/60 p-3 rounded-2xl border border-brand-stone space-y-2 text-xs">
+          <label class="flex items-start gap-2 cursor-pointer">
+            <input type="checkbox" id="giftWrapCheck" onchange="toggleGiftWrap(this.checked)" class="rounded text-brand-charcoal mt-0.5 focus:ring-0">
+            <div class="flex-1">
+              <span class="font-bold text-slate-800 block">🎁 Royal Keepsake Velvet Gift Wrap (+₹199)</span>
+              <span class="text-[10.5px] text-slate-500 block">Rigid gold-embossed box + handwritten wax-sealed greeting note.</span>
+            </div>
+          </label>
+          <div id="giftMessageField" class="hidden pt-1">
+            <input type="text" id="giftMessageText" placeholder="Enter personalized greeting (e.g. Wishing you prosperity on Diwali)..." class="w-full bg-white border border-brand-stone rounded-xl px-3 py-1.5 text-xs focus:outline-none">
+          </div>
+
+          <div class="pt-1 border-t border-brand-stone/60 flex items-center justify-between text-[11px]">
+            <span class="text-slate-600 font-semibold flex items-center gap-1"><span>🎥</span> <span>Free Artisan Video Inspection</span></span>
+            <a href="https://wa.me/917351366786?text=Hi%20Zeefaham,%20I%20want%20to%20book%20a%205-minute%20live%20WhatsApp%20video%20call%20to%20inspect%20my%20order%20before%20dispatch." target="_blank" class="font-bold text-emerald-700 hover:underline">Book on WhatsApp ➔</a>
+          </div>
+        </div>
+
         <!-- Summary Rows -->
         <div class="space-y-1.5 text-xs text-slate-600 pt-1 border-t border-slate-200">
           <div class="flex justify-between">
@@ -953,19 +1043,38 @@
   </div>
 
   <!-- ================= 12. ADVANCED PRODUCT DETAIL MODAL (PDP WITH TABS & SPECIFICATIONS) ================= -->
+    <!-- ================= 12. ADVANCED PRODUCT DETAIL MODAL (PDP WITH TABS & SPECIFICATIONS) ================= -->
   <div id="quickViewModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6">
     <div onclick="closeQuickViewModal()" class="absolute inset-0 drawer-backdrop"></div>
     <div class="relative bg-white rounded-3xl max-w-4xl w-full max-h-[94vh] overflow-y-auto shadow-2xl border border-brand-gold z-10 p-5 sm:p-8">
       <button onclick="closeQuickViewModal()" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-800 rounded-full hover:bg-slate-100 text-lg cursor-pointer">✕</button>
       
+      <!-- Live Social Proof & Urgency Bar -->
+      <div class="mb-4 bg-gradient-to-r from-amber-50 via-amber-100/50 to-amber-50 border border-amber-200/80 rounded-2xl px-4 py-2 flex flex-wrap items-center justify-between gap-2 text-xs">
+        <div class="flex items-center gap-2 font-bold text-amber-900">
+          <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>👀 <strong id="qvLiveViewers">14</strong> collectors viewing right now</span>
+          <span class="text-amber-400">•</span>
+          <span class="text-red-700 font-extrabold" id="qvScarcityText">⚡ Only 3 pieces left in Moradabad pour</span>
+        </div>
+        <div class="text-[11px] font-semibold text-slate-600 flex items-center gap-1">
+          <span>🚚</span> <span>Order in next <strong class="text-slate-900 font-bold" id="qvCountdown">2h 45m</strong> for same-day dispatch</span>
+        </div>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-start">
         
         <!-- Multi-Image Column with Gallery Switcher -->
         <div class="space-y-3">
-          <div class="aspect-square rounded-2xl overflow-hidden bg-brand-sand p-3 flex items-center justify-center border border-brand-stone relative">
+          <div class="aspect-square rounded-2xl overflow-hidden bg-brand-sand p-3 flex items-center justify-center border border-brand-stone relative group">
             <img id="qvImage" src="" alt="Metalware View" class="w-full h-full object-cover rounded-xl transition-all duration-300" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80';">
+            
             <span class="absolute top-4 left-4 bg-brand-charcoal text-brand-gold text-[9px] font-black px-2.5 py-1 rounded-full border border-brand-gold/40 shadow">
               FOUNDRY CERTIFIED
+            </span>
+
+            <span class="absolute bottom-4 right-4 bg-white/90 backdrop-blur text-slate-700 text-[10px] font-bold px-2.5 py-1 rounded-lg border border-slate-200 shadow-sm">
+              🔍 360° Artisan Preview
             </span>
           </div>
 
@@ -974,11 +1083,22 @@
             <!-- Injected via JavaScript -->
           </div>
 
+          <!-- Visualizer & Certificate Action Buttons (Dual Pill Triggers) -->
+          <div class="grid grid-cols-2 gap-2 pt-1">
+            <button onclick="openRoomVisualizerModal()" class="py-2.5 px-3 bg-brand-sand hover:bg-brand-stone/60 border border-brand-stone rounded-xl text-brand-charcoal font-bold text-xs flex items-center justify-center gap-1.5 transition-all shadow-sm cursor-pointer">
+              <span>🏛️</span> <span>See In Your Space</span>
+            </button>
+            <button onclick="openCertificateModal()" class="py-2.5 px-3 bg-brand-ivory hover:bg-amber-50 border border-brand-gold/40 rounded-xl text-brand-goldDark font-bold text-xs flex items-center justify-center gap-1.5 transition-all shadow-sm cursor-pointer">
+              <span>📜</span> <span>GI Purity Hallmark</span>
+            </button>
+          </div>
+
+          <!-- Hallmark Assurance -->
           <div class="p-3 bg-brand-ivory rounded-xl border border-brand-stone text-[11px] space-y-1">
             <div class="flex items-center gap-1.5 font-bold text-brand-charcoal">
               <span>🛡️</span> <span>Moradabad Karigari Hallmark</span>
             </div>
-            <p class="text-slate-500 text-[10.5px]">Cast using virgin brass/copper without scrap filler. Certified for heirloom durability.</p>
+            <p class="text-slate-500 text-[10.5px]">Cast using 100% virgin brass/copper without scrap filler. Certified for heirloom durability.</p>
           </div>
         </div>
         
@@ -993,16 +1113,43 @@
           
           <div class="flex items-center gap-2 text-xs">
             <span class="text-amber-400 font-bold">★★★★★</span>
-            <span id="qvReviews" class="text-slate-500 font-semibold">(184 Reviews)</span>
+            <span id="qvReviews" class="text-slate-500 font-semibold cursor-pointer hover:underline" onclick="scrollToQvReviews()">(184 Reviews)</span>
             <span class="text-slate-300">•</span>
             <span id="qvStockBadge" class="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded text-[10.5px] font-bold">In Stock (Available)</span>
           </div>
 
-          <!-- Price Row -->
-          <div class="flex items-center gap-3 pt-1">
-            <span id="qvPrice" class="text-2xl sm:text-3xl font-black text-brand-charcoal">₹2,499</span>
-            <span id="qvOldPrice" class="text-sm font-semibold text-slate-400 line-through">₹3,499</span>
-            <span id="qvBadge" class="text-[10.5px] font-extrabold text-white bg-brand-charcoal px-2.5 py-0.5 rounded">-28%</span>
+          <!-- Price Row & EMI Calculator Preview -->
+          <div class="pt-1 border-b border-brand-stone pb-3">
+            <div class="flex items-center gap-3">
+              <span id="qvPrice" class="text-2xl sm:text-3xl font-black text-brand-charcoal">₹2,499</span>
+              <span id="qvOldPrice" class="text-sm font-semibold text-slate-400 line-through">₹3,499</span>
+              <span id="qvBadge" class="text-[10.5px] font-extrabold text-white bg-brand-charcoal px-2.5 py-0.5 rounded">-28%</span>
+            </div>
+            <p class="text-[11px] text-slate-500 mt-1 flex items-center gap-1.5">
+              <span>💳</span> <span>Or 3 interest-free payments of <strong id="qvEmiText" class="text-slate-800">₹833/month</strong> with Cardless EMI</span>
+            </p>
+          </div>
+
+          <!-- Interactive Patina Finish Swatch Selector -->
+          <div class="space-y-1.5 pt-1">
+            <div class="flex justify-between items-center text-xs">
+              <span class="font-bold text-slate-700">Artisan Finish Patina:</span>
+              <span id="qvSelectedFinishName" class="font-extrabold text-brand-goldDark">Antique Gold Lustre</span>
+            </div>
+            <div class="flex flex-wrap items-center gap-2" id="qvFinishSwatches">
+              <button onclick="selectFinishSwatch('Antique Gold')" id="swatch-AntiqueGold" class="finish-swatch px-3 py-1.5 rounded-xl border-2 border-brand-charcoal bg-amber-50 text-xs font-bold text-slate-800 cursor-pointer transition-all">
+                ✨ Antique Gold
+              </button>
+              <button onclick="selectFinishSwatch('Mirror Polished')" id="swatch-MirrorPolished" class="finish-swatch px-3 py-1.5 rounded-xl border border-slate-300 hover:border-brand-charcoal bg-white text-xs font-bold text-slate-700 cursor-pointer transition-all">
+                🌟 Mirror Brass
+              </button>
+              <button onclick="selectFinishSwatch('Rose Copper')" id="swatch-RoseCopper" class="finish-swatch px-3 py-1.5 rounded-xl border border-slate-300 hover:border-brand-charcoal bg-white text-xs font-bold text-slate-700 cursor-pointer transition-all">
+                🔶 Rose Copper
+              </button>
+              <button onclick="selectFinishSwatch('Temple Oxidized')" id="swatch-TempleOxidized" class="finish-swatch px-3 py-1.5 rounded-xl border border-slate-300 hover:border-brand-charcoal bg-white text-xs font-bold text-slate-700 cursor-pointer transition-all">
+                🪔 Temple Patina
+              </button>
+            </div>
           </div>
 
           <p id="qvDescription" class="text-xs text-slate-600 leading-relaxed">
@@ -1016,6 +1163,46 @@
             <div class="flex justify-between"><span class="text-slate-500">Approximate Weight:</span> <strong id="qvWeight" class="text-slate-800">2.85 kg</strong></div>
             <div class="flex justify-between"><span class="text-slate-500">Surface Finish:</span> <strong id="qvFinish" class="text-slate-800">Hand-Buffed Antique Gold</strong></div>
             <div class="flex justify-between"><span class="text-slate-500">Package Contents:</span> <strong class="text-slate-800">1 Handcrafted Artifact + Care Certificate</strong></div>
+          </div>
+
+          <!-- Complete the Look / Frequently Bought Together (Bundle & Save 15%) -->
+          <div class="p-3.5 bg-gradient-to-br from-amber-50/60 to-brand-sand rounded-2xl border border-amber-200/80 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black uppercase tracking-wider text-brand-charcoal flex items-center gap-1.5">
+                <span>🎁</span> <span>COMPLETE THE SANCTUARY ENSEMBLE</span>
+              </span>
+              <span class="bg-brand-gold text-white text-[9.5px] font-black px-2 py-0.5 rounded-full">SAVE 15%</span>
+            </div>
+            
+            <div class="space-y-2 text-xs">
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="bundleItem1" checked disabled class="rounded text-brand-charcoal focus:ring-0">
+                <span class="text-slate-700 font-semibold truncate flex-1" id="bundleItem1Title">This Handcrafted Metalware</span>
+                <span class="font-bold text-slate-800" id="bundleItem1Price">₹2,499</span>
+              </label>
+
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="bundleItem2" checked onchange="updateBundleTotal()" class="rounded text-brand-charcoal focus:ring-0">
+                <span class="text-slate-700 font-medium truncate flex-1">+ Pure Brass Floating Lotus Diya Set (Pack of 4)</span>
+                <span class="font-bold text-slate-800">+₹599</span>
+              </label>
+
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="bundleItem3" checked onchange="updateBundleTotal()" class="rounded text-brand-charcoal focus:ring-0">
+                <span class="text-slate-700 font-medium truncate flex-1">+ Organic Pitambari Brass Polishing Wax (200g)</span>
+                <span class="font-bold text-slate-800">+₹299</span>
+              </label>
+            </div>
+
+            <div class="flex items-center justify-between pt-1 border-t border-amber-200/60">
+              <div>
+                <span class="text-[10px] text-slate-500 line-through" id="bundleRegularPrice">₹3,397</span>
+                <div class="text-sm font-black text-brand-charcoal" id="bundleCombinedPrice">₹2,887 (Bundle Deal)</div>
+              </div>
+              <button onclick="addBundleToCart()" class="px-4 py-2 bg-brand-charcoal hover:bg-brand-gold text-brand-ivory hover:text-white rounded-xl text-xs font-black transition-all shadow-sm cursor-pointer">
+                ADD ENSEMBLE TO CART
+              </button>
+            </div>
           </div>
 
           <!-- Live PIN Code Serviceability Check -->
@@ -1046,12 +1233,79 @@
             </button>
           </div>
 
+          <!-- Customer Reviews & Rating Breakdown Accordion/Section -->
+          <div id="qvReviewsSection" class="pt-4 border-t border-brand-stone space-y-3">
+            <div class="flex items-center justify-between">
+              <h4 class="text-xs font-extrabold uppercase tracking-wider text-brand-charcoal">CONNOISSEUR RATINGS & REVIEWS</h4>
+              <button onclick="toggleWriteReview()" class="text-xs font-bold text-brand-goldDark hover:underline cursor-pointer">
+                ✍️ Write a Review
+              </button>
+            </div>
+
+            <!-- Rating Summary Bars -->
+            <div class="bg-brand-sand/60 p-3 rounded-2xl border border-brand-stone flex items-center gap-4 text-xs">
+              <div class="text-center pr-3 border-r border-brand-stone">
+                <span class="text-2xl font-black text-brand-charcoal block">4.9</span>
+                <span class="text-amber-400 font-bold text-xs">★★★★★</span>
+                <span class="text-[10px] text-slate-400 block mt-0.5">184 Verified</span>
+              </div>
+              <div class="flex-1 space-y-1 text-[10.5px]">
+                <div class="flex items-center gap-2">
+                  <span class="w-4 text-slate-500">5★</span>
+                  <div class="flex-1 bg-slate-200 h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-amber-400 h-full rounded-full w-[92%]"></div>
+                  </div>
+                  <span class="w-6 text-right text-slate-400">92%</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-4 text-slate-500">4★</span>
+                  <div class="flex-1 bg-slate-200 h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-amber-400 h-full rounded-full w-[6%]"></div>
+                  </div>
+                  <span class="w-6 text-right text-slate-400">6%</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-4 text-slate-500">3★</span>
+                  <div class="flex-1 bg-slate-200 h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-amber-400 h-full rounded-full w-[2%]"></div>
+                  </div>
+                  <span class="w-6 text-right text-slate-400">2%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Write Review Form (Hidden by default) -->
+            <div id="writeReviewForm" class="hidden p-3.5 bg-white border border-brand-gold/60 rounded-2xl space-y-2.5">
+              <span class="text-xs font-bold text-brand-charcoal block">Submit Your Connoisseur Experience</span>
+              <div class="flex items-center gap-1 text-sm text-amber-400 cursor-pointer" id="reviewStarPicker">
+                <span onclick="setReviewRating(1)">★</span>
+                <span onclick="setReviewRating(2)">★</span>
+                <span onclick="setReviewRating(3)">★</span>
+                <span onclick="setReviewRating(4)">★</span>
+                <span onclick="setReviewRating(5)">★</span>
+                <span id="reviewRatingVal" class="text-xs font-bold text-slate-600 ml-2">5 Stars</span>
+              </div>
+              <input type="text" id="reviewerName" placeholder="Your Name (e.g. Ananya Singhal)" class="w-full bg-brand-sand border border-brand-stone rounded-xl px-3 py-1.5 text-xs focus:outline-none">
+              <input type="text" id="reviewerCity" placeholder="Your City (e.g. Mumbai)" class="w-full bg-brand-sand border border-brand-stone rounded-xl px-3 py-1.5 text-xs focus:outline-none">
+              <textarea id="reviewerComment" rows="2" placeholder="Write your thoughts on craftsmanship, weight, and finish..." class="w-full bg-brand-sand border border-brand-stone rounded-xl px-3 py-1.5 text-xs focus:outline-none"></textarea>
+              <div class="flex justify-end gap-2">
+                <button onclick="toggleWriteReview()" class="px-3 py-1 text-xs text-slate-500">Cancel</button>
+                <button onclick="submitReview()" class="px-4 py-1.5 bg-brand-charcoal text-white rounded-xl text-xs font-bold">Submit Review</button>
+              </div>
+            </div>
+
+            <!-- Customer Review Cards -->
+            <div class="space-y-2" id="qvReviewCardsContainer">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ================= 13. COMPLETE 3-STEP CHECKOUT WORKFLOW MODAL ================= -->
+<!-- ================= 13. COMPLETE 3-STEP CHECKOUT WORKFLOW MODAL ================= -->
   <div id="checkoutModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6">
     <div onclick="closeCheckoutModal()" class="absolute inset-0 drawer-backdrop"></div>
     <div class="relative bg-white rounded-3xl max-w-2xl w-full max-h-[94vh] overflow-y-auto shadow-2xl border-2 border-brand-gold z-10 p-5 sm:p-8">
@@ -1286,6 +1540,72 @@
           <span class="font-black text-base text-brand-charcoal block mt-0.5">55% OFF</span>
           <span class="text-[9.5px] text-emerald-700 font-semibold">Full Container Export</span>
         </div>
+      </div>
+
+      
+      <!-- Interactive Wholesale Tier & ROI Margin Calculator -->
+      <div class="bg-brand-sand/70 p-4 rounded-2xl border border-brand-gold/40 mb-5 space-y-3">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-black uppercase text-brand-charcoal flex items-center gap-1.5">
+            <span>🧮</span> <span>LIVE WHOLESALE TIER & RESALE MARGIN CALCULATOR</span>
+          </span>
+          <span id="b2bTierBadge" class="bg-brand-charcoal text-brand-gold text-[9.5px] font-black px-2.5 py-0.5 rounded-full">
+            Tier 1 (35% OFF)
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Select Catalog Artifact:</label>
+            <select id="b2bCalcProduct" onchange="calculateB2BQuote()" class="w-full bg-white border border-brand-stone rounded-xl px-3 py-2 font-bold text-slate-800">
+              <option value="2499">Imperial Brass Urli (MRP ₹2,499)</option>
+              <option value="1999">Ayurvedic Copper Dispenser (MRP ₹1,999)</option>
+              <option value="1299">Moroccan Hanging Lantern (MRP ₹1,299)</option>
+              <option value="1799">Meenakari Brass Planter (MRP ₹1,799)</option>
+              <option value="3899">Temple Hanging Bell (MRP ₹3,899)</option>
+              <option value="4299">South Indian Kuthu Vilakku (MRP ₹4,299)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Order Quantity (Units):</label>
+            <div class="flex items-center gap-2">
+              <input type="number" id="b2bCalcUnits" min="10" max="2000" value="50" oninput="calculateB2BQuote()" class="w-24 bg-white border border-brand-stone rounded-xl px-3 py-2 font-mono font-bold text-xs text-slate-800">
+              <input type="range" id="b2bCalcSlider" min="10" max="500" value="50" oninput="document.getElementById('b2bCalcUnits').value=this.value; calculateB2BQuote()" class="flex-1 accent-brand-gold">
+            </div>
+          </div>
+        </div>
+
+        <!-- Calculated Live Metrics Breakdown -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs pt-1">
+          <div class="bg-white p-2.5 rounded-xl border border-brand-stone">
+            <span class="text-[9.5px] text-slate-400 font-bold block uppercase">Wholesale Unit</span>
+            <span id="b2bUnitRate" class="font-black text-sm text-brand-charcoal block">₹1,624</span>
+            <span class="text-[9px] text-emerald-600 font-bold" id="b2bUnitSave">Save ₹875/pc</span>
+          </div>
+
+          <div class="bg-white p-2.5 rounded-xl border border-brand-stone">
+            <span class="text-[9.5px] text-slate-400 font-bold block uppercase">Total Investment</span>
+            <span id="b2bTotalInvestment" class="font-black text-sm text-brand-charcoal block">₹81,218</span>
+            <span class="text-[9px] text-slate-500 font-medium">ex-Moradabad</span>
+          </div>
+
+          <div class="bg-white p-2.5 rounded-xl border border-brand-stone">
+            <span class="text-[9.5px] text-slate-400 font-bold block uppercase">Retail Value</span>
+            <span id="b2bTotalRetail" class="font-black text-sm text-slate-700 block">₹1,24,950</span>
+            <span class="text-[9px] text-slate-400 font-medium">Standard MRP</span>
+          </div>
+
+          <div class="bg-emerald-50 p-2.5 rounded-xl border border-emerald-200">
+            <span class="text-[9.5px] text-emerald-700 font-black block uppercase">Estimated Margin</span>
+            <span id="b2bProfitPotential" class="font-black text-sm text-emerald-700 block">+₹43,732</span>
+            <span class="text-[9px] text-emerald-700 font-black" id="b2bRoiMargin">53.8% Markup</span>
+          </div>
+        </div>
+
+        <button type="button" onclick="applyB2BCalculationToForm()" class="w-full py-2 bg-brand-charcoal hover:bg-brand-gold text-white font-bold text-xs rounded-xl transition-all shadow-sm cursor-pointer">
+          Apply This Calculated Volume To RFQ Form Below ↓
+        </button>
       </div>
 
       <!-- RFQ Form -->
@@ -1662,6 +1982,203 @@
     </div>
   </div>
 
+  
+  <!-- ================= 19. TRANSPARENT MARKET BENCHMARK MODAL (TAG ZEE vs TOP PLATFORMS) ================= -->
+  <div id="benchmarkModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6">
+    <div onclick="closeBenchmarkModal()" class="absolute inset-0 drawer-backdrop"></div>
+    <div class="relative bg-white rounded-3xl max-w-4xl w-full max-h-[92vh] overflow-y-auto shadow-2xl border-2 border-brand-gold z-10 p-5 sm:p-8">
+      <button onclick="closeBenchmarkModal()" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-800 rounded-full hover:bg-slate-100 text-lg cursor-pointer">✕</button>
+
+      <div class="text-center space-y-1.5 mb-6">
+        <span class="text-[10px] uppercase font-black tracking-widest text-brand-goldDark">TRANSPARENT LUXURY AUDIT</span>
+        <h3 class="text-2xl sm:text-3xl font-black text-brand-charcoal uppercase">TAG ZEE vs Luxury Market Benchmark</h3>
+        <p class="text-xs text-slate-500 max-w-xl mx-auto">See how our direct-from-foundry Moradabad metalware compares to high-end mall retailers (Good Earth, Tata CLiQ Luxury) and generic marketplaces.</p>
+      </div>
+
+      <!-- Comparison Matrix Table -->
+      <div class="overflow-x-auto border border-brand-stone rounded-2xl shadow-sm mb-6">
+        <table class="w-full text-left text-xs border-collapse">
+          <thead>
+            <tr class="bg-brand-sand border-b border-brand-stone text-slate-700 font-extrabold uppercase text-[10.5px]">
+              <th class="p-3.5">Standard / Metric</th>
+              <th class="p-3.5 bg-brand-charcoal text-brand-gold text-center">TAG ZEE Foundry (Direct)</th>
+              <th class="p-3.5 text-slate-600 text-center">Mall Luxury (Good Earth / CLiQ)</th>
+              <th class="p-3.5 text-slate-400 text-center">Generic E-Com (Amazon / Meesho)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-brand-stone/60">
+            <tr>
+              <td class="p-3 font-bold text-slate-800">Metallurgical Purity</td>
+              <td class="p-3 bg-amber-50/40 text-center font-extrabold text-emerald-700">100% Virgin Cast Brass & Copper (0% Scrap Filler)</td>
+              <td class="p-3 text-center text-slate-600">High Grade (Premium Branded)</td>
+              <td class="p-3 text-center text-red-600">Hollow / 40% Lead & Zinc Scrap</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-slate-800">Pricing & Value</td>
+              <td class="p-3 bg-amber-50/40 text-center font-extrabold text-emerald-700">Direct Foundry Fair Price (₹1,499 - ₹4,999)</td>
+              <td class="p-3 text-center text-slate-600">300% Markup (₹8,000 - ₹25,000)</td>
+              <td class="p-3 text-center text-slate-400">Low Price (Thin gauge / breaks in months)</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-slate-800">Moradabad GI Tag Hallmark</td>
+              <td class="p-3 bg-amber-50/40 text-center font-extrabold text-emerald-700">✅ Certified GI Tag #244 Certificate Included</td>
+              <td class="p-3 text-center text-slate-600">Brand Tag Only</td>
+              <td class="p-3 text-center text-red-600">❌ No Provenance / Fake Claims</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-slate-800">B2B Volume & Customization</td>
+              <td class="p-3 bg-amber-50/40 text-center font-extrabold text-emerald-700">Direct Custom Engraving, Size & 35%-55% Tiers</td>
+              <td class="p-3 text-center text-slate-600">Inflexible / Retail Only</td>
+              <td class="p-3 text-center text-red-600">❌ Middlemen / Drop-shippers</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-slate-800">Transit Breakage Guarantee</td>
+              <td class="p-3 bg-amber-50/40 text-center font-extrabold text-emerald-700">Immediate Brand-New Dispatch (Zero Courier Return Hassle)</td>
+              <td class="p-3 text-center text-slate-600">14-Day Courier Investigation</td>
+              <td class="p-3 text-center text-red-600">Tedious Returns & Disputed Refunds</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-slate-800">Live Video Inspection</td>
+              <td class="p-3 bg-amber-50/40 text-center font-extrabold text-emerald-700">✅ Free 5-Min WhatsApp Video Call with Master Karigar</td>
+              <td class="p-3 text-center text-slate-400">❌ Not Available</td>
+              <td class="p-3 text-center text-slate-400">❌ Not Available</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-brand-sand p-4 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+        <span class="text-slate-600 font-semibold">Ready to experience authentic Moradabad heritage without luxury retail middlemen?</span>
+        <button onclick="closeBenchmarkModal(); document.getElementById('trending').scrollIntoView({behavior:'smooth'})" class="px-6 py-2.5 rounded-full bg-brand-charcoal hover:bg-brand-gold text-white font-black uppercase tracking-wider transition-all shadow-md active:scale-95 cursor-pointer">
+          EXPLORE THE SIGNATURE EDIT ➔
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= 20. ROOM VISUALIZER MODAL ("SEE IN YOUR SPACE") ================= -->
+  <div id="roomVisualizerModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6">
+    <div onclick="closeRoomVisualizerModal()" class="absolute inset-0 drawer-backdrop"></div>
+    <div class="relative bg-white rounded-3xl max-w-4xl w-full max-h-[94vh] overflow-y-auto shadow-2xl border-2 border-brand-gold z-10 p-5 sm:p-8 space-y-4">
+      <button onclick="closeRoomVisualizerModal()" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-800 rounded-full hover:bg-slate-100 text-lg cursor-pointer">✕</button>
+
+      <div class="text-center space-y-1">
+        <span class="text-[10px] uppercase font-black tracking-widest text-brand-goldDark">INTERIOR SPATIAL PREVIEW</span>
+        <h3 class="text-2xl font-black text-brand-charcoal uppercase">See In Your Living Sanctuary</h3>
+        <p class="text-xs text-slate-500">Preview how this piece harmonizes with diverse room styles and ambient lighting.</p>
+      </div>
+
+      <!-- Controls Row: Room Theme & Lighting -->
+      <div class="flex flex-wrap items-center justify-between gap-3 bg-brand-sand p-3 rounded-2xl border border-brand-stone text-xs">
+        <div class="flex items-center gap-2 overflow-x-auto pb-1 max-w-full">
+          <span class="font-bold text-slate-700 shrink-0">Space Setting:</span>
+          <button onclick="setVisualizerRoom('console')" id="vizRoom-console" class="px-3 py-1.5 rounded-xl bg-brand-charcoal text-white font-bold transition-all cursor-pointer">Living Console</button>
+          <button onclick="setVisualizerRoom('mandir')" id="vizRoom-mandir" class="px-3 py-1.5 rounded-xl bg-white border border-brand-stone text-slate-700 font-bold hover:bg-white transition-all cursor-pointer">Puja Mandir</button>
+          <button onclick="setVisualizerRoom('dining')" id="vizRoom-dining" class="px-3 py-1.5 rounded-xl bg-white border border-brand-stone text-slate-700 font-bold hover:bg-white transition-all cursor-pointer">Dining Table</button>
+          <button onclick="setVisualizerRoom('terrace')" id="vizRoom-terrace" class="px-3 py-1.5 rounded-xl bg-white border border-brand-stone text-slate-700 font-bold hover:bg-white transition-all cursor-pointer">Garden Terrace</button>
+        </div>
+
+        <div class="flex items-center gap-1.5">
+          <span class="font-bold text-slate-700">Ambience:</span>
+          <button onclick="setVisualizerLighting('day')" id="vizLight-day" class="px-2.5 py-1 rounded-lg bg-amber-100 border border-amber-300 text-amber-900 font-bold text-xs cursor-pointer">☀️ Daylight</button>
+          <button onclick="setVisualizerLighting('night')" id="vizLight-night" class="px-2.5 py-1 rounded-lg bg-slate-100 border border-slate-300 text-slate-700 font-bold text-xs cursor-pointer">🕯️ Candlelight</button>
+        </div>
+      </div>
+
+      <!-- Visualizer Canvas Display -->
+      <div id="visualizerCanvas" class="relative aspect-[16/9] w-full rounded-2xl overflow-hidden shadow-inner border border-brand-stone bg-cover bg-center transition-all duration-500 flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80');">
+        
+        <!-- Ambience Lighting Overlay -->
+        <div id="visualizerAmbienceOverlay" class="absolute inset-0 bg-transparent transition-colors duration-500 pointer-events-none"></div>
+
+        <!-- The Product Preview Overlay with Glow & Shadow -->
+        <div class="relative z-10 w-44 sm:w-60 max-w-[50%] p-2 transform transition-transform duration-300 hover:scale-105">
+          <img id="vizProductImg" src="" alt="Room Placement" class="w-full drop-shadow-[0_20px_25px_rgba(0,0,0,0.55)] rounded-2xl object-contain">
+          <div class="mt-2 text-center bg-black/60 backdrop-blur-md text-white text-[10px] font-bold py-1 px-3 rounded-full border border-white/20 inline-block">
+            <span id="vizProductTitle">Royal Brass Urli</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="flex items-center justify-between pt-2">
+        <span class="text-xs text-slate-500">Scaled to authentic proportions (14" diameter representation).</span>
+        <button onclick="closeRoomVisualizerModal(); addCurrentQvToCart();" class="px-6 py-3 bg-brand-charcoal hover:bg-brand-gold text-brand-ivory hover:text-white rounded-xl text-xs font-black uppercase tracking-wider transition-all shadow-md cursor-pointer flex items-center gap-2">
+          <span>🛒 LOOKS PERFECT, ADD TO CART</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= 21. MORADABAD GI TAG HALLMARK CERTIFICATE MODAL ================= -->
+  <div id="certificateModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6">
+    <div onclick="closeCertificateModal()" class="absolute inset-0 drawer-backdrop"></div>
+    <div class="relative bg-amber-50/95 rounded-3xl max-w-xl w-full max-h-[92vh] overflow-y-auto shadow-2xl border-4 border-double border-brand-gold z-10 p-6 sm:p-8 space-y-4 text-center">
+      <button onclick="closeCertificateModal()" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-800 rounded-full hover:bg-slate-100 text-lg cursor-pointer">✕</button>
+
+      <div class="w-16 h-16 rounded-full bg-brand-gold/20 border border-brand-gold text-brand-gold flex items-center justify-center mx-auto text-3xl shadow">
+        🏛️
+      </div>
+
+      <div class="space-y-1">
+        <span class="text-[10px] font-black uppercase tracking-widest text-brand-goldDark">OFFICIAL HEIRLOOM GUARANTEE</span>
+        <h3 class="text-2xl font-black text-brand-charcoal uppercase">Certificate of Authenticity & Provenance</h3>
+        <p class="text-xs text-slate-600 font-serif italic">Moradabad Metal Craft • Geographical Indication (GI) Reg. No. 244</p>
+      </div>
+
+      <div class="p-4 bg-white/80 rounded-2xl border border-brand-stone text-xs text-left space-y-2 leading-relaxed">
+        <p>This document certifies that this metalware artifact is crafted in accordance with the ancient metalcraft traditions of Moradabad (Peetal Nagri), India.</p>
+        
+        <div class="space-y-1 pt-1 font-mono text-[11px] text-slate-700">
+          <div>• <strong>Metallurgy:</strong> 100% Virgin Bell Brass / Certified Ayurvedic Copper</div>
+          <div>• <strong>Scrap/Lead Content:</strong> 0.00% (Certified Food & Ritual Grade)</div>
+          <div>• <strong>Foundry Guild:</strong> TAG ZEE Atelier, A 305 Jigar Colony, Moradabad - 244001</div>
+          <div>• <strong>Testing:</strong> Hand-inspected for acoustic resonance & weight tolerance</div>
+        </div>
+      </div>
+
+      <!-- Signatures -->
+      <div class="grid grid-cols-2 gap-4 pt-2 text-xs border-t border-brand-stone/60">
+        <div class="space-y-0.5">
+          <div class="font-serif italic text-base text-brand-charcoal">Zeefaham Rais</div>
+          <span class="text-[10px] text-slate-400 uppercase font-bold block">Head of Foundry Guild</span>
+        </div>
+        <div class="space-y-0.5">
+          <div class="font-serif italic text-base text-brand-charcoal">Atir Rais</div>
+          <span class="text-[10px] text-slate-400 uppercase font-bold block">Master Artisan Curator</span>
+        </div>
+      </div>
+
+      <button onclick="closeCertificateModal()" class="w-full py-3 bg-brand-charcoal text-white rounded-xl text-xs font-bold uppercase tracking-wider cursor-pointer">
+        CLOSE CERTIFICATE
+      </button>
+
+    </div>
+  </div>
+
+  <!-- ================= 22. ADMIN PRINTABLE TAX INVOICE MODAL ================= -->
+  <div id="invoiceModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/60">
+    <div onclick="closeInvoiceModal()" class="absolute inset-0"></div>
+    <div class="relative bg-white rounded-2xl max-w-2xl w-full max-h-[92vh] overflow-y-auto shadow-2xl z-10 p-6 sm:p-8 text-xs font-sans space-y-4">
+      <div class="flex items-center justify-between border-b pb-3">
+        <div>
+          <h2 class="text-xl font-black text-slate-900">TAG ZEE MORADABAD</h2>
+          <p class="text-[11px] text-slate-500">Tax Invoice & Dispatch Packing Slip</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="px-3 py-1.5 bg-brand-charcoal text-white rounded-lg font-bold text-xs cursor-pointer">🖨️ Print</button>
+          <button onclick="closeInvoiceModal()" class="p-1.5 text-slate-400 hover:text-slate-800 text-lg cursor-pointer">✕</button>
+        </div>
+      </div>
+
+      <div id="invoiceContent" class="space-y-3">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
   <!-- Policy Modals Container -->
   <div id="policyModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
     <div onclick="closePolicyModal()" class="absolute inset-0 drawer-backdrop"></div>
@@ -2024,6 +2541,39 @@
         ? [...productsDB]
         : productsDB.filter(p => p.category.toLowerCase().includes(filter.toLowerCase()));
 
+      // Faceted Filter: Finish
+      if (typeof currentFinishFilter !== 'undefined' && currentFinishFilter !== 'All') {
+        list = list.filter(p => {
+          const m = (p.material + ' ' + p.finish + ' ' + p.title).toLowerCase();
+          return m.includes(currentFinishFilter.toLowerCase());
+        });
+      }
+
+      // Faceted Filter: Price
+      if (typeof currentPriceFilter !== 'undefined' && currentPriceFilter !== 'All') {
+        if (currentPriceFilter === 'under2000') list = list.filter(p => p.price < 2000);
+        else if (currentPriceFilter === '2000to3500') list = list.filter(p => p.price >= 2000 && p.price <= 3500);
+        else if (currentPriceFilter === 'above3500') list = list.filter(p => p.price > 3500);
+      }
+
+      // Faceted Filter: Space / Room
+      if (typeof currentSpaceFilter !== 'undefined' && currentSpaceFilter !== 'All') {
+        list = list.filter(p => {
+          const t = (p.title + ' ' + p.category + ' ' + p.desc).toLowerCase();
+          if (currentSpaceFilter === 'Living') return t.includes('urli') || t.includes('scalloped') || t.includes('planter') || t.includes('console');
+          if (currentSpaceFilter === 'Mandir') return t.includes('bell') || t.includes('diya') || t.includes('dhoop') || t.includes('kuthu') || t.includes('temple');
+          if (currentSpaceFilter === 'Dining') return t.includes('copper') || t.includes('dispenser') || t.includes('jug') || t.includes('glasses');
+          if (currentSpaceFilter === 'Garden') return t.includes('planter') || t.includes('lantern') || t.includes('bell');
+          return true;
+        });
+      }
+
+      // Update count text
+      const countEl = document.getElementById('filteredCountText');
+      if (countEl) {
+        countEl.innerText = `Showing ${list.length} of ${productsDB.length} Masterpieces`;
+      }
+
       if (sort === 'price_asc') list.sort((a, b) => a.price - b.price);
       else if (sort === 'price_desc') list.sort((a, b) => b.price - a.price);
       else if (sort === 'rating') list.sort((a, b) => b.rating - a.rating);
@@ -2315,6 +2865,27 @@
       // Update wishlist button state
       const isWish = wishlist.includes(p.id);
       document.getElementById('qvWishlistBtn').innerHTML = isWish ? '❤️' : '♡';
+
+      // Social Proof & Urgency
+      const liveViewersEl = document.getElementById('qvLiveViewers');
+      if (liveViewersEl) liveViewersEl.innerText = Math.floor(Math.random() * 8) + 12;
+      const scarcityEl = document.getElementById('qvScarcityText');
+      if (scarcityEl) scarcityEl.innerText = p.stock < 25 ? `⚡ Only ${p.stock} pieces left in Moradabad pour` : '⚡ Limited handcrafted artisan batch';
+
+      // EMI calculation
+      const emiEl = document.getElementById('qvEmiText');
+      if (emiEl) emiEl.innerText = formatPrice(Math.round(p.price / 3)) + '/month';
+
+      // Setup Bundle
+      const b1Title = document.getElementById('bundleItem1Title');
+      const b1Price = document.getElementById('bundleItem1Price');
+      if (b1Title) b1Title.innerText = p.title;
+      if (b1Price) b1Price.innerText = formatPrice(p.price);
+      if (typeof updateBundleTotal === 'function') updateBundleTotal();
+
+      // Render Reviews & Track Recently Viewed
+      if (typeof renderProductReviews === 'function') renderProductReviews(p.id);
+      if (typeof trackRecentlyViewed === 'function') trackRecentlyViewed(p.id);
 
       document.getElementById('quickViewModal').classList.remove('hidden');
     }
@@ -2796,8 +3367,10 @@
             <td class="p-3 font-extrabold text-slate-900">₹${o.total.toLocaleString('en-IN')}</td>
             <td class="p-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold ${o.paymentStatus === 'Paid' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'}">${o.paymentStatus}</span></td>
             <td class="p-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-800">${o.status}</span></td>
-            <td class="p-3 text-right">
-              <button onclick="advanceOrderStatus('${o.orderId}')" class="px-2.5 py-1 bg-brand-charcoal hover:bg-brand-gold text-white rounded text-[10px] font-bold">Advance Status</button>
+            <td class="p-3 text-right space-x-1 whitespace-nowrap">
+              <button onclick="advanceOrderStatus('${o.orderId}')" class="px-2 py-1 bg-brand-charcoal hover:bg-brand-gold text-white rounded text-[10px] font-bold">Advance</button>
+              <button onclick="openInvoiceModal('${o.orderId}')" class="px-2 py-1 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 rounded text-[10px] font-bold cursor-pointer">📄 Invoice</button>
+              <a href="https://wa.me/${(o.phone || '').replace(/[^0-9]/g, '')}?text=Hi%20${encodeURIComponent(o.customerName || 'Customer')},%20your%20TAG%20ZEE%20order%20${o.orderId}%20is%20${encodeURIComponent(o.status)}.%20Track%20here:%20https://prabhve.github.io/demotagzeeecommerce/" target="_blank" class="px-2 py-1 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 rounded text-[10px] font-bold inline-block">💬 Notify</a>
             </td>
           </tr>
         `).join('');
@@ -3151,7 +3724,478 @@
     }
 
     // Initialize application on load
-    window.addEventListener('DOMContentLoaded', () => {
+    
+    // --- 16. FACETED FILTERS & GRID DENSITY SYSTEM (POTTERY BARN / WEST ELM LUXURY STANDARD) ---
+    let currentFinishFilter = 'All';
+    let currentPriceFilter = 'All';
+    let currentSpaceFilter = 'All';
+    let currentGridDensity = 'compact'; // 'compact' or 'editorial'
+
+    function applyFacetedFilters() {
+      currentFinishFilter = document.getElementById('filterFinish').value;
+      currentPriceFilter = document.getElementById('filterPrice').value;
+      currentSpaceFilter = document.getElementById('filterSpace').value;
+
+      const isFiltered = currentFinishFilter !== 'All' || currentPriceFilter !== 'All' || currentSpaceFilter !== 'All';
+      const resetBtn = document.getElementById('resetFiltersBtn');
+      if (resetBtn) {
+        if (isFiltered) resetBtn.classList.remove('hidden');
+        else resetBtn.classList.add('hidden');
+      }
+
+      renderProducts(activeFilter, currentSort);
+    }
+
+    function resetFacetedFilters() {
+      document.getElementById('filterFinish').value = 'All';
+      document.getElementById('filterPrice').value = 'All';
+      document.getElementById('filterSpace').value = 'All';
+      applyFacetedFilters();
+    }
+
+    function setGridDensity(mode) {
+      currentGridDensity = mode;
+      const compactBtn = document.getElementById('gridCompactBtn');
+      const editorialBtn = document.getElementById('gridEditorialBtn');
+      const grid = document.getElementById('productsGrid');
+
+      if (!grid) return;
+
+      if (mode === 'editorial') {
+        grid.className = "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8";
+        if (compactBtn) {
+          compactBtn.className = "p-1.5 rounded-lg hover:bg-white text-slate-600 text-xs font-bold transition-all cursor-pointer";
+        }
+        if (editorialBtn) {
+          editorialBtn.className = "p-1.5 rounded-lg bg-brand-charcoal text-white text-xs font-bold transition-all cursor-pointer";
+        }
+      } else {
+        grid.className = "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6";
+        if (compactBtn) {
+          compactBtn.className = "p-1.5 rounded-lg bg-brand-charcoal text-white text-xs font-bold transition-all cursor-pointer";
+        }
+        if (editorialBtn) {
+          editorialBtn.className = "p-1.5 rounded-lg hover:bg-white text-slate-600 text-xs font-bold transition-all cursor-pointer";
+        }
+      }
+      renderProducts(activeFilter, currentSort);
+    }
+
+    // --- 17. TRANSPARENT MARKET BENCHMARK MODAL ---
+    function openBenchmarkModal() {
+      const m = document.getElementById('benchmarkModal');
+      if (m) m.classList.remove('hidden');
+    }
+    function closeBenchmarkModal() {
+      const m = document.getElementById('benchmarkModal');
+      if (m) m.classList.add('hidden');
+    }
+
+    // --- 18. INTERIOR ROOM VISUALIZER MODAL ("SEE IN YOUR SPACE") ---
+    const visualizerRooms = {
+      console: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+      mandir: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1200&q=80',
+      dining: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80',
+      terrace: 'https://images.unsplash.com/photo-1579656381226-5fc0f0100c3b?auto=format&fit=crop&w=1200&q=80'
+    };
+
+    function openRoomVisualizerModal() {
+      if (!currentQvProduct) return;
+      const m = document.getElementById('roomVisualizerModal');
+      if (!m) return;
+
+      document.getElementById('vizProductImg').src = currentQvProduct.image;
+      document.getElementById('vizProductTitle').innerText = currentQvProduct.title;
+      setVisualizerRoom('console');
+      setVisualizerLighting('day');
+      m.classList.remove('hidden');
+    }
+
+    function closeRoomVisualizerModal() {
+      const m = document.getElementById('roomVisualizerModal');
+      if (m) m.classList.add('hidden');
+    }
+
+    function setVisualizerRoom(roomKey) {
+      const canvas = document.getElementById('visualizerCanvas');
+      if (!canvas || !visualizerRooms[roomKey]) return;
+
+      canvas.style.backgroundImage = `url('${visualizerRooms[roomKey]}')`;
+
+      ['console', 'mandir', 'dining', 'terrace'].forEach(r => {
+        const btn = document.getElementById(`vizRoom-${r}`);
+        if (btn) {
+          if (r === roomKey) {
+            btn.className = "px-3 py-1.5 rounded-xl bg-brand-charcoal text-white font-bold transition-all cursor-pointer";
+          } else {
+            btn.className = "px-3 py-1.5 rounded-xl bg-white border border-brand-stone text-slate-700 font-bold hover:bg-white transition-all cursor-pointer";
+          }
+        }
+      });
+    }
+
+    function setVisualizerLighting(mode) {
+      const overlay = document.getElementById('visualizerAmbienceOverlay');
+      const dayBtn = document.getElementById('vizLight-day');
+      const nightBtn = document.getElementById('vizLight-night');
+      const prodImg = document.getElementById('vizProductImg');
+
+      if (mode === 'night') {
+        if (overlay) overlay.className = "absolute inset-0 bg-amber-950/40 mix-blend-multiply transition-colors duration-500 pointer-events-none";
+        if (prodImg) prodImg.style.filter = "drop-shadow(0 0 20px rgba(245, 158, 11, 0.45)) contrast(108%)";
+        if (nightBtn) nightBtn.className = "px-2.5 py-1 rounded-lg bg-amber-500 text-white font-bold text-xs cursor-pointer shadow-sm";
+        if (dayBtn) dayBtn.className = "px-2.5 py-1 rounded-lg bg-slate-100 border border-slate-300 text-slate-700 font-bold text-xs cursor-pointer";
+      } else {
+        if (overlay) overlay.className = "absolute inset-0 bg-transparent transition-colors duration-500 pointer-events-none";
+        if (prodImg) prodImg.style.filter = "none";
+        if (dayBtn) dayBtn.className = "px-2.5 py-1 rounded-lg bg-amber-100 border border-amber-300 text-amber-900 font-bold text-xs cursor-pointer shadow-sm";
+        if (nightBtn) nightBtn.className = "px-2.5 py-1 rounded-lg bg-slate-100 border border-slate-300 text-slate-700 font-bold text-xs cursor-pointer";
+      }
+    }
+
+    // --- 19. MORADABAD GI TAG HALLMARK CERTIFICATE MODAL ---
+    function openCertificateModal() {
+      const m = document.getElementById('certificateModal');
+      if (m) m.classList.remove('hidden');
+    }
+    function closeCertificateModal() {
+      const m = document.getElementById('certificateModal');
+      if (m) m.classList.add('hidden');
+    }
+
+    // --- 20. FINISH PATINA SWATCH SELECTOR ---
+    function selectFinishSwatch(finishName) {
+      const finishEl = document.getElementById('qvSelectedFinishName');
+      if (finishEl) finishEl.innerText = finishName + ' Lustre';
+
+      document.querySelectorAll('.finish-swatch').forEach(btn => {
+        btn.classList.remove('border-2', 'border-brand-charcoal', 'bg-amber-50');
+        btn.classList.add('border', 'border-slate-300', 'bg-white');
+      });
+
+      const activeBtn = document.getElementById('swatch-' + finishName.replace(/\s/g, ''));
+      if (activeBtn) {
+        activeBtn.classList.remove('border-slate-300', 'bg-white');
+        activeBtn.classList.add('border-2', 'border-brand-charcoal', 'bg-amber-50');
+      }
+
+      showToast('Selected ' + finishName + ' finish', '✨');
+    }
+
+    // --- 21. COMPLETE THE ENSEMBLE (BUNDLE & SAVE 15%) ---
+    function updateBundleTotal() {
+      if (!currentQvProduct) return;
+      const b2 = document.getElementById('bundleItem2')?.checked ? 599 : 0;
+      const b3 = document.getElementById('bundleItem3')?.checked ? 299 : 0;
+      const rawTotal = currentQvProduct.price + b2 + b3;
+      const dealTotal = Math.round(rawTotal * 0.85);
+
+      const regEl = document.getElementById('bundleRegularPrice');
+      const combEl = document.getElementById('bundleCombinedPrice');
+      if (regEl) regEl.innerText = formatPrice(rawTotal);
+      if (combEl) combEl.innerText = formatPrice(dealTotal) + ' (Bundle Deal)';
+    }
+
+    function addBundleToCart() {
+      if (!currentQvProduct) return;
+      addToCart(currentQvProduct.id);
+
+      if (document.getElementById('bundleItem2')?.checked) {
+        cart.push({
+          id: 991,
+          title: "Pure Brass Floating Lotus Diya Set (Pack of 4)",
+          price: 599,
+          qty: 1,
+          image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
+        });
+      }
+
+      if (document.getElementById('bundleItem3')?.checked) {
+        cart.push({
+          id: 992,
+          title: "Organic Pitambari Brass Polishing Wax (200g)",
+          price: 299,
+          qty: 1,
+          image: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80"
+        });
+      }
+
+      saveStorage('tagzee_cart_v2', cart);
+      updateCartUI();
+      closeQuickViewModal();
+      openCartDrawer();
+      showToast('Complete Sanctuary Ensemble Added with 15% Savings!', '🎁');
+    }
+
+    // --- 22. CUSTOMER REVIEWS & RATINGS SYSTEM ---
+    let productReviewsDB = loadStorage('tagzee_reviews_v1', {
+      1: [
+        { name: "Pooja Sharma", city: "South Delhi", rating: 5, comment: "The urli is extraordinarily heavy and the hand-chiseled scalloped rim shines like gold under diya light. Heirloom quality!", date: "2 days ago" },
+        { name: "Vikramaditya Singhania", city: "Mumbai", rating: 5, comment: "Ordered for our living console. Authentically cast brass without filler. Prompt delivery in wooden crating.", date: "1 week ago" }
+      ]
+    });
+    let currentReviewRating = 5;
+
+    function renderProductReviews(prodId) {
+      const container = document.getElementById('qvReviewCardsContainer');
+      if (!container) return;
+
+      const list = productReviewsDB[prodId] || [
+        { name: "Ananya Singhal", city: "Bengaluru", rating: 5, comment: "Exceptional weight and authentic Moradabad finish. Very well packaged.", date: "3 days ago" },
+        { name: "Rohit Malhotra", city: "Chandigarh", rating: 5, comment: "Zero tarnish, lovely tone and genuine solid brass casting.", date: "1 week ago" }
+      ];
+
+      container.innerHTML = list.map(r => `
+        <div class="p-3 bg-brand-sand/50 rounded-xl border border-brand-stone/80 text-xs space-y-1">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-1.5 font-bold text-slate-800">
+              <span>${r.name}</span>
+              <span class="text-[9.5px] bg-emerald-100 text-emerald-800 font-extrabold px-1.5 py-0.2 rounded">✓ Verified</span>
+            </div>
+            <span class="text-[10px] text-slate-400">${r.date || 'Recent'}</span>
+          </div>
+          <div class="text-amber-400 text-[11px]">${'★'.repeat(r.rating || 5)}</div>
+          <p class="text-slate-600 text-[11px] leading-relaxed">${r.comment}</p>
+        </div>
+      `).join('');
+    }
+
+    function toggleWriteReview() {
+      const f = document.getElementById('writeReviewForm');
+      if (f) f.classList.toggle('hidden');
+    }
+
+    function setReviewRating(stars) {
+      currentReviewRating = stars;
+      const valEl = document.getElementById('reviewRatingVal');
+      if (valEl) valEl.innerText = stars + ' Stars';
+    }
+
+    function submitReview() {
+      if (!currentQvProduct) return;
+      const name = document.getElementById('reviewerName').value.trim() || 'Valued Connoisseur';
+      const city = document.getElementById('reviewerCity').value.trim() || 'India';
+      const comment = document.getElementById('reviewerComment').value.trim();
+
+      if (!comment) {
+        showToast('Please enter your review comment', '⚠️');
+        return;
+      }
+
+      if (!productReviewsDB[currentQvProduct.id]) {
+        productReviewsDB[currentQvProduct.id] = [];
+      }
+
+      productReviewsDB[currentQvProduct.id].unshift({
+        name,
+        city,
+        rating: currentReviewRating,
+        comment,
+        date: 'Just now'
+      });
+
+      saveStorage('tagzee_reviews_v1', productReviewsDB);
+      renderProductReviews(currentQvProduct.id);
+      toggleWriteReview();
+      showToast('Thank you! Your verified review has been recorded.', '🌟');
+    }
+
+    function scrollToQvReviews() {
+      const sec = document.getElementById('qvReviewsSection');
+      if (sec) sec.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // --- 23. B2B WHOLESALE TIER & ROI MARGIN CALCULATOR ---
+    function calculateB2BQuote() {
+      const unitMrp = parseInt(document.getElementById('b2bCalcProduct').value, 10) || 2499;
+      const units = parseInt(document.getElementById('b2bCalcUnits').value, 10) || 50;
+      const slider = document.getElementById('b2bCalcSlider');
+      if (slider && slider.value != units) slider.value = units;
+
+      let discount = 0.35;
+      let tierName = "Tier 1 (35% OFF)";
+
+      if (units >= 200) {
+        discount = 0.55;
+        tierName = "Tier 3 (55% OFF)";
+      } else if (units >= 51) {
+        discount = 0.45;
+        tierName = "Tier 2 (45% OFF)";
+      }
+
+      const wholesaleUnit = Math.round(unitMrp * (1 - discount));
+      const totalInvestment = wholesaleUnit * units;
+      const totalRetail = unitMrp * units;
+      const estimatedMargin = totalRetail - totalInvestment;
+      const roi = Math.round((estimatedMargin / totalInvestment) * 100);
+
+      document.getElementById('b2bTierBadge').innerText = tierName;
+      document.getElementById('b2bUnitRate').innerText = '₹' + wholesaleUnit.toLocaleString('en-IN');
+      document.getElementById('b2bUnitSave').innerText = 'Save ₹' + (unitMrp - wholesaleUnit) + '/pc';
+      document.getElementById('b2bTotalInvestment').innerText = '₹' + totalInvestment.toLocaleString('en-IN');
+      document.getElementById('b2bTotalRetail').innerText = '₹' + totalRetail.toLocaleString('en-IN');
+      document.getElementById('b2bProfitPotential').innerText = '+₹' + estimatedMargin.toLocaleString('en-IN');
+      document.getElementById('b2bRoiMargin').innerText = roi + '% Markup Potential';
+    }
+
+    function applyB2BCalculationToForm() {
+      const units = document.getElementById('b2bCalcUnits').value;
+      const prodName = document.getElementById('b2bCalcProduct').selectedOptions[0].text;
+      const qtySelect = document.getElementById('b2bQty');
+      const msgArea = document.getElementById('b2bMsg');
+
+      if (units >= 200) qtySelect.value = "200-1000 Pieces (55% Tier)";
+      else if (units >= 51) qtySelect.value = "51-200 Pieces (45% Tier)";
+      else qtySelect.value = "25-50 Pieces (35% Tier)";
+
+      if (msgArea) {
+        msgArea.value = `Calculated Volume: ${units} units of ${prodName}. Please share official proforma invoice and lead time.`;
+      }
+
+      showToast('Calculated volume applied to RFQ form below!', '📋');
+      msgArea?.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // --- 24. RECENTLY VIEWED ARTISAN HEIRLOOMS CAROUSEL ---
+    let recentlyViewedIDs = loadStorage('tagzee_recently_viewed', [1, 2, 3]);
+
+    function trackRecentlyViewed(id) {
+      recentlyViewedIDs = recentlyViewedIDs.filter(x => x !== id);
+      recentlyViewedIDs.unshift(id);
+      if (recentlyViewedIDs.length > 6) recentlyViewedIDs.pop();
+      saveStorage('tagzee_recently_viewed', recentlyViewedIDs);
+      renderRecentlyViewed();
+    }
+
+    function renderRecentlyViewed() {
+      const sec = document.getElementById('recentlyViewedSection');
+      const container = document.getElementById('recentlyViewedContainer');
+      if (!sec || !container) return;
+
+      if (!recentlyViewedIDs || recentlyViewedIDs.length === 0) {
+        sec.classList.add('hidden');
+        return;
+      }
+
+      const items = recentlyViewedIDs
+        .map(id => productsDB.find(p => p.id === id))
+        .filter(Boolean);
+
+      if (items.length === 0) {
+        sec.classList.add('hidden');
+        return;
+      }
+
+      sec.classList.remove('hidden');
+      container.innerHTML = items.map(p => `
+        <div onclick="openQuickViewModal(${p.id})" class="bg-brand-sand/50 p-2.5 rounded-2xl border border-brand-stone hover:border-brand-gold cursor-pointer transition-all hover:shadow-md group">
+          <div class="aspect-square rounded-xl overflow-hidden bg-white mb-2">
+            <img src="${p.image}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+          </div>
+          <h5 class="text-[11px] font-bold text-slate-800 truncate">${p.title}</h5>
+          <span class="text-xs font-black text-brand-charcoal block">${formatPrice(p.price)}</span>
+        </div>
+      `).join('');
+    }
+
+    function clearRecentlyViewed() {
+      recentlyViewedIDs = [];
+      saveStorage('tagzee_recently_viewed', []);
+      renderRecentlyViewed();
+      showToast('Viewing history cleared', '🧹');
+    }
+
+    // --- 25. LUXURY GIFT WRAP IN CART ---
+    let isGiftWrapActive = false;
+    function toggleGiftWrap(checked) {
+      isGiftWrapActive = checked;
+      const field = document.getElementById('giftMessageField');
+      if (field) {
+        if (checked) field.classList.remove('hidden');
+        else field.classList.add('hidden');
+      }
+      updateCartUI();
+      showToast(checked ? 'Royal Keepsake Velvet Gift Wrap added (+₹199)' : 'Gift wrap removed', '🎁');
+    }
+
+    // --- 26. ADMIN PRINTABLE TAX INVOICE GENERATOR ---
+    function openInvoiceModal(orderId) {
+      const order = ordersDB.find(o => o.orderId === orderId || o.id === orderId);
+      if (!order) return;
+
+      const container = document.getElementById('invoiceContent');
+      if (!container) return;
+
+      const itemsHtml = (order.items || []).map(i => `
+        <tr class="border-b border-slate-200">
+          <td class="py-2">${i.title}</td>
+          <td class="py-2 text-center font-mono">7418.10</td>
+          <td class="py-2 text-center">${i.qty}</td>
+          <td class="py-2 text-right">${formatPrice(i.price)}</td>
+          <td class="py-2 text-right font-bold">${formatPrice(i.price * i.qty)}</td>
+        </tr>
+      `).join('');
+
+      container.innerHTML = `
+        <div class="grid grid-cols-2 gap-4 pb-3 border-b border-slate-200 text-xs">
+          <div>
+            <strong>SELLER:</strong><br>
+            TAG ZEE FOUNDRY GUILD<br>
+            A 305 Jigar Colony, Civil Lines<br>
+            Moradabad, Uttar Pradesh - 244001<br>
+            <strong>GSTIN:</strong> 09AAACT9821R1Z5
+          </div>
+          <div class="text-right">
+            <strong>ORDER ID:</strong> ${order.id}<br>
+            <strong>DATE:</strong> ${order.date}<br>
+            <strong>DISPATCH AWB:</strong> ${order.trackingNumber || 'TZ-DLV-882910'}<br>
+            <strong>STATUS:</strong> ${order.status}
+          </div>
+        </div>
+
+        <div class="pb-3 border-b border-slate-200 text-xs">
+          <strong>BUYER / SHIP TO:</strong><br>
+          ${order.customer?.name || 'Valued Customer'}<br>
+          ${order.shippingAddress || 'Civil Lines, New Delhi - 110001'}<br>
+          Phone: ${order.customer?.phone || '+91 98765 43210'}
+        </div>
+
+        <table class="w-full text-xs">
+          <thead>
+            <tr class="border-b-2 border-slate-800 text-left font-bold">
+              <th class="py-1">Item Description</th>
+              <th class="py-1 text-center">HSN Code</th>
+              <th class="py-1 text-center">Qty</th>
+              <th class="py-1 text-right">Unit Price</th>
+              <th class="py-1 text-right">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${itemsHtml}
+          </tbody>
+        </table>
+
+        <div class="border-t-2 border-slate-800 pt-3 flex justify-between font-black text-sm">
+          <span>TOTAL INVOICE AMOUNT (Incl. 12% GST):</span>
+          <span>${formatPrice(order.totalAmount)}</span>
+        </div>
+
+        <div class="pt-4 text-[10px] text-slate-400 text-center font-mono">
+          Authorized Signatory: Zeefaham Rais • This is a computer-generated luxury tax invoice.
+        </div>
+      `;
+
+      document.getElementById('invoiceModal').classList.remove('hidden');
+    }
+
+    function closeInvoiceModal() {
+      const m = document.getElementById('invoiceModal');
+      if (m) m.classList.add('hidden');
+    }
+
+window.addEventListener('DOMContentLoaded', () => {
+      calculateB2BQuote();
+      renderRecentlyViewed();
       renderProducts('All', 'featured');
       updateCartUI();
       updateWishlistBadge();
